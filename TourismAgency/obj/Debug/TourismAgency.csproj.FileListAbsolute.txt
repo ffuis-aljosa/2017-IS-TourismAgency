@@ -1,0 +1,63 @@
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\bin\Debug\TourismAgency.exe.config
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\bin\Debug\TourismAgency.exe
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\bin\Debug\TourismAgency.pdb
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\obj\Debug\TourismAgency.LoginForm.resources
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\obj\Debug\TourismAgency.Properties.Resources.resources
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\obj\Debug\TourismAgency.TourismAgencyForm.resources
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\obj\Debug\TourismAgency.csproj.GenerateResource.Cache
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\obj\Debug\TourismAgency.csproj.CoreCompileInputs.cache
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\obj\Debug\TourismAgency.exe
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\obj\Debug\TourismAgency.pdb
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\obj\Debug\TourismAgency.csprojResolveAssemblyReference.cache
+C:\Users\Finch\source\repos\TourismAgency\TourismAgency\obj\Debug\TourismAgency.CreateUserForm.resources
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\bin\Debug\TourismAgency.exe.config
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\bin\Debug\TourismAgency.exe
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\bin\Debug\TourismAgency.pdb
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\obj\Debug\TourismAgency.csprojResolveAssemblyReference.cache
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\obj\Debug\TourismAgency.CreateUserForm.resources
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\obj\Debug\TourismAgency.LoginForm.resources
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\obj\Debug\TourismAgency.Properties.Resources.resources
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\obj\Debug\TourismAgency.TourismAgencyForm.resources
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\obj\Debug\TourismAgency.csproj.GenerateResource.Cache
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\obj\Debug\TourismAgency.csproj.CoreCompileInputs.cache
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\obj\Debug\TourismAgency.exe
+C:\Users\Finch\Desktop\Projekti\TourismAgency-master\obj\Debug\TourismAgency.pdb
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\bin\Debug\TourismAgency.exe.config
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\bin\Debug\TourismAgency.exe
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\bin\Debug\TourismAgency.pdb
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\obj\Debug\TourismAgency.csprojResolveAssemblyReference.cache
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\obj\Debug\TourismAgency.CreateUserForm.resources
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\obj\Debug\TourismAgency.LoginForm.resources
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\obj\Debug\TourismAgency.Properties.Resources.resources
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\obj\Debug\TourismAgency.TourismAgencyForm.resources
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\obj\Debug\TourismAgency.csproj.GenerateResource.Cache
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\obj\Debug\TourismAgency.csproj.CoreCompileInputs.cache
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\obj\Debug\TourismAgency.exe
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency-master\obj\Debug\TourismAgency.pdb
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\bin\Debug\TourismAgency.exe.config
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\bin\Debug\TourismAgency.exe
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\bin\Debug\TourismAgency.pdb
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\bin\Debug\EntityFramework.dll
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\bin\Debug\EntityFramework.xml
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\obj\Debug\TourismAgency.csprojResolveAssemblyReference.cache
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\obj\Debug\TourismAgency.CreateUserForm.resources
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\obj\Debug\TourismAgency.LoginForm.resources
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\obj\Debug\TourismAgency.Properties.Resources.resources
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\obj\Debug\TourismAgency.csproj.GenerateResource.Cache
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\obj\Debug\TourismAgency.csproj.CoreCompileInputs.cache
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\obj\Debug\TourismAgency.exe
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\obj\Debug\TourismAgency.pdb
+C:\Users\Finch\Desktop\Informacioni sistemi\TourismAgency\TourismAgency\obj\Debug\TourismAgency.AdminTourismAgencyForm.resources
