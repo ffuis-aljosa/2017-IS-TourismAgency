@@ -39,7 +39,7 @@ namespace TourismAgency
                     adminTourismAgencyForm.Show();
 
                     adminTourismAgencyForm.FormClosed += TourismAgencyForm_FormClosed;
-
+ 
                     Hide();
                 }
                 else

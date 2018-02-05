@@ -8,10 +8,17 @@ namespace TourismAgency.Db
     {
         private static DbConnection connection = DbConnection.Instance;
 
-        /*public static string Status(Users user)
+        /*public static void Status(Users user)
         {
             string sql = @"SELECT role FROM users WHERE username = @username AND password = @password";
-           
+            
+            SqlCeCommand cmd = new SqlCeCommand(sql, connection.Connection);
+
+            SqlCeDataReader reader = cmd.ExecuteReader();//to read data from table
+            while (reader.Read())
+            {
+                Console.WriteLine(reader.ToString());
+            }
         }*/
 
         public static bool login(Users user)
@@ -29,9 +36,9 @@ namespace TourismAgency.Db
             command.Prepare();
 
             SqlCeDataReader reader = command.ExecuteReader();
-
-            //Console.WriteLine(Status(user));
-            //Console.WriteLine(user.Password); 
+            
+            //Console.WriteLine(user.Password);
+            //Status(user); 
             
             if (reader.Read())
                 return true;
