@@ -19,7 +19,9 @@ namespace TourismAgency
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
+            AdminTourismAgencyForm adminForm = new AdminTourismAgencyForm();
+            adminForm.Show(); 
         }
         
     }

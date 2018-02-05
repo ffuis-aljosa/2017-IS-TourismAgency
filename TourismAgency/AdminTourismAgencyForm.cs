@@ -20,6 +20,15 @@ namespace TourismAgency
         { 
             CreateUserForm createUser = new CreateUserForm();
             createUser.Show();
+            this.Hide();
+        }
+
+        private void LogOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+
+            this.Hide();
+            loginForm.Show();
         }
     }
 }
