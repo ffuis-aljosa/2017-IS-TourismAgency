@@ -33,13 +33,15 @@
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TravelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.optionsToolStripMenuItem});
+            this.optionsToolStripMenuItem,
+            this.TravelToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(641, 24);
@@ -69,7 +71,14 @@
             this.LogOutToolStripMenuItem.Text = "Log out";
             this.LogOutToolStripMenuItem.Click += new System.EventHandler(this.LogOutToolStripMenuItem_Click);
             // 
-            // AdminTourismAgencyForm
+            // TravelToolStripMenuItem
+            // 
+            this.TravelToolStripMenuItem.Name = "TravelToolStripMenuItem";
+            this.TravelToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.TravelToolStripMenuItem.Text = "Travel";
+            this.TravelToolStripMenuItem.Click += new System.EventHandler(this.TravelToolStripMenuItem_Click);
+            // 
+            // TourismAgencyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,7 +88,7 @@
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "AdminTourismAgencyForm";
+            this.Name = "TourismAgencyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "\"Tourism Agency\"";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TourismAgencyForm_FormClosed);
@@ -95,5 +104,6 @@
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem LogOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TravelToolStripMenuItem;
     }
 }
