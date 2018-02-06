@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using TourismAgency.Db;
-using TourismAgency.Models; 
+using TourismAgency.Models;
 
 namespace TourismAgency
 {
@@ -33,14 +33,24 @@ namespace TourismAgency
             {
                 Users user = new Users(UsernameTextBox.Text, PasswordTextBox.Text);
 
-                if (UserRepository.login(user))
+                if (UserRepository.login(user) != null)
                 {
-                    AdminTourismAgencyForm adminTourismAgencyForm = new AdminTourismAgencyForm();
-                    adminTourismAgencyForm.Show();
+                    if (user.Role == "admin")
+                    {
+                        TourismAgencyForm adminTourismAgencyForm = new TourismAgencyForm();
+                        adminTourismAgencyForm.Show();
+                        adminTourismAgencyForm.FormClosed += TourismAgencyForm_FormClosed;
 
-                    adminTourismAgencyForm.FormClosed += TourismAgencyForm_FormClosed;
- 
-                    Hide();
+                        Hide();
+                    }
+                    else
+                    {
+                        TourismAgencyForm adminTourismAgencyForm = new TourismAgencyForm();
+                        adminTourismAgencyForm.Show();
+                        adminTourismAgencyForm.FormClosed += TourismAgencyForm_FormClosed;
+
+                        Hide();
+                    }
                 }
                 else
                 {

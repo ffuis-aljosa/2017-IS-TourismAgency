@@ -8,11 +8,30 @@ namespace TourismAgency.Models
     {
         private string username;
         private string password;
+        private string role; 
 
         public Users (string username, string password)
         {
             Username = username;
             Password = password; 
+        }
+
+        public string Role
+        {
+            get
+            {
+                return role;
+            }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new Exception("Role can't be a blank space!");
+
+                if (value.Length > 100)
+                    throw new Exception("Role can't be longer than a 100 characters!");
+
+                role = value;
+            }
         }
 
         public string Username

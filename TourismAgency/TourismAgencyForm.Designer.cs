@@ -1,6 +1,6 @@
 ﻿namespace TourismAgency
 {
-    partial class AdminTourismAgencyForm
+    partial class TourismAgencyForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminTourismAgencyForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TourismAgencyForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

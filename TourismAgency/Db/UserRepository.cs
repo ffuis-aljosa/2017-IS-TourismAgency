@@ -1,6 +1,7 @@
 ﻿using TourismAgency.Models;
 using System.Data.SqlServerCe;
 using System;
+using System.Windows.Forms;
 
 namespace TourismAgency.Db
 {
@@ -8,42 +9,33 @@ namespace TourismAgency.Db
     {
         private static DbConnection connection = DbConnection.Instance;
 
-        /*public static void Status(Users user)
-        {
-            string sql = @"SELECT role FROM users WHERE username = @username AND password = @password";
-            
-            SqlCeCommand cmd = new SqlCeCommand(sql, connection.Connection);
-
-            SqlCeDataReader reader = cmd.ExecuteReader();//to read data from table
-            while (reader.Read())
-            {
-                Console.WriteLine(reader.ToString());
-            }
-        }*/
-
-        public static bool login(Users user)
+        public static Users login(Users user)
         {
             string sql = @"SELECT * FROM users WHERE username = @username AND password = @password";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
-            SqlCeParameter username = new SqlCeParameter("@username", user.Username);
-            command.Parameters.Add(username);
+             SqlCeParameter username = new SqlCeParameter("@username", user.Username);
+             command.Parameters.Add(username);
 
-            SqlCeParameter password = new SqlCeParameter("@password", user.Password);
-            command.Parameters.Add(password);
+             SqlCeParameter password = new SqlCeParameter("@password", user.Password);
+             command.Parameters.Add(password);
 
+             SqlCeParameter role = new SqlCeParameter("@role", user.Role);
+             command.Parameters.Add(role); 
+             
             command.Prepare();
 
-            SqlCeDataReader reader = command.ExecuteReader();
-            
-            //Console.WriteLine(user.Password);
-            //Status(user); 
+            SqlCeDataReader reader = command.ExecuteReader();         
             
             if (reader.Read())
-                return true;
-
-            return false;
+            {
+                user.Role = reader["role"].ToString();
+                //Console.WriteLine(reader["role"]);
+                return user; 
+            }
+            
+            return null;
         }
 
         public static void createUser(Users user)
