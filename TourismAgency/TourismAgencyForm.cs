@@ -31,11 +31,13 @@ namespace TourismAgency
             loginForm.Show();
         }
 
-        private void TravelToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddNewTravelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TravelForm travelform = new TravelForm();
-            travelform.Show();
+            AddNewTravelForm newtravel = new AddNewTravelForm();
+            newtravel.Show();
             this.Hide();
         }
+
+      
     }
 }

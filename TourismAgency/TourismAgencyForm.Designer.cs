@@ -33,6 +33,7 @@
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddNewTravelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TravelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +53,8 @@
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addNewClientToolStripMenuItem,
-            this.LogOutToolStripMenuItem});
+            this.LogOutToolStripMenuItem,
+            this.AddNewTravelToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
@@ -71,12 +73,17 @@
             this.LogOutToolStripMenuItem.Text = "Log out";
             this.LogOutToolStripMenuItem.Click += new System.EventHandler(this.LogOutToolStripMenuItem_Click);
             // 
+            // AddNewTravelToolStripMenuItem
+            // 
+            this.AddNewTravelToolStripMenuItem.Name = "AddNewTravelToolStripMenuItem";
+            this.AddNewTravelToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.AddNewTravelToolStripMenuItem.Text = "Add new travel";
+            this.AddNewTravelToolStripMenuItem.Click += new System.EventHandler(this.AddNewTravelToolStripMenuItem_Click);
+            // 
             // TravelToolStripMenuItem
             // 
             this.TravelToolStripMenuItem.Name = "TravelToolStripMenuItem";
-            this.TravelToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.TravelToolStripMenuItem.Text = "Travel";
-            this.TravelToolStripMenuItem.Click += new System.EventHandler(this.TravelToolStripMenuItem_Click);
+            this.TravelToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
             // 
             // TourismAgencyForm
             // 
@@ -105,5 +112,6 @@
         private System.Windows.Forms.ToolStripMenuItem addNewClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem LogOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TravelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddNewTravelToolStripMenuItem;
     }
 }

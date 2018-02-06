@@ -1,11 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TourismAgency.Models
+namespace TourismAgency
 {
-    public partial class TravelForm : Form
+    public partial class AddNewTravelForm : Form
     {
-        public TravelForm()
+        public AddNewTravelForm()
         {
             InitializeComponent();
         }
@@ -15,6 +22,9 @@ namespace TourismAgency.Models
             this.Close();
             TourismAgencyForm adminForm = new TourismAgencyForm();
             adminForm.Show();
+
         }
+
+      
     }
 }
