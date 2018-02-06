@@ -1,7 +1,6 @@
 ﻿using TourismAgency.Models;
 using System.Data.SqlServerCe;
 using System;
-using System.Windows.Forms;
 
 namespace TourismAgency.Db
 {
@@ -26,12 +25,14 @@ namespace TourismAgency.Db
              
             command.Prepare();
 
-            SqlCeDataReader reader = command.ExecuteReader();         
-            
+            //Console.WriteLine(user.Password);
+
+            SqlCeDataReader reader = command.ExecuteReader();
+
+
             if (reader.Read())
             {
                 user.Role = reader["role"].ToString();
-                //Console.WriteLine(reader["role"]);
                 return user; 
             }
             

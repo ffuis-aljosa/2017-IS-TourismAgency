@@ -23,6 +23,5 @@ namespace TourismAgency
             TourismAgencyForm adminForm = new TourismAgencyForm();
             adminForm.Show(); 
         }
-        
     }
 }
