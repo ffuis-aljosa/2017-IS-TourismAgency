@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewTravelForm));
             this.DestinationLabel = new System.Windows.Forms.Label();
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.StartDateLabel = new System.Windows.Forms.Label();
@@ -46,128 +47,110 @@
             // 
             // DestinationLabel
             // 
-            this.DestinationLabel.AutoSize = true;
-            this.DestinationLabel.Location = new System.Drawing.Point(13, 13);
+            resources.ApplyResources(this.DestinationLabel, "DestinationLabel");
+            this.DestinationLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.DestinationLabel.Name = "DestinationLabel";
-            this.DestinationLabel.Size = new System.Drawing.Size(60, 13);
-            this.DestinationLabel.TabIndex = 0;
-            this.DestinationLabel.Text = "Destination";
             // 
             // DestinationTextBox
             // 
-            this.DestinationTextBox.Location = new System.Drawing.Point(13, 30);
+            this.DestinationTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.DestinationTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.DestinationTextBox, "DestinationTextBox");
+            this.DestinationTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.DestinationTextBox.Name = "DestinationTextBox";
-            this.DestinationTextBox.Size = new System.Drawing.Size(158, 20);
-            this.DestinationTextBox.TabIndex = 1;
             // 
             // StartDateLabel
             // 
-            this.StartDateLabel.AutoSize = true;
-            this.StartDateLabel.Location = new System.Drawing.Point(13, 57);
+            resources.ApplyResources(this.StartDateLabel, "StartDateLabel");
+            this.StartDateLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.StartDateLabel.Name = "StartDateLabel";
-            this.StartDateLabel.Size = new System.Drawing.Size(53, 13);
-            this.StartDateLabel.TabIndex = 2;
-            this.StartDateLabel.Text = "Start date";
             // 
             // StartDateTimePicker
             // 
-            this.StartDateTimePicker.Location = new System.Drawing.Point(13, 74);
+            resources.ApplyResources(this.StartDateTimePicker, "StartDateTimePicker");
+            this.StartDateTimePicker.CalendarForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.StartDateTimePicker.CalendarMonthBackground = System.Drawing.SystemColors.ActiveCaption;
+            this.StartDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.StartDateTimePicker.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.StartDateTimePicker.MinDate = new System.DateTime(2018, 2, 7, 0, 0, 0, 0);
             this.StartDateTimePicker.Name = "StartDateTimePicker";
-            this.StartDateTimePicker.Size = new System.Drawing.Size(158, 20);
-            this.StartDateTimePicker.TabIndex = 3;
             // 
             // FinishDateLabel
             // 
-            this.FinishDateLabel.AutoSize = true;
-            this.FinishDateLabel.Location = new System.Drawing.Point(13, 101);
+            resources.ApplyResources(this.FinishDateLabel, "FinishDateLabel");
+            this.FinishDateLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.FinishDateLabel.Name = "FinishDateLabel";
-            this.FinishDateLabel.Size = new System.Drawing.Size(58, 13);
-            this.FinishDateLabel.TabIndex = 4;
-            this.FinishDateLabel.Text = "Finish date";
             // 
             // FinishDateTimePicker
             // 
-            this.FinishDateTimePicker.Location = new System.Drawing.Point(13, 118);
+            this.FinishDateTimePicker.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.FinishDateTimePicker, "FinishDateTimePicker");
+            this.FinishDateTimePicker.MinDate = new System.DateTime(2018, 2, 7, 0, 0, 0, 0);
             this.FinishDateTimePicker.Name = "FinishDateTimePicker";
-            this.FinishDateTimePicker.Size = new System.Drawing.Size(158, 20);
-            this.FinishDateTimePicker.TabIndex = 5;
             // 
             // NumberOfSeatsLabel
             // 
-            this.NumberOfSeatsLabel.AutoSize = true;
-            this.NumberOfSeatsLabel.Location = new System.Drawing.Point(13, 145);
+            resources.ApplyResources(this.NumberOfSeatsLabel, "NumberOfSeatsLabel");
+            this.NumberOfSeatsLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.NumberOfSeatsLabel.Name = "NumberOfSeatsLabel";
-            this.NumberOfSeatsLabel.Size = new System.Drawing.Size(84, 13);
-            this.NumberOfSeatsLabel.TabIndex = 6;
-            this.NumberOfSeatsLabel.Text = "Number of seats";
             // 
             // NumberOfSeatsComboBox
             // 
+            this.NumberOfSeatsComboBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.NumberOfSeatsComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.NumberOfSeatsComboBox, "NumberOfSeatsComboBox");
+            this.NumberOfSeatsComboBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.NumberOfSeatsComboBox.FormattingEnabled = true;
-            this.NumberOfSeatsComboBox.Location = new System.Drawing.Point(13, 162);
             this.NumberOfSeatsComboBox.Name = "NumberOfSeatsComboBox";
-            this.NumberOfSeatsComboBox.Size = new System.Drawing.Size(158, 21);
-            this.NumberOfSeatsComboBox.TabIndex = 8;
             // 
             // PriceLabel
             // 
-            this.PriceLabel.AutoSize = true;
-            this.PriceLabel.Location = new System.Drawing.Point(13, 186);
+            resources.ApplyResources(this.PriceLabel, "PriceLabel");
+            this.PriceLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.PriceLabel.Name = "PriceLabel";
-            this.PriceLabel.Size = new System.Drawing.Size(31, 13);
-            this.PriceLabel.TabIndex = 9;
-            this.PriceLabel.Text = "Price";
             // 
             // PriceTextBox
             // 
-            this.PriceTextBox.Location = new System.Drawing.Point(13, 203);
+            this.PriceTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.PriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.PriceTextBox, "PriceTextBox");
+            this.PriceTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.PriceTextBox.Name = "PriceTextBox";
-            this.PriceTextBox.Size = new System.Drawing.Size(158, 20);
-            this.PriceTextBox.TabIndex = 10;
             // 
             // TravelListBox
             // 
             this.TravelListBox.FormattingEnabled = true;
-            this.TravelListBox.Location = new System.Drawing.Point(187, 30);
+            resources.ApplyResources(this.TravelListBox, "TravelListBox");
             this.TravelListBox.Name = "TravelListBox";
-            this.TravelListBox.Size = new System.Drawing.Size(284, 381);
-            this.TravelListBox.TabIndex = 11;
             // 
             // TravelLabel
             // 
-            this.TravelLabel.AutoSize = true;
-            this.TravelLabel.Location = new System.Drawing.Point(187, 13);
+            resources.ApplyResources(this.TravelLabel, "TravelLabel");
+            this.TravelLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.TravelLabel.Name = "TravelLabel";
-            this.TravelLabel.Size = new System.Drawing.Size(37, 13);
-            this.TravelLabel.TabIndex = 12;
-            this.TravelLabel.Text = "Travel";
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(13, 388);
+            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.ExitButton, "ExitButton");
+            this.ExitButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(158, 23);
-            this.ExitButton.TabIndex = 13;
-            this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // CreateTravelButton
             // 
-            this.CreateTravelButton.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.CreateTravelButton.Location = new System.Drawing.Point(12, 348);
+            this.CreateTravelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.CreateTravelButton, "CreateTravelButton");
+            this.CreateTravelButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.CreateTravelButton.Name = "CreateTravelButton";
-            this.CreateTravelButton.Size = new System.Drawing.Size(157, 23);
-            this.CreateTravelButton.TabIndex = 14;
-            this.CreateTravelButton.Text = "Create travel";
             this.CreateTravelButton.UseVisualStyleBackColor = true;
-            this.CreateTravelButton.UseWaitCursor = true;
             // 
             // AddNewTravelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 419);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ControlBox = false;
             this.Controls.Add(this.CreateTravelButton);
             this.Controls.Add(this.ExitButton);
@@ -183,16 +166,20 @@
             this.Controls.Add(this.StartDateLabel);
             this.Controls.Add(this.DestinationTextBox);
             this.Controls.Add(this.DestinationLabel);
-            this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.HelpButton = true;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddNewTravelForm";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Tag = "";
             this.TopMost = true;
-            this.UseWaitCursor = true;
+            this.TransparencyKey = System.Drawing.Color.Black;
             this.ResumeLayout(false);
             this.PerformLayout();
 
