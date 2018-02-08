@@ -52,9 +52,9 @@
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddNewTravelToolStripMenuItem,
             this.addNewClientToolStripMenuItem,
-            this.LogOutToolStripMenuItem,
-            this.AddNewTravelToolStripMenuItem});
+            this.LogOutToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";

@@ -153,13 +153,13 @@
     <value>Verdana, 12pt</value>
   </data>
   <data name="DestinationTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 41</value>
+    <value>12, 37</value>
   </data>
   <data name="DestinationTextBox.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="DestinationTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 20</value>
+    <value>158, 24</value>
   </data>
   <data name="DestinationTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -213,11 +213,14 @@
   <data name="StartDateTimePicker.CalendarFont" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
   </data>
+  <data name="StartDateTimePicker.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
   <data name="StartDateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 85</value>
+    <value>12, 85</value>
   </data>
   <data name="StartDateTimePicker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 20</value>
+    <value>158, 27</value>
   </data>
   <data name="StartDateTimePicker.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -241,7 +244,7 @@
     <value>Verdana, 12pt, style=Italic</value>
   </data>
   <data name="FinishDateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 108</value>
+    <value>13, 115</value>
   </data>
   <data name="FinishDateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 18</value>
@@ -264,11 +267,14 @@
   <data name="&gt;&gt;FinishDateLabel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="FinishDateTimePicker.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
   <data name="FinishDateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 129</value>
+    <value>11, 136</value>
   </data>
   <data name="FinishDateTimePicker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 20</value>
+    <value>158, 27</value>
   </data>
   <data name="FinishDateTimePicker.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -292,7 +298,7 @@
     <value>Verdana, 12pt, style=Italic</value>
   </data>
   <data name="NumberOfSeatsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 152</value>
+    <value>13, 166</value>
   </data>
   <data name="NumberOfSeatsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 18</value>
@@ -319,7 +325,7 @@
     <value>Verdana, 12pt</value>
   </data>
   <data name="NumberOfSeatsComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 173</value>
+    <value>11, 187</value>
   </data>
   <data name="NumberOfSeatsComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 26</value>
@@ -346,7 +352,7 @@
     <value>Verdana, 12pt, style=Italic</value>
   </data>
   <data name="PriceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 202</value>
+    <value>13, 216</value>
   </data>
   <data name="PriceLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
@@ -373,7 +379,7 @@
     <value>Verdana, 12pt</value>
   </data>
   <data name="PriceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 223</value>
+    <value>12, 237</value>
   </data>
   <data name="PriceTextBox.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -400,7 +406,7 @@
     <value>4</value>
   </data>
   <data name="TravelListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 30</value>
+    <value>190, 37</value>
   </data>
   <data name="TravelListBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 368</value>
@@ -454,7 +460,7 @@
     <value>Verdana, 12pt</value>
   </data>
   <data name="ExitButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 366</value>
+    <value>12, 373</value>
   </data>
   <data name="ExitButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 32</value>
@@ -481,7 +487,7 @@
     <value>Verdana, 12pt</value>
   </data>
   <data name="CreateTravelButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 322</value>
+    <value>11, 334</value>
   </data>
   <data name="CreateTravelButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 33</value>

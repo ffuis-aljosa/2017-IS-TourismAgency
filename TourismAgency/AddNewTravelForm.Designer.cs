@@ -72,8 +72,10 @@
             this.StartDateTimePicker.CalendarMonthBackground = System.Drawing.SystemColors.ActiveCaption;
             this.StartDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.StartDateTimePicker.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.StartDateTimePicker.MinDate = new System.DateTime(2018, 2, 7, 0, 0, 0, 0);
+            this.StartDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.StartDateTimePicker.MinDate = new System.DateTime(2018, 2, 8, 0, 0, 0, 0);
             this.StartDateTimePicker.Name = "StartDateTimePicker";
+            this.StartDateTimePicker.Value = new System.DateTime(2018, 2, 8, 18, 37, 15, 0);
             // 
             // FinishDateLabel
             // 
@@ -85,8 +87,10 @@
             // 
             this.FinishDateTimePicker.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.FinishDateTimePicker, "FinishDateTimePicker");
-            this.FinishDateTimePicker.MinDate = new System.DateTime(2018, 2, 7, 0, 0, 0, 0);
+            this.FinishDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FinishDateTimePicker.MinDate = new System.DateTime(2018, 2, 8, 18, 39, 17, 0);
             this.FinishDateTimePicker.Name = "FinishDateTimePicker";
+            this.FinishDateTimePicker.Value = new System.DateTime(2018, 2, 8, 18, 39, 17, 0);
             // 
             // NumberOfSeatsLabel
             // 
