@@ -16,12 +16,6 @@ namespace TourismAgency
             Application.Exit(); 
         }
 
-        private void addNewClientToolStripMenuItem_Click(object sender, EventArgs e)
-        { 
-            CreateUserForm createUser = new CreateUserForm();
-            createUser.Show();
-            this.Hide();
-        }
 
         private void LogOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -38,6 +32,11 @@ namespace TourismAgency
             this.Hide();
         }
 
-      
+        private void AddNewClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateUserForm createUser = new CreateUserForm();
+            createUser.Show();
+            this.Hide();
+        }
     }
 }
