@@ -62,7 +62,7 @@ namespace TourismAgency.Models
 
                 if (string.IsNullOrEmpty(value))
 
-                    throw new Exception("Destination can not be empty");
+                    throw new Exception("Destination can't be empty");
 
 
                 destination = value;
@@ -77,7 +77,8 @@ namespace TourismAgency.Models
             }
             set
             {
-
+                if (start_date < DateTime.Now)
+                    throw new Exception("Start date can't be lower than current time");
                 start_date = value;
 
             }
@@ -91,7 +92,10 @@ namespace TourismAgency.Models
             }
             set
             {
-
+                if (finish_date < DateTime.Now)
+                    throw new Exception("Finish date can't be lower than current time");
+                else if (finish_date < start_date)
+                    throw new Exception("Finish date can't be lower than start date");
                 finish_date = value;
 
             }
@@ -122,7 +126,7 @@ namespace TourismAgency.Models
             {
                 if (price < 0)
                     throw new Exception("The price must be higher than zero");
-                price= value;
+                price = value;
 
             }
 
