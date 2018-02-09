@@ -31,24 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TourismAgencyForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddNewTravelToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewClientToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.LogOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TravelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TravelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddNewTravelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddNewClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EnterTheDestinationTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SelectADateLabel = new System.Windows.Forms.Label();
             this.SelectADateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SearchButton = new System.Windows.Forms.Button();
-            this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -68,27 +63,15 @@
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddNewTravelToolStripMenuItem1,
-            this.addNewClientToolStripMenuItem1,
             this.LogOutToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
-            // AddNewTravelToolStripMenuItem1
-            // 
-            this.AddNewTravelToolStripMenuItem1.Name = "AddNewTravelToolStripMenuItem1";
-            this.AddNewTravelToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
-            // 
-            // addNewClientToolStripMenuItem1
-            // 
-            this.addNewClientToolStripMenuItem1.Name = "addNewClientToolStripMenuItem1";
-            this.addNewClientToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
-            // 
             // LogOutToolStripMenuItem
             // 
             this.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem";
-            this.LogOutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.LogOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.LogOutToolStripMenuItem.Text = "Log out";
             this.LogOutToolStripMenuItem.Click += new System.EventHandler(this.LogOutToolStripMenuItem_Click);
             // 
@@ -127,9 +110,16 @@
             this.AddNewClientToolStripMenuItem.Text = "Add new client";
             this.AddNewClientToolStripMenuItem.Click += new System.EventHandler(this.AddNewClientToolStripMenuItem_Click);
             // 
+            // HelpToolStripMenuItem
+            // 
+            this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.HelpToolStripMenuItem.Text = "Help";
+            // 
             // EnterTheDestinationTextBox
             // 
             this.EnterTheDestinationTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.EnterTheDestinationTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EnterTheDestinationTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.EnterTheDestinationTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.EnterTheDestinationTextBox.Location = new System.Drawing.Point(12, 58);
@@ -178,34 +168,7 @@
             this.SearchButton.Size = new System.Drawing.Size(180, 46);
             this.SearchButton.TabIndex = 6;
             this.SearchButton.Text = "Search";
-            this.SearchButton.UseVisualStyleBackColor = false;
-            // 
-            // HelpToolStripMenuItem
-            // 
-            this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.HelpToolStripMenuItem.Text = "Help";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(198, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(443, 318);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(317, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 38);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Travel turs";
+            this.SearchButton.UseVisualStyleBackColor = true;
             // 
             // TourismAgencyForm
             // 
@@ -213,8 +176,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(641, 354);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.SelectADateDateTimePicker);
             this.Controls.Add(this.SelectADateLabel);
@@ -231,7 +192,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TourismAgencyForm_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,10 +200,8 @@
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewClientToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem LogOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TravelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem AddNewTravelToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem TravelsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddNewTravelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ClientToolStripMenuItem;
@@ -254,7 +212,5 @@
         private System.Windows.Forms.DateTimePicker SelectADateDateTimePicker;
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
     }
 }
