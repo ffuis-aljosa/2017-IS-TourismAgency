@@ -56,7 +56,7 @@
             this.HelpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(641, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(754, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,7 +71,7 @@
             // LogOutToolStripMenuItem
             // 
             this.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem";
-            this.LogOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.LogOutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.LogOutToolStripMenuItem.Text = "Log out";
             this.LogOutToolStripMenuItem.Click += new System.EventHandler(this.LogOutToolStripMenuItem_Click);
             // 
@@ -121,7 +121,7 @@
             this.EnterTheDestinationTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.EnterTheDestinationTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EnterTheDestinationTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.EnterTheDestinationTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.EnterTheDestinationTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.EnterTheDestinationTextBox.Location = new System.Drawing.Point(12, 58);
             this.EnterTheDestinationTextBox.Name = "EnterTheDestinationTextBox";
             this.EnterTheDestinationTextBox.Size = new System.Drawing.Size(180, 27);
@@ -175,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(641, 354);
+            this.ClientSize = new System.Drawing.Size(754, 440);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.SelectADateDateTimePicker);
             this.Controls.Add(this.SelectADateLabel);
@@ -183,9 +183,9 @@
             this.Controls.Add(this.EnterTheDestinationTextBox);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
             this.Name = "TourismAgencyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "\"Tourism Agency\"";

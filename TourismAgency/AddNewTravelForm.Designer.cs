@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewTravelForm));
             this.DestinationLabel = new System.Windows.Forms.Label();
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.StartDateLabel = new System.Windows.Forms.Label();
@@ -60,7 +61,7 @@
             this.DestinationTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.DestinationTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DestinationTextBox.Font = new System.Drawing.Font("Verdana", 12F);
-            this.DestinationTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.DestinationTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DestinationTextBox.Location = new System.Drawing.Point(14, 37);
             this.DestinationTextBox.Multiline = true;
             this.DestinationTextBox.Name = "DestinationTextBox";
@@ -162,7 +163,7 @@
             this.PriceTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.PriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PriceTextBox.Font = new System.Drawing.Font("Verdana", 12F);
-            this.PriceTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.PriceTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.PriceTextBox.Location = new System.Drawing.Point(14, 237);
             this.PriceTextBox.Multiline = true;
             this.PriceTextBox.Name = "PriceTextBox";
@@ -173,10 +174,12 @@
             // 
             this.TravelListBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.TravelListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TravelListBox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TravelListBox.FormattingEnabled = true;
+            this.TravelListBox.ItemHeight = 16;
             this.TravelListBox.Location = new System.Drawing.Point(222, 37);
             this.TravelListBox.Name = "TravelListBox";
-            this.TravelListBox.Size = new System.Drawing.Size(323, 366);
+            this.TravelListBox.Size = new System.Drawing.Size(323, 354);
             this.TravelListBox.TabIndex = 11;
             // 
             // TravelLabel
@@ -239,12 +242,12 @@
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddNewTravelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "";
-            this.TransparencyKey = System.Drawing.Color.White;
             this.ResumeLayout(false);
             this.PerformLayout();
 

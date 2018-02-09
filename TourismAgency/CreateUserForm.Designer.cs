@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateUserForm));
             this.CreateUserLabel = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -117,7 +118,7 @@
             this.FirstNameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.FirstNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FirstNameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.FirstNameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FirstNameTextBox.Location = new System.Drawing.Point(35, 126);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(185, 27);
@@ -128,7 +129,7 @@
             this.LastNameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.LastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LastNameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.LastNameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LastNameTextBox.Location = new System.Drawing.Point(252, 126);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(185, 27);
@@ -184,7 +185,7 @@
             this.EmailTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EmailTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.EmailTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.EmailTextBox.Location = new System.Drawing.Point(251, 177);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(185, 27);
@@ -218,7 +219,7 @@
             this.PassportTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.PassportTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PassportTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PassportTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.PassportTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.PassportTextBox.Location = new System.Drawing.Point(35, 228);
             this.PassportTextBox.Name = "PassportTextBox";
             this.PassportTextBox.Size = new System.Drawing.Size(185, 27);
@@ -229,7 +230,7 @@
             this.CityTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.CityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CityTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CityTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.CityTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CityTextBox.Location = new System.Drawing.Point(252, 228);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(185, 27);
@@ -252,7 +253,7 @@
             this.CountryTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.CountryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CountryTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CountryTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.CountryTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CountryTextBox.Location = new System.Drawing.Point(35, 279);
             this.CountryTextBox.Name = "CountryTextBox";
             this.CountryTextBox.Size = new System.Drawing.Size(185, 27);
@@ -274,7 +275,7 @@
             this.TelephoneTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.TelephoneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TelephoneTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelephoneTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.TelephoneTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TelephoneTextBox.Location = new System.Drawing.Point(251, 279);
             this.TelephoneTextBox.Name = "TelephoneTextBox";
             this.TelephoneTextBox.Size = new System.Drawing.Size(185, 27);
@@ -320,6 +321,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
