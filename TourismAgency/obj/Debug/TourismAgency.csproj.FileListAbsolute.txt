@@ -105,3 +105,4 @@ C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\Tourism
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewTravelForm.resources
 C:\Users\Finch\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewTravelForm.resources
 C:\Users\Finch\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.WelcomeForm.resources
+C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.WelcomeForm.resources
