@@ -131,6 +131,13 @@ namespace TourismAgency.Models
             }
 
         }
+        public override string ToString()
+
+        {
+
+            return " Ruta:" + destination + " Polazak: " + start_date + " Povratak: " + finish_date + " Broj mjesta: " + number_of_seats + " Cijena: " + price + " KM";
+
+        }
 
     }
 
