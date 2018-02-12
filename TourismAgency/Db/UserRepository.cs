@@ -41,8 +41,8 @@ namespace TourismAgency.Db
 
         public static void createUser(Users user)
         {
-            string sql = "INSERT INTO users(username, password) VALUES"
-                + "(@username, @password)";
+            string sql = "INSERT INTO users(username, password, role, first_name, last_name, date_of_birth, e_mail, passport_number, country, city, adress, phone_number) VALUES"
+                + "(@username, @password, @role, @first_name, @last_name, @date_of_birth, @e_mail, @passport_number, @country, @city, @adress, @phone_number)";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
@@ -51,6 +51,9 @@ namespace TourismAgency.Db
 
             SqlCeParameter password = new SqlCeParameter("@password", user.Password);
             command.Parameters.Add(password);
+
+            SqlCeParameter role = new SqlCeParameter("@role", user.Role);
+            command.Parameters.Add(role); 
 
             command.Prepare();
 

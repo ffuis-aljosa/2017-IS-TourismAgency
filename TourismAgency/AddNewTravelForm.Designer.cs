@@ -131,11 +131,11 @@
             // 
             // NumberOfSeatsComboBox
             // 
-            this.NumberOfSeatsComboBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.NumberOfSeatsComboBox.BackColor = System.Drawing.SystemColors.Window;
             this.NumberOfSeatsComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NumberOfSeatsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NumberOfSeatsComboBox.Font = new System.Drawing.Font("Verdana", 12F);
-            this.NumberOfSeatsComboBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.NumberOfSeatsComboBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.NumberOfSeatsComboBox.FormattingEnabled = true;
             this.NumberOfSeatsComboBox.Items.AddRange(new object[] {
             "28",

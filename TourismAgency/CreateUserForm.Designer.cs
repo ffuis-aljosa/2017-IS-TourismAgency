@@ -46,12 +46,22 @@
             this.EmailLabel = new System.Windows.Forms.Label();
             this.PassportNumberLabel = new System.Windows.Forms.Label();
             this.PassportTextBox = new System.Windows.Forms.TextBox();
-            this.CityTextBox = new System.Windows.Forms.TextBox();
             this.CityLabel = new System.Windows.Forms.Label();
-            this.CountryTextBox = new System.Windows.Forms.TextBox();
             this.CountryLabel = new System.Windows.Forms.Label();
-            this.TelephoneTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.PhoneLabel = new System.Windows.Forms.Label();
+            this.AdressLabel = new System.Windows.Forms.Label();
+            this.CountryTextBox = new System.Windows.Forms.TextBox();
+            this.CityTextBox = new System.Windows.Forms.TextBox();
+            this.AdressTextBox = new System.Windows.Forms.TextBox();
+            this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.UsernameTextBox = new System.Windows.Forms.TextBox();
+            this.UsernameLabel = new System.Windows.Forms.Label();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.RepeatPasswordLabel = new System.Windows.Forms.Label();
+            this.RepeatPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.RoleComboBox = new System.Windows.Forms.ComboBox();
+            this.RoleLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CreateUserLabel
@@ -70,7 +80,7 @@
             this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Size = new System.Drawing.Size(473, 471);
+            this.shapeContainer1.Size = new System.Drawing.Size(473, 563);
             this.shapeContainer1.TabIndex = 12;
             this.shapeContainer1.TabStop = false;
             // 
@@ -95,17 +105,18 @@
             // CreateButton
             // 
             this.CreateButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateButton.Location = new System.Drawing.Point(67, 378);
+            this.CreateButton.Location = new System.Drawing.Point(67, 501);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(153, 50);
             this.CreateButton.TabIndex = 5;
             this.CreateButton.Text = "Create user";
             this.CreateButton.UseVisualStyleBackColor = true;
+            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
             // ExitButton
             // 
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.Location = new System.Drawing.Point(252, 378);
+            this.ExitButton.Location = new System.Drawing.Point(252, 501);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(150, 50);
             this.ExitButton.TabIndex = 6;
@@ -225,28 +236,49 @@
             this.PassportTextBox.Size = new System.Drawing.Size(185, 27);
             this.PassportTextBox.TabIndex = 29;
             // 
-            // CityTextBox
-            // 
-            this.CityTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.CityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CityTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CityTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CityTextBox.Location = new System.Drawing.Point(252, 228);
-            this.CityTextBox.Name = "CityTextBox";
-            this.CityTextBox.Size = new System.Drawing.Size(185, 27);
-            this.CityTextBox.TabIndex = 30;
-            this.CityTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // CityLabel
             // 
             this.CityLabel.AutoSize = true;
             this.CityLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CityLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.CityLabel.Location = new System.Drawing.Point(396, 207);
+            this.CityLabel.Location = new System.Drawing.Point(32, 258);
             this.CityLabel.Name = "CityLabel";
             this.CityLabel.Size = new System.Drawing.Size(40, 18);
             this.CityLabel.TabIndex = 31;
             this.CityLabel.Text = "City";
+            // 
+            // CountryLabel
+            // 
+            this.CountryLabel.AutoSize = true;
+            this.CountryLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountryLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.CountryLabel.Location = new System.Drawing.Point(365, 207);
+            this.CountryLabel.Name = "CountryLabel";
+            this.CountryLabel.Size = new System.Drawing.Size(71, 18);
+            this.CountryLabel.TabIndex = 33;
+            this.CountryLabel.Text = "Country";
+            // 
+            // PhoneLabel
+            // 
+            this.PhoneLabel.AutoSize = true;
+            this.PhoneLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.PhoneLabel.Location = new System.Drawing.Point(32, 309);
+            this.PhoneLabel.Name = "PhoneLabel";
+            this.PhoneLabel.Size = new System.Drawing.Size(125, 18);
+            this.PhoneLabel.TabIndex = 35;
+            this.PhoneLabel.Text = "Phone number";
+            // 
+            // AdressLabel
+            // 
+            this.AdressLabel.AutoSize = true;
+            this.AdressLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdressLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.AdressLabel.Location = new System.Drawing.Point(373, 258);
+            this.AdressLabel.Name = "AdressLabel";
+            this.AdressLabel.Size = new System.Drawing.Size(63, 18);
+            this.AdressLabel.TabIndex = 36;
+            this.AdressLabel.Text = "Adress";
             // 
             // CountryTextBox
             // 
@@ -254,57 +286,161 @@
             this.CountryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CountryTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CountryTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CountryTextBox.Location = new System.Drawing.Point(35, 279);
+            this.CountryTextBox.Location = new System.Drawing.Point(251, 228);
             this.CountryTextBox.Name = "CountryTextBox";
             this.CountryTextBox.Size = new System.Drawing.Size(185, 27);
-            this.CountryTextBox.TabIndex = 32;
+            this.CountryTextBox.TabIndex = 37;
+            this.CountryTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // CountryLabel
+            // CityTextBox
             // 
-            this.CountryLabel.AutoSize = true;
-            this.CountryLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CountryLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.CountryLabel.Location = new System.Drawing.Point(32, 258);
-            this.CountryLabel.Name = "CountryLabel";
-            this.CountryLabel.Size = new System.Drawing.Size(71, 18);
-            this.CountryLabel.TabIndex = 33;
-            this.CountryLabel.Text = "Country";
+            this.CityTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.CityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CityTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CityTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.CityTextBox.Location = new System.Drawing.Point(35, 279);
+            this.CityTextBox.Name = "CityTextBox";
+            this.CityTextBox.Size = new System.Drawing.Size(185, 27);
+            this.CityTextBox.TabIndex = 38;
             // 
-            // TelephoneTextBox
+            // AdressTextBox
             // 
-            this.TelephoneTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.TelephoneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TelephoneTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelephoneTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TelephoneTextBox.Location = new System.Drawing.Point(251, 279);
-            this.TelephoneTextBox.Name = "TelephoneTextBox";
-            this.TelephoneTextBox.Size = new System.Drawing.Size(185, 27);
-            this.TelephoneTextBox.TabIndex = 34;
-            this.TelephoneTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.AdressTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.AdressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AdressTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdressTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.AdressTextBox.Location = new System.Drawing.Point(252, 279);
+            this.AdressTextBox.Name = "AdressTextBox";
+            this.AdressTextBox.Size = new System.Drawing.Size(185, 27);
+            this.AdressTextBox.TabIndex = 39;
+            this.AdressTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label1
+            // PhoneNumberTextBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(276, 258);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 18);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Telephone number";
+            this.PhoneNumberTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.PhoneNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PhoneNumberTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumberTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(35, 330);
+            this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
+            this.PhoneNumberTextBox.Size = new System.Drawing.Size(185, 27);
+            this.PhoneNumberTextBox.TabIndex = 40;
+            // 
+            // UsernameTextBox
+            // 
+            this.UsernameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UsernameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.UsernameTextBox.Location = new System.Drawing.Point(252, 330);
+            this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.Size = new System.Drawing.Size(185, 27);
+            this.UsernameTextBox.TabIndex = 41;
+            this.UsernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // UsernameLabel
+            // 
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.UsernameLabel.Location = new System.Drawing.Point(342, 309);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(90, 18);
+            this.UsernameLabel.TabIndex = 42;
+            this.UsernameLabel.Text = "Username";
+            // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PasswordTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PasswordTextBox.Location = new System.Drawing.Point(35, 381);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(185, 27);
+            this.PasswordTextBox.TabIndex = 43;
+            // 
+            // PasswordLabel
+            // 
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.PasswordLabel.Location = new System.Drawing.Point(32, 360);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(86, 18);
+            this.PasswordLabel.TabIndex = 44;
+            this.PasswordLabel.Text = "Password";
+            // 
+            // RepeatPasswordLabel
+            // 
+            this.RepeatPasswordLabel.AutoSize = true;
+            this.RepeatPasswordLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RepeatPasswordLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.RepeatPasswordLabel.Location = new System.Drawing.Point(287, 360);
+            this.RepeatPasswordLabel.Name = "RepeatPasswordLabel";
+            this.RepeatPasswordLabel.Size = new System.Drawing.Size(150, 18);
+            this.RepeatPasswordLabel.TabIndex = 45;
+            this.RepeatPasswordLabel.Text = "Repeat password";
+            // 
+            // RepeatPasswordTextBox
+            // 
+            this.RepeatPasswordTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.RepeatPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RepeatPasswordTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RepeatPasswordTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.RepeatPasswordTextBox.Location = new System.Drawing.Point(252, 381);
+            this.RepeatPasswordTextBox.Name = "RepeatPasswordTextBox";
+            this.RepeatPasswordTextBox.Size = new System.Drawing.Size(185, 27);
+            this.RepeatPasswordTextBox.TabIndex = 46;
+            this.RepeatPasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // RoleComboBox
+            // 
+            this.RoleComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RoleComboBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoleComboBox.FormattingEnabled = true;
+            this.RoleComboBox.Items.AddRange(new object[] {
+            "Admin",
+            "Client"});
+            this.RoleComboBox.Location = new System.Drawing.Point(35, 432);
+            this.RoleComboBox.MaxDropDownItems = 2;
+            this.RoleComboBox.Name = "RoleComboBox";
+            this.RoleComboBox.Size = new System.Drawing.Size(185, 26);
+            this.RoleComboBox.TabIndex = 47;
+            // 
+            // RoleLabel
+            // 
+            this.RoleLabel.AutoSize = true;
+            this.RoleLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoleLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.RoleLabel.Location = new System.Drawing.Point(32, 411);
+            this.RoleLabel.Name = "RoleLabel";
+            this.RoleLabel.Size = new System.Drawing.Size(44, 18);
+            this.RoleLabel.TabIndex = 48;
+            this.RoleLabel.Text = "Role";
             // 
             // CreateUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(473, 471);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.TelephoneTextBox);
-            this.Controls.Add(this.CountryLabel);
-            this.Controls.Add(this.CountryTextBox);
-            this.Controls.Add(this.CityLabel);
+            this.ClientSize = new System.Drawing.Size(473, 563);
+            this.Controls.Add(this.RoleLabel);
+            this.Controls.Add(this.RoleComboBox);
+            this.Controls.Add(this.RepeatPasswordTextBox);
+            this.Controls.Add(this.RepeatPasswordLabel);
+            this.Controls.Add(this.PasswordLabel);
+            this.Controls.Add(this.PasswordTextBox);
+            this.Controls.Add(this.UsernameLabel);
+            this.Controls.Add(this.UsernameTextBox);
+            this.Controls.Add(this.PhoneNumberTextBox);
+            this.Controls.Add(this.AdressTextBox);
             this.Controls.Add(this.CityTextBox);
+            this.Controls.Add(this.CountryTextBox);
+            this.Controls.Add(this.AdressLabel);
+            this.Controls.Add(this.PhoneLabel);
+            this.Controls.Add(this.CountryLabel);
+            this.Controls.Add(this.CityLabel);
             this.Controls.Add(this.PassportTextBox);
             this.Controls.Add(this.PassportNumberLabel);
             this.Controls.Add(this.EmailLabel);
@@ -351,11 +487,21 @@
         private System.Windows.Forms.Label EmailLabel;
         private System.Windows.Forms.Label PassportNumberLabel;
         private System.Windows.Forms.TextBox PassportTextBox;
-        private System.Windows.Forms.TextBox CityTextBox;
         private System.Windows.Forms.Label CityLabel;
-        private System.Windows.Forms.TextBox CountryTextBox;
         private System.Windows.Forms.Label CountryLabel;
-        private System.Windows.Forms.TextBox TelephoneTextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label PhoneLabel;
+        private System.Windows.Forms.Label AdressLabel;
+        private System.Windows.Forms.TextBox CountryTextBox;
+        private System.Windows.Forms.TextBox CityTextBox;
+        private System.Windows.Forms.TextBox AdressTextBox;
+        private System.Windows.Forms.TextBox PhoneNumberTextBox;
+        private System.Windows.Forms.TextBox UsernameTextBox;
+        private System.Windows.Forms.Label UsernameLabel;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.Label PasswordLabel;
+        private System.Windows.Forms.Label RepeatPasswordLabel;
+        private System.Windows.Forms.TextBox RepeatPasswordTextBox;
+        private System.Windows.Forms.ComboBox RoleComboBox;
+        private System.Windows.Forms.Label RoleLabel;
     }
 }
