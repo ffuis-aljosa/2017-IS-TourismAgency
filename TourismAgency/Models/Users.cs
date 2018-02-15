@@ -27,11 +27,10 @@ namespace TourismAgency.Models
             Password = password; 
         }
 
-        public Users(string username, string password, string role, string first_name, string last_name, DateTime date_of_birth, string email, string passport_number, string country, string city, string adress, int phone_number)
+        public Users(string username, string password, string first_name, string last_name, DateTime date_of_birth, string email, string passport_number, string country, string city, string adress, int phone_number)
         {
             Username = username;
             Password = password;
-            Role = role;
             First_name = first_name;
             Last_name = last_name;
             Date_of_birth = date_of_birth;

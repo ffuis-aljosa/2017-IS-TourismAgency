@@ -26,14 +26,13 @@ namespace TourismAgency
                 if (PasswordTextBox.Text != RepeatPasswordTextBox.Text)
                     throw new Exception("Password and repeated password are not same!");
 
-                Users user = new Users(UsernameTextBox.Text, PasswordTextBox.Text, RoleComboBox.Text, FirstNameTextBox.Text, LastNameTextBox.Text, BirthDateTimePicker.Value.Date, EmailTextBox.Text, PassportTextBox.Text, CountryTextBox.Text, CityTextBox.Text, AdressTextBox.Text, Convert.ToInt16(PhoneNumberTextBox));
+                Users user = new Users(UsernameTextBox.Text, PasswordTextBox.Text, FirstNameTextBox.Text, LastNameTextBox.Text, BirthDateTimePicker.Value.Date, EmailTextBox.Text, PassportTextBox.Text, CountryTextBox.Text, CityTextBox.Text, AdressTextBox.Text, Convert.ToInt16(PhoneNumberTextBox));
 
                 UserRepository.createUser(user);
 
                 UsernameTextBox.Text = "";
                 PasswordTextBox.Text = "";
                 RepeatPasswordTextBox.Text = "";
-                RoleComboBox.Text = "";
                 FirstNameTextBox.Text = "";
                 LastNameTextBox.Text = "";
                 EmailTextBox.Text = "";
