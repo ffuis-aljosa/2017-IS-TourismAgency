@@ -135,7 +135,7 @@ namespace TourismAgency.Models
 
         {
 
-            return " Ruta:" + destination + " Polazak: " + start_date + " Povratak: " + finish_date + " Broj mjesta: " + number_of_seats + " Cijena: " + price + " KM";
+            return  destination + "  " + start_date + "  " + finish_date + "  " + number_of_seats + "  " + price + " KM";
 
         }
 

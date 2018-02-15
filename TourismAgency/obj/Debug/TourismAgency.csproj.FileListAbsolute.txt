@@ -93,7 +93,6 @@ C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\bin\Debug\EntityF
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\bin\Debug\EntityFramework.SqlServerCompact.xml
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.csprojResolveAssemblyReference.cache
-C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.CreateUserForm.resources
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.LoginForm.resources
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.Properties.Resources.resources
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.csproj.GenerateResource.Cache
@@ -101,7 +100,6 @@ C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\Tourism
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.exe
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.pdb
 C:\Users\Finch\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.TourismAgencyForm.resources
-C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.TourismAgencyForm.resources
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewTravelForm.resources
 C:\Users\Finch\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewTravelForm.resources
 C:\Users\Finch\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.WelcomeForm.resources
@@ -128,3 +126,6 @@ C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\Touris
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.pdb
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AdminTourismAgencyForm.resources
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewAdminForm.resources
+C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewAdminForm.resources
+C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewClientForm.resources
+C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AdminTourismAgencyForm.resources
