@@ -34,7 +34,7 @@ namespace TourismAgency
 
         private void AddNewClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreateUserForm createUser = new CreateUserForm();
+            AddNewAdminForm createUser = new AddNewAdminForm();
             createUser.Show();
             this.Hide();
         }

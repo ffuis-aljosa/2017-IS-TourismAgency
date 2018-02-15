@@ -1,6 +1,6 @@
 ﻿namespace TourismAgency
 {
-    partial class CreateUserForm
+    partial class AddNewAdminForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateUserForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewAdminForm));
             this.CreateUserLabel = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();

@@ -136,6 +136,7 @@
             // RegisterLabel
             // 
             this.RegisterLabel.AutoSize = true;
+            this.RegisterLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RegisterLabel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.RegisterLabel.Location = new System.Drawing.Point(45, 245);
@@ -143,6 +144,7 @@
             this.RegisterLabel.Size = new System.Drawing.Size(277, 14);
             this.RegisterLabel.TabIndex = 6;
             this.RegisterLabel.Text = "If you don\'t have an account, register here";
+            this.RegisterLabel.Click += new System.EventHandler(this.RegisterLabel_Click);
             // 
             // LoginForm
             // 
@@ -164,7 +166,6 @@
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 

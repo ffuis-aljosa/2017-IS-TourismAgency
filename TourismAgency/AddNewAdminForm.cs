@@ -5,9 +5,9 @@ using TourismAgency.Db;
 
 namespace TourismAgency
 {
-    public partial class CreateUserForm : Form
+    public partial class AddNewAdminForm : Form
     {
-        public CreateUserForm()
+        public AddNewAdminForm()
         {
             InitializeComponent();
         }

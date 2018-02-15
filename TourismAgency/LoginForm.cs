@@ -67,5 +67,12 @@ namespace TourismAgency
         {
             Show();
         }
+
+        private void RegisterLabel_Click(object sender, EventArgs e)
+        {
+            AddNewClientForm clientForm = new AddNewClientForm();
+            clientForm.Show();
+            this.Hide(); 
+        }
     }
 }

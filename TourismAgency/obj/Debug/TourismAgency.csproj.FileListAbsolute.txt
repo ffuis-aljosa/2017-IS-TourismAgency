@@ -119,7 +119,6 @@ C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\bin\Debug\Entity
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.csprojResolveAssemblyReference.cache
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewTravelForm.resources
-C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.CreateUserForm.resources
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.LoginForm.resources
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.Properties.Resources.resources
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.WelcomeForm.resources
@@ -128,3 +127,4 @@ C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\Touris
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.exe
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.pdb
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AdminTourismAgencyForm.resources
+C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewAdminForm.resources
