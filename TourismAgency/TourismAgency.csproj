@@ -83,6 +83,12 @@
     <Compile Include="AddNewTravelForm.Designer.cs">
       <DependentUpon>AddNewTravelForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientTourismAgencyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientTourismAgencyForm.Designer.cs">
+      <DependentUpon>ClientTourismAgencyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
