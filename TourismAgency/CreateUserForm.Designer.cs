@@ -60,8 +60,6 @@
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.RepeatPasswordLabel = new System.Windows.Forms.Label();
             this.RepeatPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.RoleComboBox = new System.Windows.Forms.ComboBox();
-            this.RoleLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CreateUserLabel
@@ -80,7 +78,7 @@
             this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Size = new System.Drawing.Size(473, 563);
+            this.shapeContainer1.Size = new System.Drawing.Size(473, 513);
             this.shapeContainer1.TabIndex = 12;
             this.shapeContainer1.TabStop = false;
             // 
@@ -105,9 +103,9 @@
             // CreateButton
             // 
             this.CreateButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateButton.Location = new System.Drawing.Point(67, 501);
+            this.CreateButton.Location = new System.Drawing.Point(35, 451);
             this.CreateButton.Name = "CreateButton";
-            this.CreateButton.Size = new System.Drawing.Size(153, 50);
+            this.CreateButton.Size = new System.Drawing.Size(185, 50);
             this.CreateButton.TabIndex = 5;
             this.CreateButton.Text = "Create user";
             this.CreateButton.UseVisualStyleBackColor = true;
@@ -116,9 +114,9 @@
             // ExitButton
             // 
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.Location = new System.Drawing.Point(252, 501);
+            this.ExitButton.Location = new System.Drawing.Point(251, 451);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(150, 50);
+            this.ExitButton.Size = new System.Drawing.Size(185, 50);
             this.ExitButton.TabIndex = 6;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -150,8 +148,9 @@
             // BirthDateTimePicker
             // 
             this.BirthDateTimePicker.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirthDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.BirthDateTimePicker.Location = new System.Drawing.Point(35, 177);
-            this.BirthDateTimePicker.MaxDate = new System.DateTime(2018, 12, 31, 0, 0, 0, 0);
+            this.BirthDateTimePicker.MaxDate = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
             this.BirthDateTimePicker.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.BirthDateTimePicker.Name = "BirthDateTimePicker";
             this.BirthDateTimePicker.Size = new System.Drawing.Size(185, 27);
@@ -394,39 +393,12 @@
             this.RepeatPasswordTextBox.TabIndex = 46;
             this.RepeatPasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // RoleComboBox
-            // 
-            this.RoleComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.RoleComboBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoleComboBox.FormattingEnabled = true;
-            this.RoleComboBox.Items.AddRange(new object[] {
-            "Admin",
-            "Client"});
-            this.RoleComboBox.Location = new System.Drawing.Point(35, 432);
-            this.RoleComboBox.MaxDropDownItems = 2;
-            this.RoleComboBox.Name = "RoleComboBox";
-            this.RoleComboBox.Size = new System.Drawing.Size(185, 26);
-            this.RoleComboBox.TabIndex = 47;
-            // 
-            // RoleLabel
-            // 
-            this.RoleLabel.AutoSize = true;
-            this.RoleLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoleLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.RoleLabel.Location = new System.Drawing.Point(32, 411);
-            this.RoleLabel.Name = "RoleLabel";
-            this.RoleLabel.Size = new System.Drawing.Size(44, 18);
-            this.RoleLabel.TabIndex = 48;
-            this.RoleLabel.Text = "Role";
-            // 
             // CreateUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(473, 563);
-            this.Controls.Add(this.RoleLabel);
-            this.Controls.Add(this.RoleComboBox);
+            this.ClientSize = new System.Drawing.Size(473, 513);
             this.Controls.Add(this.RepeatPasswordTextBox);
             this.Controls.Add(this.RepeatPasswordLabel);
             this.Controls.Add(this.PasswordLabel);
@@ -501,7 +473,5 @@
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Label RepeatPasswordLabel;
         private System.Windows.Forms.TextBox RepeatPasswordTextBox;
-        private System.Windows.Forms.ComboBox RoleComboBox;
-        private System.Windows.Forms.Label RoleLabel;
     }
 }

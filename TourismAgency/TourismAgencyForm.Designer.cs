@@ -32,7 +32,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TravelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TravelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddNewTravelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +49,6 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem,
-            this.TravelToolStripMenuItem,
             this.TravelsToolStripMenuItem,
             this.ClientToolStripMenuItem,
             this.HelpToolStripMenuItem});
@@ -74,11 +72,6 @@
             this.LogOutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.LogOutToolStripMenuItem.Text = "Log out";
             this.LogOutToolStripMenuItem.Click += new System.EventHandler(this.LogOutToolStripMenuItem_Click);
-            // 
-            // TravelToolStripMenuItem
-            // 
-            this.TravelToolStripMenuItem.Name = "TravelToolStripMenuItem";
-            this.TravelToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
             // 
             // TravelsToolStripMenuItem
             // 
@@ -201,7 +194,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem LogOutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem TravelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TravelsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddNewTravelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ClientToolStripMenuItem;

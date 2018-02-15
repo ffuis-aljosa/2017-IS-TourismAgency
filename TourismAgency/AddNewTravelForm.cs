@@ -8,6 +8,8 @@ namespace TourismAgency
         public AddNewTravelForm()
         {
             InitializeComponent();
+            StartDateTimePicker.MinDate = DateTime.Now;
+            FinishDateTimePicker.MinDate = DateTime.Now; 
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
