@@ -77,11 +77,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewClientForm.cs">
+    <Compile Include="AddNewAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewClientForm.Designer.cs">
-      <DependentUpon>AddNewClientForm.cs</DependentUpon>
+    <Compile Include="AddNewAdminForm.Designer.cs">
+      <DependentUpon>AddNewAdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AddNewTravelForm.cs">
       <SubType>Form</SubType>
@@ -95,11 +95,11 @@
     <Compile Include="ClientTourismAgencyForm.Designer.cs">
       <DependentUpon>ClientTourismAgencyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNewAdminForm.cs">
+    <Compile Include="AddNewClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewAdminForm.Designer.cs">
-      <DependentUpon>AddNewAdminForm.cs</DependentUpon>
+    <Compile Include="AddNewClientForm.Designer.cs">
+      <DependentUpon>AddNewClientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Db\DbConnection.cs" />
     <Compile Include="Db\UserRepository.cs" />
@@ -125,11 +125,14 @@
     <Compile Include="WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddNewAdminForm.resx">
+      <DependentUpon>AddNewAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddNewTravelForm.resx">
       <DependentUpon>AddNewTravelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNewAdminForm.resx">
-      <DependentUpon>AddNewAdminForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddNewClientForm.resx">
+      <DependentUpon>AddNewClientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
