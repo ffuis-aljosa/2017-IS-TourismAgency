@@ -127,7 +127,7 @@
             this.FirstNameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.FirstNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FirstNameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FirstNameTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.FirstNameTextBox.Location = new System.Drawing.Point(35, 126);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(185, 27);
@@ -161,7 +161,7 @@
             // 
             this.DateOfBirthLabel.AutoSize = true;
             this.DateOfBirthLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateOfBirthLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.DateOfBirthLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.DateOfBirthLabel.Location = new System.Drawing.Point(32, 156);
             this.DateOfBirthLabel.Name = "DateOfBirthLabel";
             this.DateOfBirthLabel.Size = new System.Drawing.Size(113, 18);
@@ -172,7 +172,7 @@
             // 
             this.FirstNameLabel.AutoSize = true;
             this.FirstNameLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.FirstNameLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.FirstNameLabel.Location = new System.Drawing.Point(32, 105);
             this.FirstNameLabel.Name = "FirstNameLabel";
             this.FirstNameLabel.Size = new System.Drawing.Size(95, 18);
@@ -183,7 +183,7 @@
             // 
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.LastNameLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LastNameLabel.Location = new System.Drawing.Point(342, 105);
             this.LastNameLabel.Name = "LastNameLabel";
             this.LastNameLabel.Size = new System.Drawing.Size(94, 18);
@@ -195,7 +195,7 @@
             this.EmailTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EmailTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.EmailTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.EmailTextBox.Location = new System.Drawing.Point(251, 177);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(185, 27);
@@ -206,7 +206,7 @@
             // 
             this.EmailLabel.AutoSize = true;
             this.EmailLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.EmailLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.EmailLabel.Location = new System.Drawing.Point(377, 156);
             this.EmailLabel.Name = "EmailLabel";
             this.EmailLabel.Size = new System.Drawing.Size(60, 18);
@@ -217,7 +217,7 @@
             // 
             this.PassportNumberLabel.AutoSize = true;
             this.PassportNumberLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PassportNumberLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.PassportNumberLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.PassportNumberLabel.Location = new System.Drawing.Point(32, 207);
             this.PassportNumberLabel.Name = "PassportNumberLabel";
             this.PassportNumberLabel.Size = new System.Drawing.Size(146, 18);
@@ -229,7 +229,7 @@
             this.PassportTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.PassportTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PassportTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PassportTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PassportTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.PassportTextBox.Location = new System.Drawing.Point(35, 228);
             this.PassportTextBox.Name = "PassportTextBox";
             this.PassportTextBox.Size = new System.Drawing.Size(185, 27);
@@ -239,7 +239,7 @@
             // 
             this.CityLabel.AutoSize = true;
             this.CityLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CityLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.CityLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.CityLabel.Location = new System.Drawing.Point(32, 258);
             this.CityLabel.Name = "CityLabel";
             this.CityLabel.Size = new System.Drawing.Size(40, 18);
@@ -250,7 +250,7 @@
             // 
             this.CountryLabel.AutoSize = true;
             this.CountryLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CountryLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.CountryLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.CountryLabel.Location = new System.Drawing.Point(365, 207);
             this.CountryLabel.Name = "CountryLabel";
             this.CountryLabel.Size = new System.Drawing.Size(71, 18);
@@ -261,7 +261,7 @@
             // 
             this.PhoneLabel.AutoSize = true;
             this.PhoneLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.PhoneLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.PhoneLabel.Location = new System.Drawing.Point(32, 309);
             this.PhoneLabel.Name = "PhoneLabel";
             this.PhoneLabel.Size = new System.Drawing.Size(125, 18);
@@ -272,7 +272,7 @@
             // 
             this.AdressLabel.AutoSize = true;
             this.AdressLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdressLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.AdressLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.AdressLabel.Location = new System.Drawing.Point(373, 258);
             this.AdressLabel.Name = "AdressLabel";
             this.AdressLabel.Size = new System.Drawing.Size(63, 18);
@@ -284,7 +284,7 @@
             this.CountryTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.CountryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CountryTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CountryTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.CountryTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.CountryTextBox.Location = new System.Drawing.Point(251, 228);
             this.CountryTextBox.Name = "CountryTextBox";
             this.CountryTextBox.Size = new System.Drawing.Size(185, 27);
@@ -296,7 +296,7 @@
             this.CityTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.CityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CityTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CityTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.CityTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.CityTextBox.Location = new System.Drawing.Point(35, 279);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(185, 27);
@@ -307,7 +307,7 @@
             this.AdressTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.AdressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AdressTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdressTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.AdressTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.AdressTextBox.Location = new System.Drawing.Point(252, 279);
             this.AdressTextBox.Name = "AdressTextBox";
             this.AdressTextBox.Size = new System.Drawing.Size(185, 27);
@@ -319,7 +319,7 @@
             this.PhoneNumberTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.PhoneNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PhoneNumberTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumberTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PhoneNumberTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.PhoneNumberTextBox.Location = new System.Drawing.Point(35, 330);
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(185, 27);
@@ -330,7 +330,7 @@
             this.UsernameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UsernameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.UsernameTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.UsernameTextBox.Location = new System.Drawing.Point(252, 330);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(185, 27);
@@ -341,7 +341,7 @@
             // 
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.UsernameLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.UsernameLabel.Location = new System.Drawing.Point(342, 309);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(90, 18);
@@ -353,7 +353,7 @@
             this.PasswordTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PasswordTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PasswordTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.PasswordTextBox.Location = new System.Drawing.Point(35, 381);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
@@ -364,7 +364,7 @@
             // 
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.PasswordLabel.Location = new System.Drawing.Point(32, 360);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(86, 18);
@@ -375,7 +375,7 @@
             // 
             this.RepeatPasswordLabel.AutoSize = true;
             this.RepeatPasswordLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RepeatPasswordLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.RepeatPasswordLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.RepeatPasswordLabel.Location = new System.Drawing.Point(287, 360);
             this.RepeatPasswordLabel.Name = "RepeatPasswordLabel";
             this.RepeatPasswordLabel.Size = new System.Drawing.Size(150, 18);
@@ -387,7 +387,7 @@
             this.RepeatPasswordTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.RepeatPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RepeatPasswordTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RepeatPasswordTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.RepeatPasswordTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.RepeatPasswordTextBox.Location = new System.Drawing.Point(252, 381);
             this.RepeatPasswordTextBox.Name = "RepeatPasswordTextBox";
             this.RepeatPasswordTextBox.PasswordChar = '*';

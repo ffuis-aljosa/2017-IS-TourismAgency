@@ -115,24 +115,27 @@
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordLabel.Location = new System.Drawing.Point(73, 124);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(85, 18);
+            this.PasswordLabel.Size = new System.Drawing.Size(86, 18);
             this.PasswordLabel.TabIndex = 7;
             this.PasswordLabel.Text = "Password";
             // 
             // RepeatPasswordLabel
             // 
             this.RepeatPasswordLabel.AutoSize = true;
+            this.RepeatPasswordLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RepeatPasswordLabel.Location = new System.Drawing.Point(73, 175);
             this.RepeatPasswordLabel.Name = "RepeatPasswordLabel";
-            this.RepeatPasswordLabel.Size = new System.Drawing.Size(149, 18);
+            this.RepeatPasswordLabel.Size = new System.Drawing.Size(150, 18);
             this.RepeatPasswordLabel.TabIndex = 8;
             this.RepeatPasswordLabel.Text = "Repeat password";
             // 
             // FirstNameLabel
             // 
             this.FirstNameLabel.AutoSize = true;
+            this.FirstNameLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameLabel.Location = new System.Drawing.Point(73, 226);
             this.FirstNameLabel.Name = "FirstNameLabel";
             this.FirstNameLabel.Size = new System.Drawing.Size(95, 18);
@@ -142,6 +145,7 @@
             // LastNameLabel
             // 
             this.LastNameLabel.AutoSize = true;
+            this.LastNameLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameLabel.Location = new System.Drawing.Point(73, 277);
             this.LastNameLabel.Name = "LastNameLabel";
             this.LastNameLabel.Size = new System.Drawing.Size(94, 18);
