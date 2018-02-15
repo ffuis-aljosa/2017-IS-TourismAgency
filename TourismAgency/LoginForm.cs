@@ -37,7 +37,7 @@ namespace TourismAgency
                 {
                     if (user.Role == "admin")
                     {
-                        TourismAgencyForm adminTourismAgencyForm = new TourismAgencyForm();
+                        AdminTourismAgencyForm adminTourismAgencyForm = new AdminTourismAgencyForm();
                         adminTourismAgencyForm.Show();
                         adminTourismAgencyForm.FormClosed += TourismAgencyForm_FormClosed;
 
@@ -45,7 +45,7 @@ namespace TourismAgency
                     }
                     else
                     {
-                        TourismAgencyForm adminTourismAgencyForm = new TourismAgencyForm();
+                        AdminTourismAgencyForm adminTourismAgencyForm = new AdminTourismAgencyForm();
                         adminTourismAgencyForm.Show();
                         adminTourismAgencyForm.FormClosed += TourismAgencyForm_FormClosed;
 

@@ -4,9 +4,9 @@ using TourismAgency.Models;
 
 namespace TourismAgency
 {
-    public partial class TourismAgencyForm : Form
+    public partial class AdminTourismAgencyForm : Form
     {
-        public TourismAgencyForm()
+        public AdminTourismAgencyForm()
         {
             InitializeComponent();
         }
