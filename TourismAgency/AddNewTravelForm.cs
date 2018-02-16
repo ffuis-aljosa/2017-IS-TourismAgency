@@ -19,5 +19,10 @@ namespace TourismAgency
             adminForm.Show();
 
         }
+
+        private void CreateTravelButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(StartDateTimePicker.Text);
+        }
     }
 }

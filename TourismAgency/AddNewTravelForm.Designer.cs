@@ -35,14 +35,20 @@
             this.StartDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.FinishDateLabel = new System.Windows.Forms.Label();
             this.FinishDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.NumberOfSeatsLabel = new System.Windows.Forms.Label();
+            this.BusLabel = new System.Windows.Forms.Label();
             this.NumberOfSeatsComboBox = new System.Windows.Forms.ComboBox();
             this.PriceLabel = new System.Windows.Forms.Label();
             this.PriceTextBox = new System.Windows.Forms.TextBox();
-            this.TravelListBox = new System.Windows.Forms.ListBox();
             this.TravelLabel = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.CreateTravelButton = new System.Windows.Forms.Button();
+            this.TravelListView = new System.Windows.Forms.ListView();
+            this.DestinationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.StartDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FinishDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BusColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PriceColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NumberColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // DestinationLabel
@@ -118,16 +124,16 @@
             this.FinishDateTimePicker.TabIndex = 5;
             this.FinishDateTimePicker.Value = new System.DateTime(2018, 2, 9, 0, 0, 0, 0);
             // 
-            // NumberOfSeatsLabel
+            // BusLabel
             // 
-            this.NumberOfSeatsLabel.AutoSize = true;
-            this.NumberOfSeatsLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
-            this.NumberOfSeatsLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.NumberOfSeatsLabel.Location = new System.Drawing.Point(15, 166);
-            this.NumberOfSeatsLabel.Name = "NumberOfSeatsLabel";
-            this.NumberOfSeatsLabel.Size = new System.Drawing.Size(144, 18);
-            this.NumberOfSeatsLabel.TabIndex = 6;
-            this.NumberOfSeatsLabel.Text = "Number of seats";
+            this.BusLabel.AutoSize = true;
+            this.BusLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
+            this.BusLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.BusLabel.Location = new System.Drawing.Point(15, 166);
+            this.BusLabel.Name = "BusLabel";
+            this.BusLabel.Size = new System.Drawing.Size(38, 18);
+            this.BusLabel.TabIndex = 6;
+            this.BusLabel.Text = "Bus";
             // 
             // NumberOfSeatsComboBox
             // 
@@ -170,18 +176,6 @@
             this.PriceTextBox.Size = new System.Drawing.Size(184, 24);
             this.PriceTextBox.TabIndex = 10;
             // 
-            // TravelListBox
-            // 
-            this.TravelListBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.TravelListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TravelListBox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TravelListBox.FormattingEnabled = true;
-            this.TravelListBox.ItemHeight = 16;
-            this.TravelListBox.Location = new System.Drawing.Point(222, 37);
-            this.TravelListBox.Name = "TravelListBox";
-            this.TravelListBox.Size = new System.Drawing.Size(323, 354);
-            this.TravelListBox.TabIndex = 11;
-            // 
             // TravelLabel
             // 
             this.TravelLabel.AutoSize = true;
@@ -217,21 +211,76 @@
             this.CreateTravelButton.TabIndex = 14;
             this.CreateTravelButton.Text = "Create travel";
             this.CreateTravelButton.UseVisualStyleBackColor = true;
+            this.CreateTravelButton.Click += new System.EventHandler(this.CreateTravelButton_Click);
+            // 
+            // TravelListView
+            // 
+            this.TravelListView.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.TravelListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.NumberColumnHeader,
+            this.DestinationColumnHeader,
+            this.StartDateColumnHeader,
+            this.FinishDateColumnHeader,
+            this.BusColumnHeader,
+            this.PriceColumnHeader});
+            this.TravelListView.GridLines = true;
+            this.TravelListView.Location = new System.Drawing.Point(221, 37);
+            this.TravelListView.Name = "TravelListView";
+            this.TravelListView.Size = new System.Drawing.Size(536, 368);
+            this.TravelListView.TabIndex = 15;
+            this.TravelListView.UseCompatibleStateImageBehavior = false;
+            this.TravelListView.View = System.Windows.Forms.View.Details;
+            // 
+            // DestinationColumnHeader
+            // 
+            this.DestinationColumnHeader.Tag = "";
+            this.DestinationColumnHeader.Text = "Destination";
+            this.DestinationColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.DestinationColumnHeader.Width = 120;
+            // 
+            // StartDateColumnHeader
+            // 
+            this.StartDateColumnHeader.Text = "Start Date";
+            this.StartDateColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.StartDateColumnHeader.Width = 79;
+            // 
+            // FinishDateColumnHeader
+            // 
+            this.FinishDateColumnHeader.Text = "Finish Date";
+            this.FinishDateColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.FinishDateColumnHeader.Width = 82;
+            // 
+            // BusColumnHeader
+            // 
+            this.BusColumnHeader.Text = "Bus";
+            this.BusColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BusColumnHeader.Width = 117;
+            // 
+            // PriceColumnHeader
+            // 
+            this.PriceColumnHeader.Text = "Price";
+            this.PriceColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PriceColumnHeader.Width = 96;
+            // 
+            // NumberColumnHeader
+            // 
+            this.NumberColumnHeader.Text = "No.";
+            this.NumberColumnHeader.Width = 37;
             // 
             // AddNewTravelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(559, 415);
+            this.ClientSize = new System.Drawing.Size(802, 428);
+            this.Controls.Add(this.TravelListView);
             this.Controls.Add(this.CreateTravelButton);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.TravelLabel);
-            this.Controls.Add(this.TravelListBox);
             this.Controls.Add(this.PriceTextBox);
             this.Controls.Add(this.PriceLabel);
             this.Controls.Add(this.NumberOfSeatsComboBox);
-            this.Controls.Add(this.NumberOfSeatsLabel);
+            this.Controls.Add(this.BusLabel);
             this.Controls.Add(this.FinishDateTimePicker);
             this.Controls.Add(this.FinishDateLabel);
             this.Controls.Add(this.StartDateTimePicker);
@@ -261,13 +310,19 @@
         private System.Windows.Forms.DateTimePicker StartDateTimePicker;
         private System.Windows.Forms.Label FinishDateLabel;
         private System.Windows.Forms.DateTimePicker FinishDateTimePicker;
-        private System.Windows.Forms.Label NumberOfSeatsLabel;
+        private System.Windows.Forms.Label BusLabel;
         private System.Windows.Forms.ComboBox NumberOfSeatsComboBox;
         private System.Windows.Forms.Label PriceLabel;
         private System.Windows.Forms.TextBox PriceTextBox;
-        private System.Windows.Forms.ListBox TravelListBox;
         private System.Windows.Forms.Label TravelLabel;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button CreateTravelButton;
+        private System.Windows.Forms.ListView TravelListView;
+        private System.Windows.Forms.ColumnHeader NumberColumnHeader;
+        private System.Windows.Forms.ColumnHeader DestinationColumnHeader;
+        private System.Windows.Forms.ColumnHeader StartDateColumnHeader;
+        private System.Windows.Forms.ColumnHeader FinishDateColumnHeader;
+        private System.Windows.Forms.ColumnHeader BusColumnHeader;
+        private System.Windows.Forms.ColumnHeader PriceColumnHeader;
     }
 }
