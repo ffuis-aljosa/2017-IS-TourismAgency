@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Text;
-using System.ComponentModel.DataAnnotations;
 
 namespace TourismAgency.Models
 {
@@ -12,13 +11,13 @@ namespace TourismAgency.Models
         private string role;
         private string first_name;
         private string last_name;
-        private DateTime date_of_birth;
+        private string date_of_birth;
         private string e_mail;
         private string passport_number;
         private string country;
         private string city;
         private string adress;
-        private int phone_number;
+        private string phone_number;
 
 
         public Users (string username, string password)
@@ -27,19 +26,29 @@ namespace TourismAgency.Models
             Password = password; 
         }
 
-        public Users(string username, string password, string first_name, string last_name, DateTime date_of_birth, string email, string passport_number, string country, string city, string adress, int phone_number)
+        public Users(string username, string password, string first_name, string last_name)
         {
             Username = username;
             Password = password;
             First_name = first_name;
+            Last_name = last_name; 
+        }
+
+
+        public Users(string first_name, string last_name, string date_of_birth, string e_mail, string passport_number, string country, string city, string adress, string phone_number, string username, string password)
+        {
+            First_name = first_name;
             Last_name = last_name;
             Date_of_birth = date_of_birth;
-            E_mail = email;
+            E_mail = e_mail;
             Passport_number = passport_number;
             Country = country;
             City = city;
             Adress = adress;
-            Phone_number = phone_number; 
+            Phone_number = phone_number;
+            Username = username;
+            Password = password;
+
         }
 
         public string Role
@@ -134,8 +143,8 @@ namespace TourismAgency.Models
                 last_name = value;
             }
         }
-
-        public DateTime Date_of_birth
+        
+        public string Date_of_birth
         {
             get
             {
@@ -143,20 +152,20 @@ namespace TourismAgency.Models
             }
             set
             {
-                DateTime zeroTime = new DateTime(1, 1, 1);
-
-                DateTime a = value;
-                DateTime b = DateTime.Today; 
-
-                TimeSpan span = b - a;
-                // Because we start at year 1 for the Gregorian
-                // calendar, we must subtract a year here.
-                int years = (zeroTime + span).Year - 1;
-
-                if (years < 18)
-                    throw new Exception("You must be an adult!");
-
                 date_of_birth = value;
+            }
+        }
+
+        bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
             }
         }
 
@@ -168,22 +177,14 @@ namespace TourismAgency.Models
             }
             set
             {
-                bool email;
-
-                if (new EmailAddressAttribute().IsValid(value))
-                    email = true;
-                else
-                    email = false; 
+                if (IsValidEmail(value) == false)
+                    throw new Exception("E-mail is not valid");
 
                 if (string.IsNullOrEmpty(value))
                 throw new Exception("E-mail can't be a blank space!");
 
                 if (value.Length > 100)
                     throw new Exception("E-mail can't be longer than a 30 characters!");
-
-                if (email == false)
-                    throw new Exception("E-mail is not valid"); 
-
 
                 e_mail = value;
             }
@@ -198,10 +199,10 @@ namespace TourismAgency.Models
             set
             {
                 if (string.IsNullOrEmpty(value))
-                    throw new Exception("Passport can't be a blank space!");
+                    throw new Exception("Passport number can't be a blank space!");
 
-                if (value.Length != 8)
-                    throw new Exception("Passport is not valid! ");
+                if (value.Length != 8 && value.Length != 0)
+                    throw new Exception("Passport number is not valid!");
 
                 passport_number = value;
             }
@@ -261,7 +262,7 @@ namespace TourismAgency.Models
             }
         }
 
-        public int Phone_number
+        public string Phone_number
         {
             get
             {

@@ -15,20 +15,21 @@ namespace TourismAgency
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            AdminTourismAgencyForm adminForm = new AdminTourismAgencyForm();
-            adminForm.Show(); 
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show(); 
         }
 
-        private void CreateButton_Click(object sender, EventArgs e)
+        private void RegisterButton_Click(object sender, EventArgs e)
         {
             try
             {
                 if (PasswordTextBox.Text != RepeatPasswordTextBox.Text)
                     throw new Exception("Password and repeated password are not same!");
 
-                Users user = new Users(UsernameTextBox.Text, PasswordTextBox.Text, FirstNameTextBox.Text, LastNameTextBox.Text, BirthDateTimePicker.Value.Date, EmailTextBox.Text, PassportTextBox.Text, CountryTextBox.Text, CityTextBox.Text, AdressTextBox.Text, Convert.ToInt16(PhoneNumberTextBox));
+                Users user = new Users(FirstNameTextBox.Text, LastNameTextBox.Text, BirthDateTimePicker.Text, EmailTextBox.Text, PassportTextBox.Text, CountryTextBox.Text, CityTextBox.Text, AdressTextBox.Text, PhoneNumberTextBox.Text, UsernameTextBox.Text, PasswordTextBox.Text);
+                user.Role = "client"; 
 
-                UserRepository.createUser(user);
+                UserRepository.CreateUser(user);
 
                 UsernameTextBox.Text = "";
                 PasswordTextBox.Text = "";
@@ -42,7 +43,7 @@ namespace TourismAgency
                 AdressTextBox.Text = "";
                 PhoneNumberTextBox.Text = "";
 
-                MessageBox.Show("User is created succesfully!");
+                MessageBox.Show("Client is created succesfully!");
             }
             catch (Exception error)
             {

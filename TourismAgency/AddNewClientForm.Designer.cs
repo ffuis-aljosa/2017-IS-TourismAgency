@@ -34,7 +34,7 @@
             this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.CreateButton = new System.Windows.Forms.Button();
+            this.RegisterButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.FirstNameTextBox = new System.Windows.Forms.TextBox();
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
@@ -65,12 +65,12 @@
             // CreateUserLabel
             // 
             this.CreateUserLabel.AutoSize = true;
-            this.CreateUserLabel.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateUserLabel.Location = new System.Drawing.Point(56, 9);
+            this.CreateUserLabel.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateUserLabel.Location = new System.Drawing.Point(146, 34);
             this.CreateUserLabel.Name = "CreateUserLabel";
-            this.CreateUserLabel.Size = new System.Drawing.Size(346, 65);
+            this.CreateUserLabel.Size = new System.Drawing.Size(177, 32);
             this.CreateUserLabel.TabIndex = 0;
-            this.CreateUserLabel.Text = "Create User";
+            this.CreateUserLabel.Text = "Registration";
             this.CreateUserLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // shapeContainer1
@@ -100,16 +100,16 @@
             this.rectangleShape1.Name = "";
             this.rectangleShape1.Size = new System.Drawing.Size(0, 0);
             // 
-            // CreateButton
+            // RegisterButton
             // 
-            this.CreateButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateButton.Location = new System.Drawing.Point(35, 451);
-            this.CreateButton.Name = "CreateButton";
-            this.CreateButton.Size = new System.Drawing.Size(185, 50);
-            this.CreateButton.TabIndex = 5;
-            this.CreateButton.Text = "Create user";
-            this.CreateButton.UseVisualStyleBackColor = true;
-            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
+            this.RegisterButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterButton.Location = new System.Drawing.Point(35, 451);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(185, 50);
+            this.RegisterButton.TabIndex = 13;
+            this.RegisterButton.Text = "Register";
+            this.RegisterButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // ExitButton
             // 
@@ -117,7 +117,7 @@
             this.ExitButton.Location = new System.Drawing.Point(251, 451);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(185, 50);
-            this.ExitButton.TabIndex = 6;
+            this.ExitButton.TabIndex = 14;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
@@ -131,7 +131,7 @@
             this.FirstNameTextBox.Location = new System.Drawing.Point(35, 126);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(185, 27);
-            this.FirstNameTextBox.TabIndex = 13;
+            this.FirstNameTextBox.TabIndex = 1;
             // 
             // LastNameTextBox
             // 
@@ -142,7 +142,7 @@
             this.LastNameTextBox.Location = new System.Drawing.Point(252, 126);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(185, 27);
-            this.LastNameTextBox.TabIndex = 14;
+            this.LastNameTextBox.TabIndex = 2;
             this.LastNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // BirthDateTimePicker
@@ -154,7 +154,7 @@
             this.BirthDateTimePicker.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.BirthDateTimePicker.Name = "BirthDateTimePicker";
             this.BirthDateTimePicker.Size = new System.Drawing.Size(185, 27);
-            this.BirthDateTimePicker.TabIndex = 15;
+            this.BirthDateTimePicker.TabIndex = 3;
             this.BirthDateTimePicker.Value = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
             // 
             // DateOfBirthLabel
@@ -199,7 +199,7 @@
             this.EmailTextBox.Location = new System.Drawing.Point(251, 177);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(185, 27);
-            this.EmailTextBox.TabIndex = 26;
+            this.EmailTextBox.TabIndex = 4;
             this.EmailTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // EmailLabel
@@ -233,7 +233,7 @@
             this.PassportTextBox.Location = new System.Drawing.Point(35, 228);
             this.PassportTextBox.Name = "PassportTextBox";
             this.PassportTextBox.Size = new System.Drawing.Size(185, 27);
-            this.PassportTextBox.TabIndex = 29;
+            this.PassportTextBox.TabIndex = 5;
             // 
             // CityLabel
             // 
@@ -288,7 +288,7 @@
             this.CountryTextBox.Location = new System.Drawing.Point(251, 228);
             this.CountryTextBox.Name = "CountryTextBox";
             this.CountryTextBox.Size = new System.Drawing.Size(185, 27);
-            this.CountryTextBox.TabIndex = 37;
+            this.CountryTextBox.TabIndex = 6;
             this.CountryTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // CityTextBox
@@ -300,7 +300,7 @@
             this.CityTextBox.Location = new System.Drawing.Point(35, 279);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(185, 27);
-            this.CityTextBox.TabIndex = 38;
+            this.CityTextBox.TabIndex = 7;
             // 
             // AdressTextBox
             // 
@@ -311,7 +311,7 @@
             this.AdressTextBox.Location = new System.Drawing.Point(252, 279);
             this.AdressTextBox.Name = "AdressTextBox";
             this.AdressTextBox.Size = new System.Drawing.Size(185, 27);
-            this.AdressTextBox.TabIndex = 39;
+            this.AdressTextBox.TabIndex = 8;
             this.AdressTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // PhoneNumberTextBox
@@ -323,7 +323,7 @@
             this.PhoneNumberTextBox.Location = new System.Drawing.Point(35, 330);
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(185, 27);
-            this.PhoneNumberTextBox.TabIndex = 40;
+            this.PhoneNumberTextBox.TabIndex = 9;
             // 
             // UsernameTextBox
             // 
@@ -334,7 +334,7 @@
             this.UsernameTextBox.Location = new System.Drawing.Point(252, 330);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(185, 27);
-            this.UsernameTextBox.TabIndex = 41;
+            this.UsernameTextBox.TabIndex = 10;
             this.UsernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // UsernameLabel
@@ -358,7 +358,7 @@
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(185, 27);
-            this.PasswordTextBox.TabIndex = 43;
+            this.PasswordTextBox.TabIndex = 11;
             // 
             // PasswordLabel
             // 
@@ -392,7 +392,7 @@
             this.RepeatPasswordTextBox.Name = "RepeatPasswordTextBox";
             this.RepeatPasswordTextBox.PasswordChar = '*';
             this.RepeatPasswordTextBox.Size = new System.Drawing.Size(185, 27);
-            this.RepeatPasswordTextBox.TabIndex = 46;
+            this.RepeatPasswordTextBox.TabIndex = 12;
             this.RepeatPasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // AddNewClientForm
@@ -426,7 +426,7 @@
             this.Controls.Add(this.LastNameTextBox);
             this.Controls.Add(this.FirstNameTextBox);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.CreateButton);
+            this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.CreateUserLabel);
             this.Controls.Add(this.shapeContainer1);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -445,7 +445,7 @@
 
         #endregion
         private System.Windows.Forms.Label CreateUserLabel;
-        private System.Windows.Forms.Button CreateButton;
+        private System.Windows.Forms.Button RegisterButton;
         private System.Windows.Forms.Button ExitButton;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;

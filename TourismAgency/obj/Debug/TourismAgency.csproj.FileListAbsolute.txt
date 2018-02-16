@@ -128,3 +128,4 @@ C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\Touris
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.pdb
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AdminTourismAgencyForm.resources
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewAdminForm.resources
+C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewClientForm.resources

@@ -32,10 +32,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddNewAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TravelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddNewTravelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddNewClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -44,8 +44,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem,
+            this.AdminToolStripMenuItem,
             this.TravelsToolStripMenuItem,
-            this.ClientToolStripMenuItem,
             this.HelpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -64,9 +64,24 @@
             // LogOutToolStripMenuItem
             // 
             this.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem";
-            this.LogOutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.LogOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.LogOutToolStripMenuItem.Text = "Log out";
             this.LogOutToolStripMenuItem.Click += new System.EventHandler(this.LogOutToolStripMenuItem_Click);
+            // 
+            // AdminToolStripMenuItem
+            // 
+            this.AdminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddNewAdminToolStripMenuItem});
+            this.AdminToolStripMenuItem.Name = "AdminToolStripMenuItem";
+            this.AdminToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.AdminToolStripMenuItem.Text = "Admins";
+            // 
+            // AddNewAdminToolStripMenuItem
+            // 
+            this.AddNewAdminToolStripMenuItem.Name = "AddNewAdminToolStripMenuItem";
+            this.AddNewAdminToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.AddNewAdminToolStripMenuItem.Text = "Add new admin";
+            this.AddNewAdminToolStripMenuItem.Click += new System.EventHandler(this.AddNewAdminToolStripMenuItem_Click);
             // 
             // TravelsToolStripMenuItem
             // 
@@ -82,21 +97,6 @@
             this.AddNewTravelToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.AddNewTravelToolStripMenuItem.Text = "Add new travel";
             this.AddNewTravelToolStripMenuItem.Click += new System.EventHandler(this.AddNewTravelToolStripMenuItem_Click);
-            // 
-            // ClientToolStripMenuItem
-            // 
-            this.ClientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddNewClientToolStripMenuItem});
-            this.ClientToolStripMenuItem.Name = "ClientToolStripMenuItem";
-            this.ClientToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.ClientToolStripMenuItem.Text = "Client";
-            // 
-            // AddNewClientToolStripMenuItem
-            // 
-            this.AddNewClientToolStripMenuItem.Name = "AddNewClientToolStripMenuItem";
-            this.AddNewClientToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.AddNewClientToolStripMenuItem.Text = "Add new client";
-            this.AddNewClientToolStripMenuItem.Click += new System.EventHandler(this.AddNewClientToolStripMenuItem_Click);
             // 
             // HelpToolStripMenuItem
             // 
@@ -117,7 +117,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdminTourismAgencyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "\"Tourism Agency\"";
+            this.Text = "Tourism Agency";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TourismAgencyForm_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -132,8 +132,8 @@
         private System.Windows.Forms.ToolStripMenuItem LogOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TravelsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddNewTravelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ClientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem AddNewClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AdminToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddNewAdminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem;
     }
 }

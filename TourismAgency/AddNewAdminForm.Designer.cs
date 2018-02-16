@@ -160,6 +160,7 @@
             this.CreateAdminButton.TabIndex = 11;
             this.CreateAdminButton.Text = "Create admin";
             this.CreateAdminButton.UseVisualStyleBackColor = true;
+            this.CreateAdminButton.Click += new System.EventHandler(this.CreateAdminButton_Click);
             // 
             // ExitButton
             // 
@@ -169,6 +170,7 @@
             this.ExitButton.TabIndex = 12;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // AddNewAdminForm
             // 

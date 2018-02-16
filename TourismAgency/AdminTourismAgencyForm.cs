@@ -32,11 +32,11 @@ namespace TourismAgency
             this.Hide();
         }
 
-        private void AddNewClientToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddNewAdminToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddNewClientForm createUser = new AddNewClientForm();
-            createUser.Show();
-            this.Hide();
+            AddNewAdminForm addNewAdmin = new AddNewAdminForm();
+            addNewAdmin.Show();
+            this.Hide(); 
         }
     }
 }

@@ -86,7 +86,7 @@
             // 
             this.UsernameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsernameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.UsernameTextBox.Location = new System.Drawing.Point(81, 138);
             this.UsernameTextBox.Name = "UsernameTextBox";
@@ -100,7 +100,7 @@
             // 
             this.PasswordTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasswordTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.PasswordTextBox.Location = new System.Drawing.Point(81, 200);
             this.PasswordTextBox.Name = "PasswordTextBox";
