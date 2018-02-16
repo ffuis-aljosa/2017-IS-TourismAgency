@@ -43,12 +43,12 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.CreateTravelButton = new System.Windows.Forms.Button();
             this.TravelListView = new System.Windows.Forms.ListView();
+            this.NumberColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DestinationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StartDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FinishDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BusColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PriceColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NumberColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // DestinationLabel
@@ -231,6 +231,11 @@
             this.TravelListView.UseCompatibleStateImageBehavior = false;
             this.TravelListView.View = System.Windows.Forms.View.Details;
             // 
+            // NumberColumnHeader
+            // 
+            this.NumberColumnHeader.Text = "No.";
+            this.NumberColumnHeader.Width = 37;
+            // 
             // DestinationColumnHeader
             // 
             this.DestinationColumnHeader.Tag = "";
@@ -261,11 +266,6 @@
             this.PriceColumnHeader.Text = "Price";
             this.PriceColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.PriceColumnHeader.Width = 96;
-            // 
-            // NumberColumnHeader
-            // 
-            this.NumberColumnHeader.Text = "No.";
-            this.NumberColumnHeader.Width = 37;
             // 
             // AddNewTravelForm
             // 

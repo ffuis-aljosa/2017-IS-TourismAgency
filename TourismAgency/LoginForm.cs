@@ -40,14 +40,14 @@ namespace TourismAgency
                         AdminTourismAgencyForm adminTourismAgencyForm = new AdminTourismAgencyForm();
                         adminTourismAgencyForm.Show();
                         adminTourismAgencyForm.FormClosed += TourismAgencyForm_FormClosed;
-
+                       
                         Hide();
                     }
                     else
                     {
-                        AdminTourismAgencyForm adminTourismAgencyForm = new AdminTourismAgencyForm();
-                        adminTourismAgencyForm.Show();
-                        adminTourismAgencyForm.FormClosed += TourismAgencyForm_FormClosed;
+                        ClientTourismAgencyForm clientTourismAgencyForm = new ClientTourismAgencyForm();
+                        clientTourismAgencyForm.Show();
+                        clientTourismAgencyForm.FormClosed += TourismAgencyForm_FormClosed;
 
                         Hide();
                     }

@@ -15,6 +15,7 @@ namespace TourismAgency
         public ClientTourismAgencyForm()
         {
             InitializeComponent();
+
         }
     }
 }
