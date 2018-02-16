@@ -12,13 +12,6 @@ namespace TourismAgency
             InitializeComponent();
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show(); 
-        }
-
         private void RegisterButton_Click(object sender, EventArgs e)
         {
             try
@@ -50,6 +43,13 @@ namespace TourismAgency
                 MessageBox.Show(error.Message);
             }
 
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
     }
     
