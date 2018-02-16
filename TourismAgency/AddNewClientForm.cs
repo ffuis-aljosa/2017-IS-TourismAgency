@@ -36,11 +36,11 @@ namespace TourismAgency
                 AdressTextBox.Text = "";
                 PhoneNumberTextBox.Text = "";
 
-                MessageBox.Show("Client is created succesfully!");
+                MessageBox.Show("Client is created succesfully!", "Great", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception error)
             {
-                MessageBox.Show(error.Message);
+                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

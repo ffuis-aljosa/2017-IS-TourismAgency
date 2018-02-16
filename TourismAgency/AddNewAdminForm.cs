@@ -37,11 +37,11 @@ namespace TourismAgency
                 FirstNameTextBox.Text = "";
                 LastNameTextBox.Text = "";
 
-                MessageBox.Show("Admin is created succesfully!");
+                MessageBox.Show("Admin is created succesfully!", "Great", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception error)
             {
-                MessageBox.Show(error.Message);
+                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
