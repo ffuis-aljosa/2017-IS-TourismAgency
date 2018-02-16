@@ -47,10 +47,10 @@
             this.PassportNumberLabel = new System.Windows.Forms.Label();
             this.PassportTextBox = new System.Windows.Forms.TextBox();
             this.CityLabel = new System.Windows.Forms.Label();
-            this.CountryLabel = new System.Windows.Forms.Label();
+            this.CitizenshipLabel = new System.Windows.Forms.Label();
             this.PhoneLabel = new System.Windows.Forms.Label();
             this.AdressLabel = new System.Windows.Forms.Label();
-            this.CountryTextBox = new System.Windows.Forms.TextBox();
+            this.CitizenshipTextBox = new System.Windows.Forms.TextBox();
             this.CityTextBox = new System.Windows.Forms.TextBox();
             this.AdressTextBox = new System.Windows.Forms.TextBox();
             this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
@@ -246,16 +246,16 @@
             this.CityLabel.TabIndex = 31;
             this.CityLabel.Text = "City";
             // 
-            // CountryLabel
+            // CitizenshipLabel
             // 
-            this.CountryLabel.AutoSize = true;
-            this.CountryLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CountryLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CountryLabel.Location = new System.Drawing.Point(365, 207);
-            this.CountryLabel.Name = "CountryLabel";
-            this.CountryLabel.Size = new System.Drawing.Size(71, 18);
-            this.CountryLabel.TabIndex = 33;
-            this.CountryLabel.Text = "Country";
+            this.CitizenshipLabel.AutoSize = true;
+            this.CitizenshipLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CitizenshipLabel.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.CitizenshipLabel.Location = new System.Drawing.Point(338, 207);
+            this.CitizenshipLabel.Name = "CitizenshipLabel";
+            this.CitizenshipLabel.Size = new System.Drawing.Size(98, 18);
+            this.CitizenshipLabel.TabIndex = 33;
+            this.CitizenshipLabel.Text = "Citizenship";
             // 
             // PhoneLabel
             // 
@@ -279,17 +279,17 @@
             this.AdressLabel.TabIndex = 36;
             this.AdressLabel.Text = "Adress";
             // 
-            // CountryTextBox
+            // CitizenshipTextBox
             // 
-            this.CountryTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.CountryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CountryTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CountryTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CountryTextBox.Location = new System.Drawing.Point(251, 228);
-            this.CountryTextBox.Name = "CountryTextBox";
-            this.CountryTextBox.Size = new System.Drawing.Size(185, 27);
-            this.CountryTextBox.TabIndex = 6;
-            this.CountryTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.CitizenshipTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.CitizenshipTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CitizenshipTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CitizenshipTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.CitizenshipTextBox.Location = new System.Drawing.Point(251, 228);
+            this.CitizenshipTextBox.Name = "CitizenshipTextBox";
+            this.CitizenshipTextBox.Size = new System.Drawing.Size(185, 27);
+            this.CitizenshipTextBox.TabIndex = 6;
+            this.CitizenshipTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // CityTextBox
             // 
@@ -410,10 +410,10 @@
             this.Controls.Add(this.PhoneNumberTextBox);
             this.Controls.Add(this.AdressTextBox);
             this.Controls.Add(this.CityTextBox);
-            this.Controls.Add(this.CountryTextBox);
+            this.Controls.Add(this.CitizenshipTextBox);
             this.Controls.Add(this.AdressLabel);
             this.Controls.Add(this.PhoneLabel);
-            this.Controls.Add(this.CountryLabel);
+            this.Controls.Add(this.CitizenshipLabel);
             this.Controls.Add(this.CityLabel);
             this.Controls.Add(this.PassportTextBox);
             this.Controls.Add(this.PassportNumberLabel);
@@ -462,10 +462,10 @@
         private System.Windows.Forms.Label PassportNumberLabel;
         private System.Windows.Forms.TextBox PassportTextBox;
         private System.Windows.Forms.Label CityLabel;
-        private System.Windows.Forms.Label CountryLabel;
+        private System.Windows.Forms.Label CitizenshipLabel;
         private System.Windows.Forms.Label PhoneLabel;
         private System.Windows.Forms.Label AdressLabel;
-        private System.Windows.Forms.TextBox CountryTextBox;
+        private System.Windows.Forms.TextBox CitizenshipTextBox;
         private System.Windows.Forms.TextBox CityTextBox;
         private System.Windows.Forms.TextBox AdressTextBox;
         private System.Windows.Forms.TextBox PhoneNumberTextBox;

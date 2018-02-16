@@ -68,8 +68,8 @@ namespace TourismAgency.Db
 
         public static void CreateUser(Users user)
         {
-            string sql = "INSERT INTO users(username, password, role, first_name, last_name, date_of_birth, e_mail, passport_number, country, city, adress, phone_number) VALUES"
-                + "(@username, @password, @role, @first_name, @last_name, @date_of_birth, @e_mail, @passport_number, @country, @city, @adress, @phone_number)";
+            string sql = "INSERT INTO users(username, password, role, first_name, last_name, date_of_birth, e_mail, passport_number, citizenship, city, adress, phone_number) VALUES"
+                + "(@username, @password, @role, @first_name, @last_name, @date_of_birth, @e_mail, @passport_number, @citizenship, @city, @adress, @phone_number)";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
@@ -97,8 +97,8 @@ namespace TourismAgency.Db
             SqlCeParameter passport_number = new SqlCeParameter("@passport_number", user.Passport_number);
             command.Parameters.Add(passport_number);
 
-            SqlCeParameter country = new SqlCeParameter("@country", user.Country);
-            command.Parameters.Add(country);
+            SqlCeParameter citizenship = new SqlCeParameter("@citizenship", user.Citizenship);
+            command.Parameters.Add(citizenship);
 
             SqlCeParameter city = new SqlCeParameter("@city", user.City);
             command.Parameters.Add(city);

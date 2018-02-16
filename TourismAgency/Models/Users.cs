@@ -14,7 +14,7 @@ namespace TourismAgency.Models
         private string date_of_birth;
         private string e_mail;
         private string passport_number;
-        private string country;
+        private string citizenship;
         private string city;
         private string adress;
         private string phone_number;
@@ -35,14 +35,14 @@ namespace TourismAgency.Models
         }
 
 
-        public Users(string first_name, string last_name, string date_of_birth, string e_mail, string passport_number, string country, string city, string adress, string phone_number, string username, string password)
+        public Users(string first_name, string last_name, string date_of_birth, string e_mail, string passport_number, string citizenship, string city, string adress, string phone_number, string username, string password)
         {
             First_name = first_name;
             Last_name = last_name;
             Date_of_birth = date_of_birth;
             E_mail = e_mail;
             Passport_number = passport_number;
-            Country = country;
+            Citizenship = citizenship;
             City = city;
             Adress = adress;
             Phone_number = phone_number;
@@ -201,18 +201,18 @@ namespace TourismAgency.Models
                 if (string.IsNullOrEmpty(value))
                     throw new Exception("Passport number can't be a blank space!");
 
-                if (value.Length != 8 && value.Length != 0)
+                if (value.Length != 8)
                     throw new Exception("Passport number is not valid!");
 
                 passport_number = value;
             }
         }
 
-        public string Country
+        public string Citizenship
         {
             get
             {
-                return country;
+                return citizenship;
             }
             set
             {
@@ -222,7 +222,7 @@ namespace TourismAgency.Models
                 if (value.Length > 100)
                     throw new Exception("Country can't be longer than a 100 characters!");
 
-                country = value;
+                citizenship = value;
             }
         }
 
@@ -270,6 +270,9 @@ namespace TourismAgency.Models
             }
             set
             {
+                if (value.StartsWith("06") == false || value.Length > 15)
+                    throw new Exception("The phone number is not valid!"); 
+
                 phone_number = value;
             }
         }
