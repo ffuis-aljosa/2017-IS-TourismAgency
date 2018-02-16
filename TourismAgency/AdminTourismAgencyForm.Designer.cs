@@ -46,6 +46,7 @@
             this.AdressColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PhoneNumberColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TravelsTabPage = new System.Windows.Forms.TabPage();
+            this.AddNewTravelButton = new System.Windows.Forms.Button();
             this.TravelListView = new System.Windows.Forms.ListView();
             this.NumberTravelColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DestinationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -56,7 +57,6 @@
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
             this.LogoutToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.HelpToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.AddNewTravelButton = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.UsersTabPage.SuspendLayout();
             this.TravelsTabPage.SuspendLayout();
@@ -115,7 +115,7 @@
             this.PhoneNumberColumnHeader});
             this.UsersListView.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsersListView.GridLines = true;
-            this.UsersListView.Location = new System.Drawing.Point(0, 89);
+            this.UsersListView.Location = new System.Drawing.Point(0, 39);
             this.UsersListView.Name = "UsersListView";
             this.UsersListView.Size = new System.Drawing.Size(1109, 214);
             this.UsersListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
@@ -205,6 +205,16 @@
             this.TravelsTabPage.TabIndex = 1;
             this.TravelsTabPage.Text = "Travels";
             // 
+            // AddNewTravelButton
+            // 
+            this.AddNewTravelButton.Location = new System.Drawing.Point(8, 310);
+            this.AddNewTravelButton.Name = "AddNewTravelButton";
+            this.AddNewTravelButton.Size = new System.Drawing.Size(136, 44);
+            this.AddNewTravelButton.TabIndex = 1;
+            this.AddNewTravelButton.Text = "Add new travel";
+            this.AddNewTravelButton.UseVisualStyleBackColor = true;
+            this.AddNewTravelButton.Click += new System.EventHandler(this.AddNewTravelButton_Click);
+            // 
             // TravelListView
             // 
             this.TravelListView.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -288,16 +298,6 @@
             this.HelpToolStripButton.Name = "HelpToolStripButton";
             this.HelpToolStripButton.Size = new System.Drawing.Size(55, 22);
             this.HelpToolStripButton.Text = "Help";
-            // 
-            // AddNewTravelButton
-            // 
-            this.AddNewTravelButton.Location = new System.Drawing.Point(8, 310);
-            this.AddNewTravelButton.Name = "AddNewTravelButton";
-            this.AddNewTravelButton.Size = new System.Drawing.Size(136, 44);
-            this.AddNewTravelButton.TabIndex = 1;
-            this.AddNewTravelButton.Text = "Add new travel";
-            this.AddNewTravelButton.UseVisualStyleBackColor = true;
-            this.AddNewTravelButton.Click += new System.EventHandler(this.AddNewTravelButton_Click);
             // 
             // AdminTourismAgencyForm
             // 

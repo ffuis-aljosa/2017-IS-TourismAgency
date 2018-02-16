@@ -13,7 +13,7 @@ namespace TourismAgency.Models
         private string destination;
         private DateTime start_date;
         private DateTime finish_date;
-        private int number_of_seats;
+        private Bus bus;
         private int price;
 
         public Travel(int id, string destination , DateTime start_date , DateTime finish_date , int number_of_seats , int price)
@@ -22,7 +22,6 @@ namespace TourismAgency.Models
             Destination = destination;
             Start_date = start_date;
             Finish_date = finish_date;
-            Number_of_seats = number_of_seats;
             Price = price;
 
         }
@@ -32,7 +31,6 @@ namespace TourismAgency.Models
             Destination = destination;
             Start_date = start_date;
             Finish_date = finish_date;
-            Number_of_seats = number_of_seats;
 
             int priceInt;
 
@@ -101,21 +99,17 @@ namespace TourismAgency.Models
             }
 
         }
-        public int Number_of_seats
+        public Bus Bus
         {
             get
             {
-                return number_of_seats;
+                return bus;
             }
             set
             {
-
-                number_of_seats = value;
-
+                bus = value;
             }
-
         }
-
         public int Price
         {
             get
@@ -135,7 +129,7 @@ namespace TourismAgency.Models
 
         {
 
-            return  destination + "  " + start_date + "  " + finish_date + "  " + number_of_seats + "  " + price + " KM";
+            return  destination + "  " + start_date + "  " + finish_date + "  " + bus.Name + " " + bus.Number_of_seats  + "  " + price + " KM";
 
         }
 
