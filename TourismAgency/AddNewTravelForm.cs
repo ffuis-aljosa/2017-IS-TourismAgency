@@ -14,16 +14,12 @@ namespace TourismAgency
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
-            
-
+            TravelsInfoForm travelsInfoForm = new TravelsInfoForm();
+            this.Hide();
+            travelsInfoForm.Show();
         }
 
-        private void CreateTravelButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(StartDateTimePicker.Text);
-        }
 
-     
     }
-}
+
+ }

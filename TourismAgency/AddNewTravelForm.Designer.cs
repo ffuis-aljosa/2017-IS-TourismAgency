@@ -217,7 +217,6 @@
             this.CreateTravelButton.TabIndex = 14;
             this.CreateTravelButton.Text = "Create travel";
             this.CreateTravelButton.UseVisualStyleBackColor = true;
-            this.CreateTravelButton.Click += new System.EventHandler(this.CreateTravelButton_Click);
             // 
             // TravelListView
             // 
