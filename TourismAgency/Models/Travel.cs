@@ -14,23 +14,28 @@ namespace TourismAgency.Models
         private DateTime start_date;
         private DateTime finish_date;
         private Bus bus;
+        private Guide guide;
         private int price;
 
-        public Travel(int id, string destination , DateTime start_date , DateTime finish_date , int number_of_seats , int price)
+        public Travel(int id, string destination , DateTime start_date , DateTime finish_date , Bus bus, Guide guide , int price)
         {
             this.id = id;
             Destination = destination;
             Start_date = start_date;
             Finish_date = finish_date;
+            Bus = bus;
+            Guide = guide;
             Price = price;
 
         }
-        public Travel( string destination, DateTime start_date, DateTime finish_date, int number_of_seats, string price)
+        public Travel( string destination, DateTime start_date, DateTime finish_date, Bus bus , Guide guide, string price)
         {
             
             Destination = destination;
             Start_date = start_date;
             Finish_date = finish_date;
+            Bus = bus;
+            Guide = guide;
 
             int priceInt;
 
@@ -110,6 +115,19 @@ namespace TourismAgency.Models
                 bus = value;
             }
         }
+        public Guide Guide
+        {
+            get
+            {
+                return guide;
+
+            }
+            set
+            {
+                guide = value;
+
+            }
+        }
         public int Price
         {
             get
@@ -129,7 +147,7 @@ namespace TourismAgency.Models
 
         {
 
-            return  destination + "  " + start_date + "  " + finish_date + "  " + bus.Name + " " + bus.Number_of_seats  + "  " + price + " KM";
+            return  destination + "  " + start_date + "  " + finish_date + "  " + bus.Name + " " + bus.Number_of_seats  + guide.First_name +"  " + price + " KM";
 
         }
 

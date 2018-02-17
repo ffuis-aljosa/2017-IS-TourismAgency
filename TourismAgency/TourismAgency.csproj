@@ -110,6 +110,7 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Bus.cs" />
+    <Compile Include="Models\Guide.cs" />
     <Compile Include="Models\Travel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
