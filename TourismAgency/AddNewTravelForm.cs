@@ -9,8 +9,12 @@ namespace TourismAgency
         {
             InitializeComponent();
             StartDateTimePicker.MinDate = DateTime.Now;
-            FinishDateTimePicker.MinDate = DateTime.Now; 
+            FinishDateTimePicker.MinDate = DateTime.Now;
+            
+
+            
         }
+
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
@@ -18,8 +22,8 @@ namespace TourismAgency
             this.Hide();
             travelsInfoForm.Show();
         }
+       
 
-
-    }
+}
 
  }

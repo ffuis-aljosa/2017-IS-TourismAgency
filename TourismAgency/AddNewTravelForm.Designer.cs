@@ -50,8 +50,9 @@
             this.BusColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PriceColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GuideColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.GuideComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Number_Of_SeatsColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // DestinationLabel
@@ -228,11 +229,12 @@
             this.FinishDateColumnHeader,
             this.BusColumnHeader,
             this.PriceColumnHeader,
-            this.GuideColumnHeader});
+            this.GuideColumnHeader,
+            this.Number_Of_SeatsColumnHeader});
             this.TravelListView.GridLines = true;
             this.TravelListView.Location = new System.Drawing.Point(221, 37);
             this.TravelListView.Name = "TravelListView";
-            this.TravelListView.Size = new System.Drawing.Size(619, 379);
+            this.TravelListView.Size = new System.Drawing.Size(750, 379);
             this.TravelListView.TabIndex = 15;
             this.TravelListView.UseCompatibleStateImageBehavior = false;
             this.TravelListView.View = System.Windows.Forms.View.Details;
@@ -269,33 +271,32 @@
             // 
             // PriceColumnHeader
             // 
-            this.PriceColumnHeader.DisplayIndex = 6;
+            this.PriceColumnHeader.DisplayIndex = 7;
             this.PriceColumnHeader.Text = "Price";
             this.PriceColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.PriceColumnHeader.Width = 85;
+            this.PriceColumnHeader.Width = 92;
             // 
             // GuideColumnHeader
             // 
-            this.GuideColumnHeader.DisplayIndex = 5;
             this.GuideColumnHeader.Text = "Guide";
             this.GuideColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.GuideColumnHeader.Width = 117;
+            this.GuideColumnHeader.Width = 130;
             // 
-            // comboBox1
+            // GuideComboBox
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.GuideComboBox.BackColor = System.Drawing.SystemColors.Window;
+            this.GuideComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GuideComboBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.GuideComboBox.FormattingEnabled = true;
+            this.GuideComboBox.Items.AddRange(new object[] {
             "Branislav Šimšić",
             "Sunčica Marić",
             "Vlado Vanovac",
             "Đorđe Tepavčević"});
-            this.comboBox1.Location = new System.Drawing.Point(13, 237);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(184, 26);
-            this.comboBox1.TabIndex = 16;
+            this.GuideComboBox.Location = new System.Drawing.Point(13, 237);
+            this.GuideComboBox.Name = "GuideComboBox";
+            this.GuideComboBox.Size = new System.Drawing.Size(184, 26);
+            this.GuideComboBox.TabIndex = 16;
             // 
             // label1
             // 
@@ -308,14 +309,21 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Guide";
             // 
+            // Number_Of_SeatsColumnHeader
+            // 
+            this.Number_Of_SeatsColumnHeader.DisplayIndex = 5;
+            this.Number_Of_SeatsColumnHeader.Text = "Number of seats";
+            this.Number_Of_SeatsColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Number_Of_SeatsColumnHeader.Width = 111;
+            // 
             // AddNewTravelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(859, 437);
+            this.ClientSize = new System.Drawing.Size(983, 437);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.GuideComboBox);
             this.Controls.Add(this.TravelListView);
             this.Controls.Add(this.CreateTravelButton);
             this.Controls.Add(this.ExitButton);
@@ -367,8 +375,9 @@
         private System.Windows.Forms.ColumnHeader FinishDateColumnHeader;
         private System.Windows.Forms.ColumnHeader BusColumnHeader;
         private System.Windows.Forms.ColumnHeader PriceColumnHeader;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox GuideComboBox;
         private System.Windows.Forms.ColumnHeader GuideColumnHeader;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColumnHeader Number_Of_SeatsColumnHeader;
     }
 }
