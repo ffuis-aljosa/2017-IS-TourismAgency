@@ -120,6 +120,18 @@
     <Compile Include="AdminTourismAgencyForm.Designer.cs">
       <DependentUpon>AdminTourismAgencyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TravelsInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TravelsInfoForm.Designer.cs">
+      <DependentUpon>TravelsInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersInfoForm.Designer.cs">
+      <DependentUpon>UsersInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +147,9 @@
     <EmbeddedResource Include="AddNewClientForm.resx">
       <DependentUpon>AddNewClientForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClientTourismAgencyForm.resx">
+      <DependentUpon>ClientTourismAgencyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +164,12 @@
     </Compile>
     <EmbeddedResource Include="AdminTourismAgencyForm.resx">
       <DependentUpon>AdminTourismAgencyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TravelsInfoForm.resx">
+      <DependentUpon>TravelsInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersInfoForm.resx">
+      <DependentUpon>UsersInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>

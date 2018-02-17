@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ClientTourismAgencyForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "ClientTourismAgencyForm";
             this.Text = "ClientTourismAgencyForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ClientTourismAgencyForm_FormClosed);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

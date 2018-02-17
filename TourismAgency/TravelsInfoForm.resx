@@ -117,35 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="MainToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="HelpToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEbSURBVDhPpVM7bgIxEB0iCk5CSYVouQB3SAm7CxIV7dIk
-        V0gXCUXKBSIahDgEPe0WlIgkhWM7b8YLCuuxhJSRnvbz3jx7ZmyKonBdKvySMvtBhakE8o5/zKXDtyCY
-        09h8QexVCAcNa2+Dk+1aTVIB7Y0Ju2rCyc+eMtdDwlPM805Ccje57dy+imbqBhEXykFPpDkN8oKxsVh9
-        h+dR5XNXUt3hBmk+sfobVl6A38R8Dc4No2qS5oCV36n0D/ToO/g+xRrRVQkDYGLOYlD6drJHYqCWwOBR
-        ITI31HkglJBqopuJQW6fdR6QJibH6Ea1wQu2+h3x1zFyqAfJbvG/H2BXMX85SBL/PcoSbALXZMeBsG3t
-        Mv0Jruvu60z0C/+Q5EbY7KKRAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="LogoutToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEpSURBVDhPpVOxSgNBEJ1gCksrMY1lCrG3sPEbBLHTUnIb
-        wUISxUIJVv6AooK1YBcs1VjY+R02NlbCZW/3OTO3V6y3AWMePO7Yee+xOztLNRjfJoMz6rghGfuh1H9e
-        k9pkoMGCA9qz3yxGklpjjWhjiNk9Jk1JsjYK4dSFQ4/rUY7eg414+TyG1OohspPS3JatLR157NwVNeH2
-        TQGp/V4Px+GeaHOgolTAYt+juQ+sDJx+o3rmTyl0eGJAxdaxx2A4jkPEW15VHLB84rF24WrcvCpw+5qj
-        0a1C2Dt7wCxHMHj/cxNXzxNNNBj9/xqFXb9ezcL0g9RxL6VZMe0oc/O2MBfMFcJjymyeNgVm7ol2MR9M
-        CehzdveU4Yt745TGfpIp3jhgI6gCiH4ARwEZPOO3//EAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAUAEBAAAAEAIABoBAAAVgAAABgYAAABACAAiAkAAL4EAAAgIAAAAQAgAKgQAABGDgAAMDAAAAEA

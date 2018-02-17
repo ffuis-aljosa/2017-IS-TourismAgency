@@ -16,16 +16,25 @@ namespace TourismAgency
             Application.Exit(); 
         }
 
-        private void AddNewAdminButton_Click(object sender, EventArgs e)
+        private void LogoutToolStripButton_Click(object sender, EventArgs e)
         {
-            AddNewAdminForm addNewAdmin = new AddNewAdminForm();
-            addNewAdmin.ShowDialog();
+            LoginForm loginForm = new LoginForm();
+            this.Hide();
+            loginForm.Show(); 
         }
 
-        private void AddNewTravelButton_Click(object sender, EventArgs e)
+        private void UsersInfoButton_Click(object sender, EventArgs e)
         {
-            AddNewTravelForm addNewTravel = new AddNewTravelForm();
-            addNewTravel.ShowDialog(); 
+            UsersInfoForm usersInfoForm = new UsersInfoForm();
+            this.Hide();
+            usersInfoForm.Show(); 
+        }
+
+        private void TravelsInfoButton_Click(object sender, EventArgs e)
+        {
+            TravelsInfoForm travelsInfo = new TravelsInfoForm();
+            this.Hide();
+            travelsInfo.Show(); 
         }
     }
 }

@@ -57,8 +57,8 @@
             // DestinationLabel
             // 
             this.DestinationLabel.AutoSize = true;
-            this.DestinationLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
-            this.DestinationLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.DestinationLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DestinationLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.DestinationLabel.Location = new System.Drawing.Point(15, 16);
             this.DestinationLabel.Name = "DestinationLabel";
             this.DestinationLabel.Size = new System.Drawing.Size(103, 18);
@@ -80,8 +80,8 @@
             // StartDateLabel
             // 
             this.StartDateLabel.AutoSize = true;
-            this.StartDateLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
-            this.StartDateLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.StartDateLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartDateLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.StartDateLabel.Location = new System.Drawing.Point(15, 64);
             this.StartDateLabel.Name = "StartDateLabel";
             this.StartDateLabel.Size = new System.Drawing.Size(91, 18);
@@ -107,8 +107,8 @@
             // FinishDateLabel
             // 
             this.FinishDateLabel.AutoSize = true;
-            this.FinishDateLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
-            this.FinishDateLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.FinishDateLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinishDateLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.FinishDateLabel.Location = new System.Drawing.Point(15, 115);
             this.FinishDateLabel.Name = "FinishDateLabel";
             this.FinishDateLabel.Size = new System.Drawing.Size(99, 18);
@@ -130,8 +130,8 @@
             // BusLabel
             // 
             this.BusLabel.AutoSize = true;
-            this.BusLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
-            this.BusLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.BusLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BusLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.BusLabel.Location = new System.Drawing.Point(15, 166);
             this.BusLabel.Name = "BusLabel";
             this.BusLabel.Size = new System.Drawing.Size(38, 18);
@@ -162,11 +162,11 @@
             // PriceLabel
             // 
             this.PriceLabel.AutoSize = true;
-            this.PriceLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
-            this.PriceLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.PriceLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.PriceLabel.Location = new System.Drawing.Point(15, 266);
             this.PriceLabel.Name = "PriceLabel";
-            this.PriceLabel.Size = new System.Drawing.Size(48, 18);
+            this.PriceLabel.Size = new System.Drawing.Size(47, 18);
             this.PriceLabel.TabIndex = 9;
             this.PriceLabel.Text = "Price";
             // 
@@ -185,11 +185,11 @@
             // TravelLabel
             // 
             this.TravelLabel.AutoSize = true;
-            this.TravelLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
-            this.TravelLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.TravelLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TravelLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.TravelLabel.Location = new System.Drawing.Point(218, 13);
             this.TravelLabel.Name = "TravelLabel";
-            this.TravelLabel.Size = new System.Drawing.Size(59, 18);
+            this.TravelLabel.Size = new System.Drawing.Size(56, 18);
             this.TravelLabel.TabIndex = 12;
             this.TravelLabel.Text = "Travel";
             // 
@@ -301,8 +301,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label1.Location = new System.Drawing.Point(15, 216);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 18);
