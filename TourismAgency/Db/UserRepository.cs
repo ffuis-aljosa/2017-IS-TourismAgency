@@ -1,5 +1,6 @@
 ﻿using TourismAgency.Models;
 using System.Data.SqlServerCe;
+using System.Collections.Generic;
 using System;
 
 namespace TourismAgency.Db

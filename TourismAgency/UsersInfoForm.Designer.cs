@@ -84,37 +84,37 @@
             // 
             this.UsernameColumnHeader.Text = "Username";
             this.UsernameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.UsernameColumnHeader.Width = 116;
+            this.UsernameColumnHeader.Width = 89;
             // 
             // RoleColumnHeader
             // 
             this.RoleColumnHeader.Text = "Role";
             this.RoleColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.RoleColumnHeader.Width = 68;
+            this.RoleColumnHeader.Width = 51;
             // 
             // FirstNameColumnHeader
             // 
             this.FirstNameColumnHeader.Text = "First Name";
             this.FirstNameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.FirstNameColumnHeader.Width = 137;
+            this.FirstNameColumnHeader.Width = 110;
             // 
             // LastNameColumnHeader
             // 
             this.LastNameColumnHeader.Text = "Last Name";
             this.LastNameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.LastNameColumnHeader.Width = 150;
+            this.LastNameColumnHeader.Width = 131;
             // 
             // DateOfBirthColumnHeader
             // 
             this.DateOfBirthColumnHeader.Text = "Date of birth";
             this.DateOfBirthColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.DateOfBirthColumnHeader.Width = 95;
+            this.DateOfBirthColumnHeader.Width = 110;
             // 
             // EmailColumnHeader
             // 
             this.EmailColumnHeader.Text = "E-mail";
             this.EmailColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.EmailColumnHeader.Width = 129;
+            this.EmailColumnHeader.Width = 167;
             // 
             // PassportNumberColumnHeader
             // 
@@ -126,25 +126,25 @@
             // 
             this.CitizenshipColumnHeader.Text = "Citizenship";
             this.CitizenshipColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CitizenshipColumnHeader.Width = 113;
+            this.CitizenshipColumnHeader.Width = 119;
             // 
             // CityColumnHeader
             // 
             this.CityColumnHeader.Text = "City";
             this.CityColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CityColumnHeader.Width = 128;
+            this.CityColumnHeader.Width = 145;
             // 
             // AdressColumnHeader
             // 
             this.AdressColumnHeader.Text = "Adress";
             this.AdressColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.AdressColumnHeader.Width = 148;
+            this.AdressColumnHeader.Width = 159;
             // 
             // PhoneNumberColumnHeader
             // 
             this.PhoneNumberColumnHeader.Text = "Phone number";
             this.PhoneNumberColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.PhoneNumberColumnHeader.Width = 122;
+            this.PhoneNumberColumnHeader.Width = 121;
             // 
             // ExitButton
             // 
@@ -152,7 +152,7 @@
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.Location = new System.Drawing.Point(0, 459);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(1386, 46);
+            this.ExitButton.Size = new System.Drawing.Size(1370, 46);
             this.ExitButton.TabIndex = 1;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -164,7 +164,7 @@
             this.ChangeUserInfoButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangeUserInfoButton.Location = new System.Drawing.Point(0, 413);
             this.ChangeUserInfoButton.Name = "ChangeUserInfoButton";
-            this.ChangeUserInfoButton.Size = new System.Drawing.Size(1386, 46);
+            this.ChangeUserInfoButton.Size = new System.Drawing.Size(1370, 46);
             this.ChangeUserInfoButton.TabIndex = 2;
             this.ChangeUserInfoButton.Text = "Change Existing User Info";
             this.ChangeUserInfoButton.UseVisualStyleBackColor = true;
@@ -175,7 +175,7 @@
             this.CreateNewAdminButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateNewAdminButton.Location = new System.Drawing.Point(0, 367);
             this.CreateNewAdminButton.Name = "CreateNewAdminButton";
-            this.CreateNewAdminButton.Size = new System.Drawing.Size(1386, 46);
+            this.CreateNewAdminButton.Size = new System.Drawing.Size(1370, 46);
             this.CreateNewAdminButton.TabIndex = 3;
             this.CreateNewAdminButton.Text = "Create New Admin";
             this.CreateNewAdminButton.UseVisualStyleBackColor = true;
@@ -196,7 +196,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1386, 505);
+            this.ClientSize = new System.Drawing.Size(1370, 505);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CreateNewAdminButton);
             this.Controls.Add(this.ChangeUserInfoButton);

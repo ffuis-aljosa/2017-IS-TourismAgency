@@ -18,6 +18,7 @@ namespace TourismAgency.Models
             Name = name;
             Number_of_seats = number_of_seats;
         }
+
         public Bus(string name , string number_of_seats)
         {
 
@@ -31,6 +32,7 @@ namespace TourismAgency.Models
                 throw new Exception("Incorrect number of seats");
             Number_of_seats = number_of_seatsInt;
         }
+
         public int Id
         {
             get
@@ -48,14 +50,15 @@ namespace TourismAgency.Models
             set
             {
                 if (string.IsNullOrEmpty(value))
-                    throw new Exception("The name of the bus can not be empty");
+                    throw new Exception("The name of the bus can't be empty!");
 
                 if (value.Length > 32)
-                    throw new Exception("The name can not be longer than 32 characters");
+                    throw new Exception("The name can't be longer than 32 characters!");
 
                 name = value;
             }
         }
+
         public int Number_of_seats
         {
             get

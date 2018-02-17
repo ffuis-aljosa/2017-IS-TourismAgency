@@ -6,6 +6,7 @@ namespace TourismAgency.Models
 {
     class Users
     {
+        private int id;
         private string username;
         private string password;
         private string role;
@@ -20,10 +21,10 @@ namespace TourismAgency.Models
         private string phone_number;
 
 
-        public Users (string username, string password)
+        public Users(string username, string password)
         {
             Username = username;
-            Password = password; 
+            Password = password;
         }
 
         public Users(string username, string password, string first_name, string last_name)
@@ -31,9 +32,8 @@ namespace TourismAgency.Models
             Username = username;
             Password = password;
             First_name = first_name;
-            Last_name = last_name; 
+            Last_name = last_name;
         }
-
 
         public Users(string first_name, string last_name, string date_of_birth, string e_mail, string passport_number, string citizenship, string city, string adress, string phone_number, string username, string password)
         {
@@ -48,7 +48,30 @@ namespace TourismAgency.Models
             Phone_number = phone_number;
             Username = username;
             Password = password;
+        }
 
+        public Users(int id, string username, string role, string first_name, string last_name, string date_of_birth, string e_mail, string passport_number, string citizenship, string city, string adress, string phone_number)
+        {
+            this.id = id;
+            Username = username;
+            Role = role;
+            First_name = first_name;
+            Last_name = last_name;
+            Date_of_birth = date_of_birth;
+            E_mail = e_mail;
+            Passport_number = passport_number;
+            Citizenship = citizenship;
+            City = city;
+            Adress = adress;
+            Phone_number = phone_number;
+        }
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
         }
 
         public string Role
@@ -63,7 +86,7 @@ namespace TourismAgency.Models
                     throw new Exception("Role can't be a blank space!");
 
                 if (value.Length > 100)
-                    throw new Exception("Role can't be longer than a 100 characters!");
+                    throw new Exception("Role can't be longer than a 32 characters!");
 
                 role = value;
             }
@@ -81,7 +104,7 @@ namespace TourismAgency.Models
                     throw new Exception("Username can't be a blank space!");
 
                 if (value.Length > 100)
-                    throw new Exception("Username can't be longer than a 100 characters!");
+                    throw new Exception("Username can't be longer than a 32 characters!");
 
                 username = value;
             }
@@ -120,7 +143,7 @@ namespace TourismAgency.Models
                     throw new Exception("First name can't be a blank space!");
 
                 if (value.Length > 100)
-                    throw new Exception("First name can't be longer than a 100 characters!");
+                    throw new Exception("First name can't be longer than a 32 characters!");
 
                 first_name = value;
             }
@@ -138,7 +161,7 @@ namespace TourismAgency.Models
                     throw new Exception("Last name can't be a blank space!");
 
                 if (value.Length > 100)
-                    throw new Exception("Last name can't be longer than a 100 characters!");
+                    throw new Exception("Last name can't be longer than a 32 characters!");
 
                 last_name = value;
             }
@@ -184,7 +207,7 @@ namespace TourismAgency.Models
                 throw new Exception("E-mail can't be a blank space!");
 
                 if (value.Length > 100)
-                    throw new Exception("E-mail can't be longer than a 30 characters!");
+                    throw new Exception("E-mail can't be longer than a 32 characters!");
 
                 e_mail = value;
             }
@@ -220,7 +243,7 @@ namespace TourismAgency.Models
                     throw new Exception("Country can't be a blank space!");
 
                 if (value.Length > 100)
-                    throw new Exception("Country can't be longer than a 100 characters!");
+                    throw new Exception("Country can't be longer than a 32 characters!");
 
                 citizenship = value;
             }
@@ -238,7 +261,7 @@ namespace TourismAgency.Models
                     throw new Exception("City can't be a blank space!");
 
                 if (value.Length > 100)
-                    throw new Exception("City can't be longer than a 100 characters!");
+                    throw new Exception("City can't be longer than a 32 characters!");
 
                 city = value;
             }
@@ -256,7 +279,7 @@ namespace TourismAgency.Models
                     throw new Exception("Adress can't be a blank space!");
 
                 if (value.Length > 100)
-                    throw new Exception("Adress can't be longer than a 100 characters!");
+                    throw new Exception("Adress can't be longer than a 32 characters!");
 
                 adress = value;
             }
@@ -270,7 +293,7 @@ namespace TourismAgency.Models
             }
             set
             {
-                if (value.StartsWith("06") == false || value.Length > 15)
+                if (value.StartsWith("+387") == false || value.Length > 15)
                     throw new Exception("The phone number is not valid!"); 
 
                 phone_number = value;

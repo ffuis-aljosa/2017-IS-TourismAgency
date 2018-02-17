@@ -11,20 +11,20 @@ namespace TourismAgency.Models
         private int id;
         private string first_name;
         private string last_name;
-        private DateTime date_of_birth;
+        private string date_of_birth;
         private int phone_number;
-        private string passaport_number;
+        private string passport_number;
 
-        public Guide(int id , string first_name , string last_name , DateTime date_of_birth , int phone_number , string passaport_number)
+        public Guide(int id , string first_name , string last_name , string date_of_birth , int phone_number , string passport_number)
         {
             this.id = id;
             First_name = first_name;
             Last_name = last_name;
             Date_of_birth = date_of_birth;
             Phone_number = phone_number;
-            Passaport_number = passaport_number;
+            Passport_number = passport_number;
         }
-        public Guide( string first_name, string last_name, DateTime date_of_birth, string phone_number, string passaport_number)
+        public Guide( string first_name, string last_name, string date_of_birth, string phone_number, string passport_number)
         {
             First_name = first_name;
             Last_name = last_name;
@@ -35,11 +35,11 @@ namespace TourismAgency.Models
             bool parseSuccessful = int.TryParse(phone_number, out phone_numberInt);
 
             if (!parseSuccessful)
-                throw new Exception("Incorrect phone number");
+                throw new Exception("Incorrect phone number!");
             Phone_number = phone_numberInt;
 
 
-            Passaport_number = passaport_number;
+            Passport_number = passport_number;
         }
 
         public int Id
@@ -62,7 +62,7 @@ namespace TourismAgency.Models
 
                 if (string.IsNullOrEmpty(value))
 
-                    throw new Exception("First name can't be empty");
+                    throw new Exception("First name can't be empty!");
 
 
                 first_name = value;
@@ -81,14 +81,21 @@ namespace TourismAgency.Models
 
                 if (string.IsNullOrEmpty(value))
 
-                    throw new Exception("Last name can't be empty");
+                    throw new Exception("Last name can't be empty!");
 
 
                 last_name = value;
 
             }
         }
-        public DateTime Date_of_birth
+
+        int Years(DateTime start, DateTime end)
+        {
+            return (end.Year - start.Year - 1) +
+                (((end.Month > start.Month) || ((end.Month == start.Month) && (end.Day >= start.Day))) ? 1 : 0);
+        }
+
+        public string Date_of_birth
         {
             get
             {
@@ -96,8 +103,9 @@ namespace TourismAgency.Models
             }
             set
             {
-               /* if (date_of_birth < " 2000:12:31 ")
-                    throw new Exception(" ");*/
+                if (Years(DateTime.Now, Convert.ToDateTime(date_of_birth)) < 18)
+                    throw new Exception("Tourist guide must be an adult!");
+
                 date_of_birth = value;
                 
             }
@@ -118,11 +126,11 @@ namespace TourismAgency.Models
             }
 
         }
-        public string Passaport_number
+        public string Passport_number
         {
             get
             {
-                return passaport_number;
+                return passport_number;
             }
             set
             {
@@ -132,14 +140,14 @@ namespace TourismAgency.Models
                 if (value.Length > 8)
                     throw new Exception("The passaport number can not be longer than 8 characters");
 
-                passaport_number = value;
+                passport_number = value;
             }
 
         }
 
         public override string ToString()
         {
-            return first_name + " " + last_name + " " + date_of_birth + " " + phone_number + " " + passaport_number;
+            return first_name + " " + last_name + " " + date_of_birth + " " + phone_number + " " + passport_number;
         }
     }
 

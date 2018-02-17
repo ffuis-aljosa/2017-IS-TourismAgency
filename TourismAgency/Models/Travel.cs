@@ -45,6 +45,7 @@ namespace TourismAgency.Models
                 throw new Exception("Incorrect price");
             Price = priceInt;
         }
+
         public int Id
         {
             get

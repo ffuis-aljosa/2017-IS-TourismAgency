@@ -324,6 +324,7 @@
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(185, 27);
             this.PhoneNumberTextBox.TabIndex = 9;
+            this.PhoneNumberTextBox.Text = "+387";
             // 
             // UsernameTextBox
             // 
