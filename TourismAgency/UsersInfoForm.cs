@@ -14,7 +14,7 @@ namespace TourismAgency
         public UsersInfoForm()
         {
             InitializeComponent();
-            loadUsers();
+            LoadUsers();
         }
 
         private void UsersListView_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
@@ -37,7 +37,7 @@ namespace TourismAgency
             addNewAdmin.Show(); 
         }
 
-        private void loadUsers()
+        private void LoadUsers()
         {
             UsersListView.Items.Clear();
 

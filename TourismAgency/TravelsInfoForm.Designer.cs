@@ -33,11 +33,11 @@
             this.NumberColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DestinationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StartDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
             this.FinishDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.BusColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SeatsColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GuideColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PriceColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.ChangeTravelInfoButton = new System.Windows.Forms.Button();
             this.AddNewTravelButton = new System.Windows.Forms.Button();
@@ -52,8 +52,8 @@
             this.DestinationColumnHeader,
             this.StartDateColumnHeader,
             this.FinishDateColumnHeader,
-            this.BusColumnHeader,
             this.GuideColumnHeader,
+            this.SeatsColumnHeader,
             this.PriceColumnHeader});
             this.TravelsListView.GridLines = true;
             this.TravelsListView.Location = new System.Drawing.Point(12, 30);
@@ -81,27 +81,17 @@
             this.StartDateColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.StartDateColumnHeader.Width = 100;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Travels Info";
-            // 
             // FinishDateColumnHeader
             // 
             this.FinishDateColumnHeader.Text = "Finish Date";
             this.FinishDateColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.FinishDateColumnHeader.Width = 103;
             // 
-            // BusColumnHeader
+            // SeatsColumnHeader
             // 
-            this.BusColumnHeader.Text = "Bus";
-            this.BusColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BusColumnHeader.Width = 130;
+            this.SeatsColumnHeader.Text = "Number of seats";
+            this.SeatsColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SeatsColumnHeader.Width = 130;
             // 
             // GuideColumnHeader
             // 
@@ -114,6 +104,16 @@
             this.PriceColumnHeader.Text = "Price";
             this.PriceColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.PriceColumnHeader.Width = 107;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 18);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Travels Info";
             // 
             // ExitButton
             // 
@@ -181,7 +181,7 @@
         private System.Windows.Forms.ColumnHeader StartDateColumnHeader;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader FinishDateColumnHeader;
-        private System.Windows.Forms.ColumnHeader BusColumnHeader;
+        private System.Windows.Forms.ColumnHeader SeatsColumnHeader;
         private System.Windows.Forms.ColumnHeader GuideColumnHeader;
         private System.Windows.Forms.ColumnHeader PriceColumnHeader;
         private System.Windows.Forms.Button ExitButton;

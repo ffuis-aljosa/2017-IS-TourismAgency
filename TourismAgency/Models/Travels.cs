@@ -6,44 +6,38 @@ using System.Threading.Tasks;
 
 namespace TourismAgency.Models
 {
-    class Travel
+    class Travels
     {
 
         private int id;
         private string destination;
-        private DateTime start_date;
-        private DateTime finish_date;
-        private Bus bus;
-        private Guide guide;
-        private int price;
+        private string start_date;
+        private string finish_date;
+        private string number_of_seats;
+        private string guide;
+        private string price;
 
-        public Travel(int id, string destination , DateTime start_date , DateTime finish_date , Bus bus, Guide guide , int price)
+        public Travels(int id, string destination , string start_date , string finish_date , string number_of_seats ,string guide , string price)
         {
             this.id = id;
             Destination = destination;
             Start_date = start_date;
             Finish_date = finish_date;
-            Bus = bus;
+            Number_of_seats = number_of_seats;
             Guide = guide;
             Price = price;
 
         }
-        public Travel( string destination, DateTime start_date, DateTime finish_date, Bus bus , Guide guide, string price)
+
+        public Travels(string destination, string start_date, string finish_date, string number_of_seats , string guide, string price)
         {
             
             Destination = destination;
             Start_date = start_date;
             Finish_date = finish_date;
-            Bus = bus;
+            Number_of_seats = number_of_seats;
             Guide = guide;
-
-            int priceInt;
-
-            bool parseSuccessful = int.TryParse(price, out priceInt);
-
-            if (!parseSuccessful)
-                throw new Exception("Incorrect price");
-            Price = priceInt;
+            Price = price; 
         }
 
         public int Id
@@ -73,7 +67,8 @@ namespace TourismAgency.Models
 
             }
         }
-        public DateTime Start_date
+
+        public string Start_date
         {
             get
             {
@@ -81,14 +76,15 @@ namespace TourismAgency.Models
             }
             set
             {
-                if (start_date < DateTime.Now)
-                    throw new Exception("Start date can't be lower than current time");
                 start_date = value;
 
             }
 
         }
-        public DateTime Finish_date
+
+        
+
+        public string Finish_date
         {
             get
             {
@@ -96,27 +92,30 @@ namespace TourismAgency.Models
             }
             set
             {
-                if (finish_date < DateTime.Now)
-                    throw new Exception("Finish date can't be lower than current time");
-                else if (finish_date < start_date)
-                    throw new Exception("Finish date can't be lower than start date");
+               // if ()
+                 //   throw new Exception("Finish date can't be lower than start date!");
                 finish_date = value;
 
             }
 
         }
-        public Bus Bus
+
+        public string Number_of_seats
         {
             get
             {
-                return bus;
+                return number_of_seats;
             }
             set
             {
-                bus = value;
+                if (string.IsNullOrEmpty(value))
+                    throw new Exception("Number of seats can't be empty!");
+
+                number_of_seats = value;
             }
         }
-        public Guide Guide
+
+        public string Guide
         {
             get
             {
@@ -125,11 +124,15 @@ namespace TourismAgency.Models
             }
             set
             {
+                if (string.IsNullOrEmpty(value))
+                    throw new Exception("Guide can't be empty");
+
                 guide = value;
 
             }
         }
-        public int Price
+
+        public string Price
         {
             get
             {
@@ -137,20 +140,19 @@ namespace TourismAgency.Models
             }
             set
             {
-                if (price < 0)
+                if (string.IsNullOrEmpty(value))
+                    throw new Exception("Price can't be empty");
+
+                if (Convert.ToInt16(price) < 0)
                     throw new Exception("The price must be higher than zero");
+
+
                 price = value;
 
             }
 
         }
-        public override string ToString()
 
-        {
-
-            return  destination + "  " + start_date + "  " + finish_date + "  " + bus.Name + " " + bus.Number_of_seats  + guide.First_name +"  " + price + " KM";
-
-        }
 
     }
 

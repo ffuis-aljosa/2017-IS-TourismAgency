@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using TourismAgency.Db;
 using System.Data.SqlServerCe;
 using System.Windows.Forms;
@@ -44,8 +39,8 @@ namespace TourismAgency
         {
             TravelsListView.Items.Clear();
 
-            string sql = @"SELECT t.id, t.destination, t.start_date, t.finish_date, b.model, g.first_name,
-                t.price FROM travels AS t JOIN buses AS b JOIN guides AS g ON b.id = t.bus_id AND g.id = t.guide_id";
+            string sql = @"SELECT id, destinations, start_date, finish_date, guide, number_of_seats,
+                price FROM travels";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection);
 
@@ -55,11 +50,11 @@ namespace TourismAgency
                 while (reader.Read())
                 {
                     ListViewItem item = new ListViewItem(reader["id"].ToString());
-                    item.SubItems.Add(reader["destination"].ToString());
+                    item.SubItems.Add(reader["destinations"].ToString());
                     item.SubItems.Add(reader["start_date"].ToString());
                     item.SubItems.Add(reader["finish_date"].ToString());
-                    item.SubItems.Add(reader["bus"].ToString());
                     item.SubItems.Add(reader["guide"].ToString());
+                    item.SubItems.Add(reader["number_of_seats"].ToString());
                     item.SubItems.Add(reader["price"].ToString());
 
                     TravelsListView.Items.Add(item);
