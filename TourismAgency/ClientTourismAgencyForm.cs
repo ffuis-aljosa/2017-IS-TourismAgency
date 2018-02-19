@@ -14,5 +14,12 @@ namespace TourismAgency
         {
             Application.Exit(); 
         }
+
+        private void toolStripButton1_Click(object sender, System.EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            this.Hide();
+            login.Show(); 
+        }
     }
 }

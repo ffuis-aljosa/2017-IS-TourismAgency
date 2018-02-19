@@ -76,12 +76,9 @@ namespace TourismAgency.Models
             set
             {
                 start_date = value;
-
             }
 
         }
-
-        
 
         public string Finish_date
         {
@@ -91,8 +88,12 @@ namespace TourismAgency.Models
             }
             set
             {
-               // if ()
-                 //   throw new Exception("Finish date can't be lower than start date!");
+                DateTime startDate = Convert.ToDateTime(start_date);
+                DateTime finishDate = Convert.ToDateTime(finish_date); 
+
+                if (startDate > finishDate)
+                    throw new Exception("Finish date can't be lower than start date!");
+
                 finish_date = value;
 
             }

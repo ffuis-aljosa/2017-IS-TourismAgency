@@ -15,7 +15,9 @@ namespace TourismAgency
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            ClientTourismAgencyForm client = new ClientTourismAgencyForm();
+            client.Show();
         }
 
         private void UsernameTextBox_Click(object sender, EventArgs e)
