@@ -10,6 +10,8 @@ namespace TourismAgency
         public AddNewAdminForm()
         {
             InitializeComponent();
+            PasswordTextBox.UseSystemPasswordChar = true;
+            RepeatPasswordTextBox.UseSystemPasswordChar = true; 
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -27,16 +29,13 @@ namespace TourismAgency
                 if (PasswordTextBox.Text != RepeatPasswordTextBox.Text)
                     throw new Exception("Password and repeated password are not same!");
 
-                Users user = new Users(UsernameTextBox.Text, PasswordTextBox.Text, FirstNameTextBox.Text, LastNameTextBox.Text);
-                user.Role = "admin";
+                User user = new User(UsernameTextBox.Text, PasswordTextBox.Text);
 
                 UserRepository.CreateAdmin(user);
 
                 UsernameTextBox.Text = "";
                 PasswordTextBox.Text = "";
                 RepeatPasswordTextBox.Text = "";
-                FirstNameTextBox.Text = "";
-                LastNameTextBox.Text = "";
 
                 MessageBox.Show("Admin is created succesfully!", "Great", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

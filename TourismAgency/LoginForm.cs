@@ -10,6 +10,7 @@ namespace TourismAgency
         public LoginForm()
         {
             InitializeComponent();
+            PasswordTextBox.UseSystemPasswordChar = true; 
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -31,26 +32,15 @@ namespace TourismAgency
         {
             try
             {
-                Users user = new Users(UsernameTextBox.Text, PasswordTextBox.Text);
+                User user = new User(UsernameTextBox.Text, PasswordTextBox.Text);
 
                 if (UserRepository.login(user) != null)
                 {
-                    if (user.Role == "admin")
-                    {
                         AdminTourismAgencyForm adminTourismAgencyForm = new AdminTourismAgencyForm();
                         adminTourismAgencyForm.Show();
                         adminTourismAgencyForm.FormClosed += TourismAgencyForm_FormClosed;
                        
                         Hide();
-                    }
-                    else
-                    {
-                        ClientTourismAgencyForm clientTourismAgencyForm = new ClientTourismAgencyForm();
-                        clientTourismAgencyForm.Show();
-                        clientTourismAgencyForm.FormClosed += TourismAgencyForm_FormClosed;
-
-                        Hide();
-                    }
                 }
                 else
                 {
@@ -66,13 +56,6 @@ namespace TourismAgency
         private void TourismAgencyForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Show();
-        }
-
-        private void RegisterLabel_Click(object sender, EventArgs e)
-        {
-            AddNewClientForm clientForm = new AddNewClientForm();
-            clientForm.Show();
-            this.Hide(); 
         }
     }
 }

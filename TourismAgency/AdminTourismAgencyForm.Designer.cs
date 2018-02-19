@@ -30,11 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminTourismAgencyForm));
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
-            this.LogoutToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.HelpToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.LogoutToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.UsersInfoButton = new System.Windows.Forms.Button();
             this.TravelsInfoButton = new System.Windows.Forms.Button();
-            this.AdminToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.MainToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,13 +43,21 @@
             this.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HelpToolStripButton,
-            this.LogoutToolStripButton,
-            this.AdminToolStripLabel});
+            this.LogoutToolStripButton});
             this.MainToolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.MainToolStrip.Location = new System.Drawing.Point(0, 0);
             this.MainToolStrip.Name = "MainToolStrip";
-            this.MainToolStrip.Size = new System.Drawing.Size(617, 25);
+            this.MainToolStrip.Size = new System.Drawing.Size(617, 37);
             this.MainToolStrip.TabIndex = 3;
+            // 
+            // HelpToolStripButton
+            // 
+            this.HelpToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("HelpToolStripButton.Image")));
+            this.HelpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.HelpToolStripButton.Name = "HelpToolStripButton";
+            this.HelpToolStripButton.Size = new System.Drawing.Size(39, 34);
+            this.HelpToolStripButton.Text = "Help";
+            this.HelpToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // LogoutToolStripButton
             // 
@@ -58,17 +65,10 @@
             this.LogoutToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("LogoutToolStripButton.Image")));
             this.LogoutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.LogoutToolStripButton.Name = "LogoutToolStripButton";
-            this.LogoutToolStripButton.Size = new System.Drawing.Size(71, 22);
+            this.LogoutToolStripButton.Size = new System.Drawing.Size(55, 34);
             this.LogoutToolStripButton.Text = "Logout";
+            this.LogoutToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.LogoutToolStripButton.Click += new System.EventHandler(this.LogoutToolStripButton_Click);
-            // 
-            // HelpToolStripButton
-            // 
-            this.HelpToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("HelpToolStripButton.Image")));
-            this.HelpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.HelpToolStripButton.Name = "HelpToolStripButton";
-            this.HelpToolStripButton.Size = new System.Drawing.Size(55, 22);
-            this.HelpToolStripButton.Text = "Help";
             // 
             // UsersInfoButton
             // 
@@ -89,13 +89,6 @@
             this.TravelsInfoButton.Text = "Travels info";
             this.TravelsInfoButton.UseVisualStyleBackColor = true;
             this.TravelsInfoButton.Click += new System.EventHandler(this.TravelsInfoButton_Click);
-            // 
-            // AdminToolStripLabel
-            // 
-            this.AdminToolStripLabel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.AdminToolStripLabel.Name = "AdminToolStripLabel";
-            this.AdminToolStripLabel.Size = new System.Drawing.Size(45, 22);
-            this.AdminToolStripLabel.Text = "Admin";
             // 
             // AdminTourismAgencyForm
             // 
@@ -127,6 +120,5 @@
         private System.Windows.Forms.ToolStripButton HelpToolStripButton;
         private System.Windows.Forms.Button UsersInfoButton;
         private System.Windows.Forms.Button TravelsInfoButton;
-        private System.Windows.Forms.ToolStripLabel AdminToolStripLabel;
     }
 }

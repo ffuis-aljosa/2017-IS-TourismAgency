@@ -38,6 +38,8 @@
             this.LoginButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.RegisterLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // shapeContainer1
@@ -48,28 +50,21 @@
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.PasswordRectangleShape,
             this.UsernamRectangleShape});
-            this.shapeContainer1.Size = new System.Drawing.Size(363, 399);
+            this.shapeContainer1.Size = new System.Drawing.Size(363, 351);
             this.shapeContainer1.TabIndex = 0;
             this.shapeContainer1.TabStop = false;
             // 
             // PasswordRectangleShape
             // 
-            this.PasswordRectangleShape.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.PasswordRectangleShape.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-            this.PasswordRectangleShape.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.PasswordRectangleShape.Location = new System.Drawing.Point(70, 184);
-            this.PasswordRectangleShape.Name = "PasswordRectangleShape";
-            this.PasswordRectangleShape.Size = new System.Drawing.Size(222, 47);
+            this.PasswordRectangleShape.Location = new System.Drawing.Point(0, 0);
+            this.PasswordRectangleShape.Name = "";
+            this.PasswordRectangleShape.Size = new System.Drawing.Size(0, 0);
             // 
             // UsernamRectangleShape
             // 
-            this.UsernamRectangleShape.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.UsernamRectangleShape.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-            this.UsernamRectangleShape.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.UsernamRectangleShape.FillGradientColor = System.Drawing.Color.Gray;
-            this.UsernamRectangleShape.Location = new System.Drawing.Point(70, 125);
-            this.UsernamRectangleShape.Name = "UsernamRectangleShape";
-            this.UsernamRectangleShape.Size = new System.Drawing.Size(222, 47);
+            this.UsernamRectangleShape.Location = new System.Drawing.Point(0, 0);
+            this.UsernamRectangleShape.Name = "";
+            this.UsernamRectangleShape.Size = new System.Drawing.Size(0, 0);
             // 
             // LoginLabel
             // 
@@ -88,12 +83,10 @@
             this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.UsernameTextBox.Location = new System.Drawing.Point(81, 138);
+            this.UsernameTextBox.Location = new System.Drawing.Point(81, 135);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(201, 20);
             this.UsernameTextBox.TabIndex = 2;
-            this.UsernameTextBox.Text = "username";
-            this.UsernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.UsernameTextBox.Click += new System.EventHandler(this.UsernameTextBox_Click);
             // 
             // PasswordTextBox
@@ -102,19 +95,16 @@
             this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasswordTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PasswordTextBox.Location = new System.Drawing.Point(81, 200);
+            this.PasswordTextBox.Location = new System.Drawing.Point(81, 179);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(201, 20);
             this.PasswordTextBox.TabIndex = 3;
-            this.PasswordTextBox.Text = "password";
-            this.PasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.PasswordTextBox.Click += new System.EventHandler(this.PasswordTextBox_Click);
             // 
             // LoginButton
             // 
             this.LoginButton.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.Location = new System.Drawing.Point(107, 281);
+            this.LoginButton.Location = new System.Drawing.Point(107, 233);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(161, 50);
             this.LoginButton.TabIndex = 4;
@@ -125,7 +115,7 @@
             // ExitButton
             // 
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.Location = new System.Drawing.Point(107, 337);
+            this.ExitButton.Location = new System.Drawing.Point(107, 289);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(161, 50);
             this.ExitButton.TabIndex = 5;
@@ -135,23 +125,39 @@
             // 
             // RegisterLabel
             // 
-            this.RegisterLabel.AutoSize = true;
-            this.RegisterLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegisterLabel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.RegisterLabel.Location = new System.Drawing.Point(45, 245);
+            this.RegisterLabel.Location = new System.Drawing.Point(0, 0);
             this.RegisterLabel.Name = "RegisterLabel";
-            this.RegisterLabel.Size = new System.Drawing.Size(277, 14);
-            this.RegisterLabel.TabIndex = 6;
-            this.RegisterLabel.Text = "If you don\'t have an account, register here";
-            this.RegisterLabel.Click += new System.EventHandler(this.RegisterLabel_Click);
+            this.RegisterLabel.Size = new System.Drawing.Size(100, 23);
+            this.RegisterLabel.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(78, 114);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 18);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Username";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(78, 158);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 18);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Password";
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(363, 399);
+            this.ClientSize = new System.Drawing.Size(363, 351);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.RegisterLabel);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.LoginButton);
@@ -182,6 +188,8 @@
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Label RegisterLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

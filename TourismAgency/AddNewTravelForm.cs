@@ -25,11 +25,11 @@ namespace TourismAgency
             travelsInfoForm.Show();
         }
 
-        private void CreateTravelButton_Click(object sender, EventArgs e)
+       /* private void CreateTravelButton_Click(object sender, EventArgs e)
         {
             try
             {
-                Travels travel = new Travels(DestinationsTextBox.Text, StartDateTimePicker.Text, FinishDateTimePicker.Text,  BusAndNumber_Of_SeatsComboBox.Text, GuideComboBox.Text, PriceTextBox.Text);
+                Travel travel = new Travel(DestinationsTextBox.Text, StartDateTimePicker.Text, FinishDateTimePicker.Text,  BusAndNumber_Of_SeatsComboBox.Text, GuideComboBox.Text, PriceTextBox.Text);
             
                 TravelRepository.CreateTravel(travel);
 
@@ -45,7 +45,7 @@ namespace TourismAgency
                 MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        */
         private void loadTravels()
         {
             TravelsListView.Items.Clear();

@@ -54,12 +54,6 @@
             this.CityTextBox = new System.Windows.Forms.TextBox();
             this.AdressTextBox = new System.Windows.Forms.TextBox();
             this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
-            this.UsernameLabel = new System.Windows.Forms.Label();
-            this.PasswordTextBox = new System.Windows.Forms.TextBox();
-            this.PasswordLabel = new System.Windows.Forms.Label();
-            this.RepeatPasswordLabel = new System.Windows.Forms.Label();
-            this.RepeatPasswordTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CreateUserLabel
@@ -78,7 +72,7 @@
             this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Size = new System.Drawing.Size(473, 513);
+            this.shapeContainer1.Size = new System.Drawing.Size(473, 467);
             this.shapeContainer1.TabIndex = 12;
             this.shapeContainer1.TabStop = false;
             // 
@@ -103,7 +97,7 @@
             // RegisterButton
             // 
             this.RegisterButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterButton.Location = new System.Drawing.Point(35, 451);
+            this.RegisterButton.Location = new System.Drawing.Point(35, 405);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(185, 50);
             this.RegisterButton.TabIndex = 13;
@@ -114,7 +108,7 @@
             // ExitButton
             // 
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.Location = new System.Drawing.Point(251, 451);
+            this.ExitButton.Location = new System.Drawing.Point(252, 405);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(185, 50);
             this.ExitButton.TabIndex = 14;
@@ -325,89 +319,14 @@
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(185, 27);
             this.PhoneNumberTextBox.TabIndex = 9;
             this.PhoneNumberTextBox.Text = "+387";
-            // 
-            // UsernameTextBox
-            // 
-            this.UsernameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UsernameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.UsernameTextBox.Location = new System.Drawing.Point(252, 330);
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(185, 27);
-            this.UsernameTextBox.TabIndex = 10;
-            this.UsernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // UsernameLabel
-            // 
-            this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.UsernameLabel.Location = new System.Drawing.Point(342, 309);
-            this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(90, 18);
-            this.UsernameLabel.TabIndex = 42;
-            this.UsernameLabel.Text = "Username";
-            // 
-            // PasswordTextBox
-            // 
-            this.PasswordTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PasswordTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.PasswordTextBox.Location = new System.Drawing.Point(35, 381);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.PasswordChar = '*';
-            this.PasswordTextBox.Size = new System.Drawing.Size(185, 27);
-            this.PasswordTextBox.TabIndex = 11;
-            // 
-            // PasswordLabel
-            // 
-            this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.PasswordLabel.Location = new System.Drawing.Point(32, 360);
-            this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(86, 18);
-            this.PasswordLabel.TabIndex = 44;
-            this.PasswordLabel.Text = "Password";
-            // 
-            // RepeatPasswordLabel
-            // 
-            this.RepeatPasswordLabel.AutoSize = true;
-            this.RepeatPasswordLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RepeatPasswordLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.RepeatPasswordLabel.Location = new System.Drawing.Point(287, 360);
-            this.RepeatPasswordLabel.Name = "RepeatPasswordLabel";
-            this.RepeatPasswordLabel.Size = new System.Drawing.Size(150, 18);
-            this.RepeatPasswordLabel.TabIndex = 45;
-            this.RepeatPasswordLabel.Text = "Repeat password";
-            // 
-            // RepeatPasswordTextBox
-            // 
-            this.RepeatPasswordTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.RepeatPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RepeatPasswordTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RepeatPasswordTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.RepeatPasswordTextBox.Location = new System.Drawing.Point(252, 381);
-            this.RepeatPasswordTextBox.Name = "RepeatPasswordTextBox";
-            this.RepeatPasswordTextBox.PasswordChar = '*';
-            this.RepeatPasswordTextBox.Size = new System.Drawing.Size(185, 27);
-            this.RepeatPasswordTextBox.TabIndex = 12;
-            this.RepeatPasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.PhoneNumberTextBox.Click += new System.EventHandler(this.PhoneNumberTextBox_Click);
             // 
             // AddNewClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(473, 513);
-            this.Controls.Add(this.RepeatPasswordTextBox);
-            this.Controls.Add(this.RepeatPasswordLabel);
-            this.Controls.Add(this.PasswordLabel);
-            this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.UsernameLabel);
-            this.Controls.Add(this.UsernameTextBox);
+            this.ClientSize = new System.Drawing.Size(473, 467);
             this.Controls.Add(this.PhoneNumberTextBox);
             this.Controls.Add(this.AdressTextBox);
             this.Controls.Add(this.CityTextBox);
@@ -470,11 +389,5 @@
         private System.Windows.Forms.TextBox CityTextBox;
         private System.Windows.Forms.TextBox AdressTextBox;
         private System.Windows.Forms.TextBox PhoneNumberTextBox;
-        private System.Windows.Forms.TextBox UsernameTextBox;
-        private System.Windows.Forms.Label UsernameLabel;
-        private System.Windows.Forms.TextBox PasswordTextBox;
-        private System.Windows.Forms.Label PasswordLabel;
-        private System.Windows.Forms.Label RepeatPasswordLabel;
-        private System.Windows.Forms.TextBox RepeatPasswordTextBox;
     }
 }

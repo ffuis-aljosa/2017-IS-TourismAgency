@@ -7,7 +7,7 @@ namespace TourismAgency.Db
     {
         private static DbConnection connection = DbConnection.Instance;
 
-        public static void CreateTravel(Travels travel)
+        public static void CreateTravel(Travel travel)
         {
             string sql = @"INSERT INTO travels(destinations, start_date, finish_date, guide, number_of_seats, price) VALUES
                 (@destinations, @start_date, @finish_date, @guide, @number_of_seats, @price)";

@@ -17,7 +17,7 @@ namespace TourismAgency
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new WelcomeForm());
-            //Application.Run(new UsersInfoForm());
+            //Application.Run(new AddNewClientForm());
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TourismAgency.Models
 {
-    class Travels
+    class Travel
     {
 
         private int id;
@@ -14,10 +14,10 @@ namespace TourismAgency.Models
         private string start_date;
         private string finish_date;
         private string number_of_seats;
-        private string guide;
+        private Guide guide;
         private string price;
 
-        public Travels(int id, string destination , string start_date , string finish_date , string number_of_seats ,string guide , string price)
+        public Travel(int id, string destination , string start_date , string finish_date , string number_of_seats , Guide guide , string price)
         {
             this.id = id;
             Destination = destination;
@@ -29,9 +29,8 @@ namespace TourismAgency.Models
 
         }
 
-        public Travels(string destination, string start_date, string finish_date, string number_of_seats , string guide, string price)
+        public Travel(string destination, string start_date, string finish_date, string number_of_seats , Guide guide, string price)
         {
-            
             Destination = destination;
             Start_date = start_date;
             Finish_date = finish_date;
@@ -115,20 +114,15 @@ namespace TourismAgency.Models
             }
         }
 
-        public string Guide
+        public Guide Guide
         {
             get
             {
                 return guide;
-
             }
             set
             {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("Guide can't be empty");
-
                 guide = value;
-
             }
         }
 

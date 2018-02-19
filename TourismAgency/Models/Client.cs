@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace TourismAgency.Models
 {
-    class Users
+    class Client
     {
-        private int id;
-        private string username;
-        private string password;
-        private string role;
+        private int id; 
         private string first_name;
         private string last_name;
         private string date_of_birth;
@@ -21,21 +16,7 @@ namespace TourismAgency.Models
         private string phone_number;
 
 
-        public Users(string username, string password)
-        {
-            Username = username;
-            Password = password;
-        }
-
-        public Users(string username, string password, string first_name, string last_name)
-        {
-            Username = username;
-            Password = password;
-            First_name = first_name;
-            Last_name = last_name;
-        }
-
-        public Users(string first_name, string last_name, string date_of_birth, string e_mail, string passport_number, string citizenship, string city, string adress, string phone_number, string username, string password)
+        public Client(string first_name, string last_name, string date_of_birth, string e_mail, string passport_number, string citizenship, string city, string adress, string phone_number)
         {
             First_name = first_name;
             Last_name = last_name;
@@ -46,15 +27,11 @@ namespace TourismAgency.Models
             City = city;
             Adress = adress;
             Phone_number = phone_number;
-            Username = username;
-            Password = password;
         }
 
-        public Users(int id, string username, string role, string first_name, string last_name, string date_of_birth, string e_mail, string passport_number, string citizenship, string city, string adress, string phone_number)
+        public Client(int id, string first_name, string last_name, string date_of_birth, string e_mail, string passport_number, string citizenship, string city, string adress, string phone_number)
         {
             this.id = id;
-            Username = username;
-            Role = role;
             First_name = first_name;
             Last_name = last_name;
             Date_of_birth = date_of_birth;
@@ -64,71 +41,6 @@ namespace TourismAgency.Models
             City = city;
             Adress = adress;
             Phone_number = phone_number;
-        }
-
-        public int Id
-        {
-            get
-            {
-                return id;
-            }
-        }
-
-        public string Role
-        {
-            get
-            {
-                return role;
-            }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("Role can't be a blank space!");
-
-                if (value.Length > 100)
-                    throw new Exception("Role can't be longer than a 32 characters!");
-
-                role = value;
-            }
-        }
-
-        public string Username
-        {
-            get
-            {
-                return username;
-            }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("Username can't be a blank space!");
-
-                if (value.Length > 100)
-                    throw new Exception("Username can't be longer than a 32 characters!");
-
-                username = value;
-            }
-        }
-
-        public string Password
-        {
-            get
-            {
-                return password;
-            }
-            set
-            {
-                if (value.Length < 6)
-                    throw new Exception("Password must have at least 6 characters!");
-
-                using (SHA256 sha = new SHA256Managed())
-                {
-                    byte[] passwordBytes = Encoding.UTF8.GetBytes(value);
-                    byte[] hashedPassword = sha.ComputeHash(passwordBytes);
-
-                    password = Convert.ToBase64String(hashedPassword);
-                }
-            }
         }
 
         public string First_name
@@ -166,7 +78,7 @@ namespace TourismAgency.Models
                 last_name = value;
             }
         }
-        
+
         public string Date_of_birth
         {
             get
@@ -204,7 +116,7 @@ namespace TourismAgency.Models
                     throw new Exception("E-mail is not valid");
 
                 if (string.IsNullOrEmpty(value))
-                throw new Exception("E-mail can't be a blank space!");
+                    throw new Exception("E-mail can't be a blank space!");
 
                 if (value.Length > 100)
                     throw new Exception("E-mail can't be longer than a 32 characters!");
@@ -294,12 +206,10 @@ namespace TourismAgency.Models
             set
             {
                 if (value.StartsWith("+387") == false || value.Length > 15)
-                    throw new Exception("The phone number is not valid!"); 
+                    throw new Exception("The phone number must start with '+387'!");
 
                 phone_number = value;
             }
         }
-
-
     }
 }
