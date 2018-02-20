@@ -2,27 +2,35 @@
 using System.Windows.Forms;
 using TourismAgency.Models;
 using TourismAgency.Db;
-using System.Data.SqlServerCe;
 using System.Collections.Generic;
 
 namespace TourismAgency
 {
-    public partial class AddNewTravelForm : Form
+    public partial class InfoTravelsForm : Form
     {
-        public AddNewTravelForm()
+        public InfoTravelsForm()
         {
             InitializeComponent();
             StartDateTimePicker.MinDate = DateTime.Now;
             FinishDateTimePicker.MinDate = DateTime.Now;
             TravelRepository.LoadTravels(TravelsListView);
-            GuideRepository.FetchGuides(GuideComboBox);
+            loadGuides();
+            TravelsListView.FullRowSelect = true;
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            TravelsInfoForm travelsInfoForm = new TravelsInfoForm();
+            AdminTourismAgencyForm adminForm = new AdminTourismAgencyForm();
             this.Hide();
-            travelsInfoForm.Show();
+            adminForm.Show();
+        }
+
+        private void loadGuides()
+        {
+            List<Guide> guides = GuideRepository.FetchAllGuides();
+
+            foreach (Guide guide in guides)
+                GuideComboBox.Items.Add(guide);
         }
 
         private void CreateTravelButton_Click(object sender, EventArgs e)
@@ -51,6 +59,23 @@ namespace TourismAgency
         private void StartDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             FinishDateTimePicker.MinDate = StartDateTimePicker.Value;
+        }
+
+        private void TravelsListView_Click(object sender, EventArgs e)
+        {
+            string destinations = TravelsListView.SelectedItems[0].SubItems[0].Text;
+            string startDate = TravelsListView.SelectedItems[0].SubItems[1].Text;
+            string finishDate = TravelsListView.SelectedItems[0].SubItems[2].Text;
+            string numberOfSeats = TravelsListView.SelectedItems[0].SubItems[3].Text;
+            string guide = TravelsListView.SelectedItems[0].SubItems[4].Text;
+            string price = TravelsListView.SelectedItems[0].SubItems[5].Text;
+
+            DestinationsTextBox.Text = destinations;
+            StartDateTimePicker.Text = startDate;
+            FinishDateTimePicker.Text = finishDate;
+            Number_Of_SeatsComboBox.Text = numberOfSeats;
+            GuideComboBox.Text = guide;
+            PriceTextBox.Text = price;
         }
     }
 

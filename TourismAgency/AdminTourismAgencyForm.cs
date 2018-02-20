@@ -25,14 +25,14 @@ namespace TourismAgency
 
         private void UsersInfoButton_Click(object sender, EventArgs e)
         {
-            ClientsInfoForm usersInfoForm = new ClientsInfoForm();
+            InfoClientsForm usersInfoForm = new InfoClientsForm();
             this.Hide();
             usersInfoForm.Show(); 
         }
 
         private void TravelsInfoButton_Click(object sender, EventArgs e)
         {
-            TravelsInfoForm travelsInfo = new TravelsInfoForm();
+            InfoTravelsForm travelsInfo = new InfoTravelsForm();
             this.Hide();
             travelsInfo.Show(); 
         }
@@ -45,7 +45,7 @@ namespace TourismAgency
 
         private void GuidesInfoButton_Click(object sender, EventArgs e)
         {
-            AddNewGuideForm guideForm = new AddNewGuideForm();
+            InfoGuidesForm guideForm = new InfoGuidesForm();
             this.Hide();
             guideForm.Show();
         }

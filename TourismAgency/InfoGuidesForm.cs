@@ -6,12 +6,13 @@ using System.Collections.Generic;
 
 namespace TourismAgency
 {
-    public partial class AddNewGuideForm : Form
+    public partial class InfoGuidesForm : Form
     {
-        public AddNewGuideForm()
+        public InfoGuidesForm()
         {
             InitializeComponent();
             GuideRepository.LoadGuides(GuidesListView);
+            GuidesListView.FullRowSelect = true;
         }
 
         public void ClearTextBox(TextBox textBox)
@@ -48,6 +49,15 @@ namespace TourismAgency
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void GuidesListView_Click(object sender, EventArgs e)
+        {
+            string firstName = GuidesListView.SelectedItems[0].SubItems[0].Text;
+            string lastName = GuidesListView.SelectedItems[0].SubItems[1].Text;
+
+            FirstNameTextBox.Text = firstName;
+            LastNameTextBox.Text = lastName;
         }
     }
 }

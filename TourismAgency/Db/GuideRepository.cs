@@ -33,8 +33,8 @@ namespace TourismAgency.Db
         {
             listview.Items.Clear();
 
-            string sql = @"SELECT id, first_name, last_name 
-                 FROM guides ORDER BY id";
+            string sql = @"SELECT first_name, last_name 
+                 FROM guides ORDER BY first_name";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
@@ -43,12 +43,10 @@ namespace TourismAgency.Db
                 SqlCeDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    ListViewItem item = new ListViewItem(reader["id"].ToString());
-                    item.SubItems.Add(reader["first_name"].ToString());
+                    ListViewItem item = new ListViewItem(reader["first_name"].ToString());
                     item.SubItems.Add(reader["last_name"].ToString());
 
                     listview.Items.Add(item);
-
                 }
             }
             catch (Exception ex)
@@ -58,29 +56,27 @@ namespace TourismAgency.Db
             }
         }
 
-        public static void FetchGuides(ComboBox comboBox)
+        public static List<Guide> FetchAllGuides()
         {
-            comboBox.Items.Clear();
+            List<Guide> guides = new List<Guide>();
 
-            string sql = @"SELECT first_name, last_name 
-                 FROM guides";
+            string sql = @"SELECT first_name, last_name FROM guides";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
-            try
-            {
-                SqlCeDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    comboBox.DisplayMember = "first_name + '' + last_name" ;
-                    comboBox.ValueMember = "first_name + '' + last_name";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            SqlCeDataReader reader = command.ExecuteReader();
 
+            while (reader.Read())
+            {
+                string first_name = (string)reader["first_name"];
+                string last_name = (string)reader["last_name"];
+
+
+                Guide guide = new Guide(first_name, last_name);
+                guides.Add(guide);
             }
+
+            return guides;
         }
     }
 }

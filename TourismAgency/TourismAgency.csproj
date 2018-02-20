@@ -83,11 +83,11 @@
     <Compile Include="AddNewAdminForm.Designer.cs">
       <DependentUpon>AddNewAdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNewTravelForm.cs">
+    <Compile Include="InfoTravelsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewTravelForm.Designer.cs">
-      <DependentUpon>AddNewTravelForm.cs</DependentUpon>
+    <Compile Include="InfoTravelsForm.Designer.cs">
+      <DependentUpon>InfoTravelsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ClientTourismAgencyForm.cs">
       <SubType>Form</SubType>
@@ -95,22 +95,16 @@
     <Compile Include="ClientTourismAgencyForm.Designer.cs">
       <DependentUpon>ClientTourismAgencyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNewClientForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddNewClientForm.Designer.cs">
-      <DependentUpon>AddNewClientForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Db\ClientRepository.cs" />
     <Compile Include="Db\DbConnection.cs" />
     <Compile Include="Db\GuideRepository.cs" />
     <Compile Include="Db\TravelRepository.cs" />
     <Compile Include="Db\UserRepository.cs" />
-    <Compile Include="AddNewGuideForm.cs">
+    <Compile Include="InfoGuidesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewGuideForm.Designer.cs">
-      <DependentUpon>AddNewGuideForm.cs</DependentUpon>
+    <Compile Include="InfoGuidesForm.Designer.cs">
+      <DependentUpon>InfoGuidesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -130,17 +124,11 @@
     <Compile Include="AdminTourismAgencyForm.Designer.cs">
       <DependentUpon>AdminTourismAgencyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TravelsInfoForm.cs">
+    <Compile Include="InfoClientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TravelsInfoForm.Designer.cs">
-      <DependentUpon>TravelsInfoForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ClientsInfoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ClientsInfoForm.Designer.cs">
-      <DependentUpon>ClientsInfoForm.cs</DependentUpon>
+    <Compile Include="InfoClientsForm.Designer.cs">
+      <DependentUpon>InfoClientsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
@@ -151,17 +139,14 @@
     <EmbeddedResource Include="AddNewAdminForm.resx">
       <DependentUpon>AddNewAdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNewTravelForm.resx">
-      <DependentUpon>AddNewTravelForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddNewClientForm.resx">
-      <DependentUpon>AddNewClientForm.cs</DependentUpon>
+    <EmbeddedResource Include="InfoTravelsForm.resx">
+      <DependentUpon>InfoTravelsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientTourismAgencyForm.resx">
       <DependentUpon>ClientTourismAgencyForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNewGuideForm.resx">
-      <DependentUpon>AddNewGuideForm.cs</DependentUpon>
+    <EmbeddedResource Include="InfoGuidesForm.resx">
+      <DependentUpon>InfoGuidesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -179,11 +164,8 @@
     <EmbeddedResource Include="AdminTourismAgencyForm.resx">
       <DependentUpon>AdminTourismAgencyForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TravelsInfoForm.resx">
-      <DependentUpon>TravelsInfoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ClientsInfoForm.resx">
-      <DependentUpon>ClientsInfoForm.cs</DependentUpon>
+    <EmbeddedResource Include="InfoClientsForm.resx">
+      <DependentUpon>InfoClientsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>

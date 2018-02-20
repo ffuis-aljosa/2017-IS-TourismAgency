@@ -43,7 +43,7 @@ namespace TourismAgency.Db
         {
             listview.Items.Clear();
 
-            string sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date, g.first_name + '' + g.last_name AS guide, t.number_of_seats,
+            string sql = @"SELECT t.destinations, t.start_date, t.finish_date, g.first_name + '' + g.last_name AS guide, t.number_of_seats,
                 t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
@@ -53,8 +53,7 @@ namespace TourismAgency.Db
                 SqlCeDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    ListViewItem item = new ListViewItem(reader["id"].ToString());
-                    item.SubItems.Add(reader["destinations"].ToString());
+                    ListViewItem item = new ListViewItem(reader["destinations"].ToString());
                     item.SubItems.Add(reader["start_date"].ToString());
                     item.SubItems.Add(reader["finish_date"].ToString());
                     item.SubItems.Add(reader["guide"].ToString());

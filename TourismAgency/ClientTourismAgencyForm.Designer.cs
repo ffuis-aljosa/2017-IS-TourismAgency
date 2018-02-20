@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientTourismAgencyForm));
             this.ClientFormToolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.ClientFormToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,13 +59,23 @@
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::TourismAgency.Properties.Resources.ClientForm;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(813, 323);
+            this.panel1.TabIndex = 1;
+            // 
             // ClientTourismAgencyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TourismAgency.Properties.Resources.ClientForm;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(813, 360);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ClientFormToolStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClientTourismAgencyForm";
@@ -81,5 +92,6 @@
 
         private System.Windows.Forms.ToolStrip ClientFormToolStrip;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
