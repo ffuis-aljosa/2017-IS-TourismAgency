@@ -16,7 +16,7 @@ namespace TourismAgency.Db
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
-            SqlCeParameter destination = new SqlCeParameter("@destinations", travel.Destination);
+            SqlCeParameter destination = new SqlCeParameter("@destinations", travel.Destinations);
             command.Parameters.Add(destination);
 
             SqlCeParameter start_date = new SqlCeParameter("@start_date", travel.Start_date);

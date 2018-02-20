@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data;
 
 namespace TourismAgency.Models
 {
@@ -10,17 +12,17 @@ namespace TourismAgency.Models
     {
 
         private int id;
-        private string destination;
+        private string destinations;
         private string start_date;
         private string finish_date;
         private string number_of_seats;
         private Guide guide;
         private string price;
 
-        public Travel(int id, string destination , string start_date , string finish_date , string number_of_seats , Guide guide , string price)
+        public Travel(int id, string destinations , string start_date , string finish_date , string number_of_seats , Guide guide , string price)
         {
             this.id = id;
-            Destination = destination;
+            Destinations = destinations;
             Start_date = start_date;
             Finish_date = finish_date;
             Number_of_seats = number_of_seats;
@@ -29,9 +31,9 @@ namespace TourismAgency.Models
 
         }
 
-        public Travel(string destination, string start_date, string finish_date, string number_of_seats , Guide guide, string price)
+        public Travel(string destinations, string start_date, string finish_date, string number_of_seats , Guide guide, string price)
         {
-            Destination = destination;
+            Destinations = destinations;
             Start_date = start_date;
             Finish_date = finish_date;
             Number_of_seats = number_of_seats;
@@ -47,12 +49,12 @@ namespace TourismAgency.Models
             }
         }
 
-        public string Destination
+        public string Destinations
         {
             
             get
             {
-                return destination;
+                return destinations;
             }
             set
             {
@@ -62,7 +64,7 @@ namespace TourismAgency.Models
                     throw new Exception("Destination can't be empty");
 
 
-                destination = value;
+                destinations = value;
 
             }
         }
@@ -88,12 +90,6 @@ namespace TourismAgency.Models
             }
             set
             {
-                DateTime startDate = Convert.ToDateTime(start_date);
-                DateTime finishDate = Convert.ToDateTime(finish_date); 
-
-                if (startDate > finishDate)
-                    throw new Exception("Finish date can't be lower than start date!");
-
                 finish_date = value;
 
             }

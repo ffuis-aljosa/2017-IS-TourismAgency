@@ -103,13 +103,14 @@
     </Compile>
     <Compile Include="Db\ClientRepository.cs" />
     <Compile Include="Db\DbConnection.cs" />
+    <Compile Include="Db\GuideRepository.cs" />
     <Compile Include="Db\TravelRepository.cs" />
     <Compile Include="Db\UserRepository.cs" />
-    <Compile Include="GuidesForm.cs">
+    <Compile Include="AddNewGuideForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GuidesForm.Designer.cs">
-      <DependentUpon>GuidesForm.cs</DependentUpon>
+    <Compile Include="AddNewGuideForm.Designer.cs">
+      <DependentUpon>AddNewGuideForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -122,7 +123,7 @@
     <Compile Include="Models\Travel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="AdminTourismAgencyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,8 +160,8 @@
     <EmbeddedResource Include="ClientTourismAgencyForm.resx">
       <DependentUpon>ClientTourismAgencyForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GuidesForm.resx">
-      <DependentUpon>GuidesForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddNewGuideForm.resx">
+      <DependentUpon>AddNewGuideForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

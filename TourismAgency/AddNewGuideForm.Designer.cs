@@ -1,6 +1,6 @@
 ﻿namespace TourismAgency
 {
-    partial class GuidesForm
+    partial class AddNewGuideForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,12 +31,12 @@
             this.FirstNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.LastNameLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.GuidesListView = new System.Windows.Forms.ListView();
-            this.RemoveGuidesButton = new System.Windows.Forms.Button();
             this.NumberColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FirstNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LastNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.RemoveGuidesButton = new System.Windows.Forms.Button();
             this.GuidesLabel = new System.Windows.Forms.Label();
             this.AddGuidesButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
@@ -75,16 +75,16 @@
             this.LastNameLabel.TabIndex = 2;
             this.LastNameLabel.Text = "Last name";
             // 
-            // textBox1
+            // LastNameTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox1.Location = new System.Drawing.Point(15, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 27);
-            this.textBox1.TabIndex = 3;
+            this.LastNameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.LastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LastNameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LastNameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LastNameTextBox.Location = new System.Drawing.Point(15, 81);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.Size = new System.Drawing.Size(129, 27);
+            this.LastNameTextBox.TabIndex = 3;
             // 
             // GuidesListView
             // 
@@ -101,6 +101,23 @@
             this.GuidesListView.UseCompatibleStateImageBehavior = false;
             this.GuidesListView.View = System.Windows.Forms.View.Details;
             // 
+            // NumberColumnHeader
+            // 
+            this.NumberColumnHeader.Text = "No.";
+            this.NumberColumnHeader.Width = 31;
+            // 
+            // FirstNameColumnHeader
+            // 
+            this.FirstNameColumnHeader.Text = "First name";
+            this.FirstNameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.FirstNameColumnHeader.Width = 165;
+            // 
+            // LastNameColumnHeader
+            // 
+            this.LastNameColumnHeader.Text = "Last name";
+            this.LastNameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LastNameColumnHeader.Width = 170;
+            // 
             // RemoveGuidesButton
             // 
             this.RemoveGuidesButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -111,23 +128,6 @@
             this.RemoveGuidesButton.TabIndex = 5;
             this.RemoveGuidesButton.Text = "Remove guides";
             this.RemoveGuidesButton.UseVisualStyleBackColor = true;
-            // 
-            // NumberColumnHeader
-            // 
-            this.NumberColumnHeader.Text = "No.";
-            this.NumberColumnHeader.Width = 31;
-            // 
-            // FirstNameColumnHeader
-            // 
-            this.FirstNameColumnHeader.Text = "First name";
-            this.FirstNameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.FirstNameColumnHeader.Width = 167;
-            // 
-            // LastNameColumnHeader
-            // 
-            this.LastNameColumnHeader.Text = "Last name";
-            this.LastNameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.LastNameColumnHeader.Width = 170;
             // 
             // GuidesLabel
             // 
@@ -150,6 +150,7 @@
             this.AddGuidesButton.TabIndex = 7;
             this.AddGuidesButton.Text = "Add guides";
             this.AddGuidesButton.UseVisualStyleBackColor = true;
+            this.AddGuidesButton.Click += new System.EventHandler(this.AddGuidesButton_Click);
             // 
             // ExitButton
             // 
@@ -174,7 +175,7 @@
             this.Controls.Add(this.GuidesLabel);
             this.Controls.Add(this.RemoveGuidesButton);
             this.Controls.Add(this.GuidesListView);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.LastNameTextBox);
             this.Controls.Add(this.LastNameLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FirstNameTextBox);
@@ -196,7 +197,7 @@
         private System.Windows.Forms.TextBox FirstNameTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LastNameLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox LastNameTextBox;
         private System.Windows.Forms.ListView GuidesListView;
         private System.Windows.Forms.Button RemoveGuidesButton;
         private System.Windows.Forms.ColumnHeader NumberColumnHeader;

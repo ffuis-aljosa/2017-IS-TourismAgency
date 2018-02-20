@@ -36,7 +36,7 @@
             this.FinishDateLabel = new System.Windows.Forms.Label();
             this.FinishDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.BusLabel = new System.Windows.Forms.Label();
-            this.BusAndNumber_Of_SeatsComboBox = new System.Windows.Forms.ComboBox();
+            this.Number_Of_SeatsComboBox = new System.Windows.Forms.ComboBox();
             this.PriceLabel = new System.Windows.Forms.Label();
             this.PriceTextBox = new System.Windows.Forms.TextBox();
             this.TravelLabel = new System.Windows.Forms.Label();
@@ -103,6 +103,7 @@
             this.StartDateTimePicker.Size = new System.Drawing.Size(184, 27);
             this.StartDateTimePicker.TabIndex = 3;
             this.StartDateTimePicker.Value = new System.DateTime(2018, 2, 9, 1, 6, 19, 0);
+            this.StartDateTimePicker.ValueChanged += new System.EventHandler(this.StartDateTimePicker_ValueChanged);
             // 
             // FinishDateLabel
             // 
@@ -138,15 +139,15 @@
             this.BusLabel.TabIndex = 6;
             this.BusLabel.Text = "Number of seats";
             // 
-            // BusAndNumber_Of_SeatsComboBox
+            // Number_Of_SeatsComboBox
             // 
-            this.BusAndNumber_Of_SeatsComboBox.BackColor = System.Drawing.SystemColors.Window;
-            this.BusAndNumber_Of_SeatsComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BusAndNumber_Of_SeatsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.BusAndNumber_Of_SeatsComboBox.Font = new System.Drawing.Font("Verdana", 12F);
-            this.BusAndNumber_Of_SeatsComboBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.BusAndNumber_Of_SeatsComboBox.FormattingEnabled = true;
-            this.BusAndNumber_Of_SeatsComboBox.Items.AddRange(new object[] {
+            this.Number_Of_SeatsComboBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Number_Of_SeatsComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Number_Of_SeatsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Number_Of_SeatsComboBox.Font = new System.Drawing.Font("Verdana", 12F);
+            this.Number_Of_SeatsComboBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Number_Of_SeatsComboBox.FormattingEnabled = true;
+            this.Number_Of_SeatsComboBox.Items.AddRange(new object[] {
             "",
             "33",
             "34",
@@ -156,10 +157,10 @@
             "54",
             "60",
             "80"});
-            this.BusAndNumber_Of_SeatsComboBox.Location = new System.Drawing.Point(13, 187);
-            this.BusAndNumber_Of_SeatsComboBox.Name = "BusAndNumber_Of_SeatsComboBox";
-            this.BusAndNumber_Of_SeatsComboBox.Size = new System.Drawing.Size(184, 26);
-            this.BusAndNumber_Of_SeatsComboBox.TabIndex = 8;
+            this.Number_Of_SeatsComboBox.Location = new System.Drawing.Point(13, 187);
+            this.Number_Of_SeatsComboBox.Name = "Number_Of_SeatsComboBox";
+            this.Number_Of_SeatsComboBox.Size = new System.Drawing.Size(184, 26);
+            this.Number_Of_SeatsComboBox.TabIndex = 8;
             // 
             // PriceLabel
             // 
@@ -219,7 +220,8 @@
             this.CreateTravelButton.TabIndex = 14;
             this.CreateTravelButton.Text = "Create travel";
             this.CreateTravelButton.UseVisualStyleBackColor = true;
-           // 
+            this.CreateTravelButton.Click += new System.EventHandler(this.CreateTravelButton_Click);
+            // 
             // TravelsListView
             // 
             this.TravelsListView.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -287,12 +289,6 @@
             this.GuideComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GuideComboBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.GuideComboBox.FormattingEnabled = true;
-            this.GuideComboBox.Items.AddRange(new object[] {
-            "",
-            "Branislav Šimšić",
-            "Sunčica Marić",
-            "Vlado Vanovac",
-            "Đorđe Tepavčević"});
             this.GuideComboBox.Location = new System.Drawing.Point(13, 237);
             this.GuideComboBox.Name = "GuideComboBox";
             this.GuideComboBox.Size = new System.Drawing.Size(184, 26);
@@ -323,7 +319,7 @@
             this.Controls.Add(this.TravelLabel);
             this.Controls.Add(this.PriceTextBox);
             this.Controls.Add(this.PriceLabel);
-            this.Controls.Add(this.BusAndNumber_Of_SeatsComboBox);
+            this.Controls.Add(this.Number_Of_SeatsComboBox);
             this.Controls.Add(this.BusLabel);
             this.Controls.Add(this.FinishDateTimePicker);
             this.Controls.Add(this.FinishDateLabel);
@@ -355,7 +351,7 @@
         private System.Windows.Forms.Label FinishDateLabel;
         private System.Windows.Forms.DateTimePicker FinishDateTimePicker;
         private System.Windows.Forms.Label BusLabel;
-        private System.Windows.Forms.ComboBox BusAndNumber_Of_SeatsComboBox;
+        private System.Windows.Forms.ComboBox Number_Of_SeatsComboBox;
         private System.Windows.Forms.Label PriceLabel;
         private System.Windows.Forms.TextBox PriceTextBox;
         private System.Windows.Forms.Label TravelLabel;

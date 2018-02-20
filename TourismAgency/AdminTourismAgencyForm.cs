@@ -45,7 +45,7 @@ namespace TourismAgency
 
         private void GuidesInfoButton_Click(object sender, EventArgs e)
         {
-            GuidesForm guideForm = new GuidesForm();
+            AddNewGuideForm guideForm = new AddNewGuideForm();
             this.Hide();
             guideForm.Show();
         }
