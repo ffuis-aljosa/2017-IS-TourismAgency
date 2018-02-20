@@ -30,29 +30,39 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminTourismAgencyForm));
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.HelpToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.LogoutToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.UsersInfoButton = new System.Windows.Forms.Button();
             this.TravelsInfoButton = new System.Windows.Forms.Button();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.MainToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainToolStrip
             // 
+            this.MainToolStrip.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainToolStrip.BackgroundImage")));
+            this.MainToolStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MainToolStrip.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.HelpToolStripButton,
-            this.LogoutToolStripButton,
-            this.toolStripButton2});
+            this.LogoutToolStripButton});
             this.MainToolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.MainToolStrip.Location = new System.Drawing.Point(0, 0);
             this.MainToolStrip.Name = "MainToolStrip";
             this.MainToolStrip.Size = new System.Drawing.Size(617, 37);
             this.MainToolStrip.TabIndex = 3;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(81, 34);
+            this.toolStripButton1.Text = "New admin";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // HelpToolStripButton
             // 
@@ -94,25 +104,6 @@
             this.TravelsInfoButton.UseVisualStyleBackColor = true;
             this.TravelsInfoButton.Click += new System.EventHandler(this.TravelsInfoButton_Click);
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(81, 34);
-            this.toolStripButton1.Text = "New admin";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 34);
-            this.toolStripButton2.Text = "toolStripButton2";
-            // 
             // AdminTourismAgencyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
@@ -144,6 +135,5 @@
         private System.Windows.Forms.Button UsersInfoButton;
         private System.Windows.Forms.Button TravelsInfoButton;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

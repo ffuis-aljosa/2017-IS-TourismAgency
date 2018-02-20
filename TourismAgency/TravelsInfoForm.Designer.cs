@@ -63,7 +63,7 @@
             this.TravelsListView.UseCompatibleStateImageBehavior = false;
             this.TravelsListView.View = System.Windows.Forms.View.Details;
             this.TravelsListView.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.TravelsListView_ColumnWidthChanging);
-            // 
+           // 
             // NumberColumnHeader
             // 
             this.NumberColumnHeader.Text = "No.";
