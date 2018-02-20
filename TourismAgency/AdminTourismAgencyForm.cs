@@ -42,5 +42,12 @@ namespace TourismAgency
             AddNewAdminForm addNewAdmin = new AddNewAdminForm();
             addNewAdmin.ShowDialog();
         }
+
+        private void GuidesInfoButton_Click(object sender, EventArgs e)
+        {
+            GuidesForm guideForm = new GuidesForm();
+            this.Hide();
+            guideForm.Show();
+        }
     }
 }

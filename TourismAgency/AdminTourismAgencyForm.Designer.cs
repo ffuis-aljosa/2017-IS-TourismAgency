@@ -35,6 +35,7 @@
             this.LogoutToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.UsersInfoButton = new System.Windows.Forms.Button();
             this.TravelsInfoButton = new System.Windows.Forms.Button();
+            this.GuidesInfoButton = new System.Windows.Forms.Button();
             this.MainToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,7 +89,7 @@
             // 
             this.UsersInfoButton.Location = new System.Drawing.Point(65, 99);
             this.UsersInfoButton.Name = "UsersInfoButton";
-            this.UsersInfoButton.Size = new System.Drawing.Size(193, 112);
+            this.UsersInfoButton.Size = new System.Drawing.Size(193, 90);
             this.UsersInfoButton.TabIndex = 0;
             this.UsersInfoButton.Text = "Users info";
             this.UsersInfoButton.UseVisualStyleBackColor = true;
@@ -98,18 +99,29 @@
             // 
             this.TravelsInfoButton.Location = new System.Drawing.Point(355, 99);
             this.TravelsInfoButton.Name = "TravelsInfoButton";
-            this.TravelsInfoButton.Size = new System.Drawing.Size(193, 112);
+            this.TravelsInfoButton.Size = new System.Drawing.Size(193, 90);
             this.TravelsInfoButton.TabIndex = 2;
             this.TravelsInfoButton.Text = "Travels info";
             this.TravelsInfoButton.UseVisualStyleBackColor = true;
             this.TravelsInfoButton.Click += new System.EventHandler(this.TravelsInfoButton_Click);
+            // 
+            // GuidesInfoButton
+            // 
+            this.GuidesInfoButton.Location = new System.Drawing.Point(65, 235);
+            this.GuidesInfoButton.Name = "GuidesInfoButton";
+            this.GuidesInfoButton.Size = new System.Drawing.Size(193, 90);
+            this.GuidesInfoButton.TabIndex = 4;
+            this.GuidesInfoButton.Text = "Guides info";
+            this.GuidesInfoButton.UseVisualStyleBackColor = true;
+            this.GuidesInfoButton.Click += new System.EventHandler(this.GuidesInfoButton_Click);
             // 
             // AdminTourismAgencyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(617, 286);
+            this.ClientSize = new System.Drawing.Size(617, 355);
+            this.Controls.Add(this.GuidesInfoButton);
             this.Controls.Add(this.TravelsInfoButton);
             this.Controls.Add(this.UsersInfoButton);
             this.Controls.Add(this.MainToolStrip);
@@ -135,5 +147,6 @@
         private System.Windows.Forms.Button UsersInfoButton;
         private System.Windows.Forms.Button TravelsInfoButton;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Button GuidesInfoButton;
     }
 }

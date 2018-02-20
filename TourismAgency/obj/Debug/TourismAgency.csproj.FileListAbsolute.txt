@@ -134,5 +134,6 @@ C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\Touris
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.TravelsInfoForm.resources
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.ClientTourismAgencyForm.resources
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.TravelsInfoForm.resources
-C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.UsersInfoForm.resources
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.ClientsInfoForm.resources
+C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.GuidesForm.resources
+C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.ClientsInfoForm.resources

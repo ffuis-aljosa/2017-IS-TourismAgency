@@ -219,7 +219,7 @@
             this.CreateTravelButton.TabIndex = 14;
             this.CreateTravelButton.Text = "Create travel";
             this.CreateTravelButton.UseVisualStyleBackColor = true;
-            // 
+           // 
             // TravelsListView
             // 
             this.TravelsListView.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
