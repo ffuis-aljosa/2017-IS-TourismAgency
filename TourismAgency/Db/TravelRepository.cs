@@ -43,7 +43,7 @@ namespace TourismAgency.Db
         {
             listview.Items.Clear();
 
-            string sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date, g.first_name, t.number_of_seats,
+            string sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date, g.first_name + '' + g.last_name AS guide, t.number_of_seats,
                 t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
@@ -54,12 +54,12 @@ namespace TourismAgency.Db
                 while (reader.Read())
                 {
                     ListViewItem item = new ListViewItem(reader["id"].ToString());
-                    item.SubItems.Add(reader["t.destinations"].ToString());
-                    item.SubItems.Add(reader["t.start_date"].ToString());
-                    item.SubItems.Add(reader["t.finish_date"].ToString());
-                    item.SubItems.Add(reader["g.guide"].ToString());
-                    item.SubItems.Add(reader["t.number_of_seats"].ToString());
-                    item.SubItems.Add(reader["t.price"].ToString());
+                    item.SubItems.Add(reader["destinations"].ToString());
+                    item.SubItems.Add(reader["start_date"].ToString());
+                    item.SubItems.Add(reader["finish_date"].ToString());
+                    item.SubItems.Add(reader["guide"].ToString());
+                    item.SubItems.Add(reader["number_of_seats"].ToString());
+                    item.SubItems.Add(reader["price"].ToString());
 
                     listview.Items.Add(item);
                 }
