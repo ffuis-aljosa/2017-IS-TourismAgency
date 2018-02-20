@@ -7,9 +7,9 @@ namespace TourismAgency.Db
     {
         private static DbConnection connection = DbConnection.Instance;
 
-        public static void CreateUser(Client client)
+        public static void CreateClient(Client client)
         {
-            string sql = "INSERT INTO users(first_name, last_name, date_of_birth, e_mail, passport_number, citizenship, city, adress, phone_number) VALUES"
+            string sql = "INSERT INTO clients(first_name, last_name, date_of_birth, e_mail, passport_number, citizenship, city, adress, phone_number) VALUES"
                 + "(@first_name, @last_name, @date_of_birth, @e_mail, @passport_number, @citizenship, @city, @adress, @phone_number)";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);

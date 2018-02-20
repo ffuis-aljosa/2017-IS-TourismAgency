@@ -1,5 +1,7 @@
 ﻿using TourismAgency.Models;
 using System.Data.SqlServerCe;
+using System.Windows.Forms;
+using System;
 
 namespace TourismAgency.Db
 {
@@ -35,6 +37,38 @@ namespace TourismAgency.Db
             command.Prepare();
 
             command.ExecuteNonQuery();
+        }
+
+        public static void LoadTravels (ListView listview)
+        {
+            listview.Items.Clear();
+
+            string sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date, g.first_name, t.number_of_seats,
+                t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id";
+
+            SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
+
+            try
+            {
+                SqlCeDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    ListViewItem item = new ListViewItem(reader["id"].ToString());
+                    item.SubItems.Add(reader["t.destinations"].ToString());
+                    item.SubItems.Add(reader["t.start_date"].ToString());
+                    item.SubItems.Add(reader["t.finish_date"].ToString());
+                    item.SubItems.Add(reader["g.guide"].ToString());
+                    item.SubItems.Add(reader["t.number_of_seats"].ToString());
+                    item.SubItems.Add(reader["t.price"].ToString());
+
+                    listview.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
     }

@@ -112,11 +112,12 @@ namespace TourismAgency.Models
             }
             set
             {
-                if (IsValidEmail(value) == false)
-                    throw new Exception("E-mail is not valid");
 
                 if (string.IsNullOrEmpty(value))
                     throw new Exception("E-mail can't be a blank space!");
+
+                if (IsValidEmail(value) == false)
+                    throw new Exception("E-mail is not valid");
 
                 if (value.Length > 100)
                     throw new Exception("E-mail can't be longer than a 32 characters!");
@@ -152,10 +153,10 @@ namespace TourismAgency.Models
             set
             {
                 if (string.IsNullOrEmpty(value))
-                    throw new Exception("Country can't be a blank space!");
+                    throw new Exception("Citizenship can't be a blank space!");
 
                 if (value.Length > 100)
-                    throw new Exception("Country can't be longer than a 32 characters!");
+                    throw new Exception("Citizenship can't be longer than a 32 characters!");
 
                 citizenship = value;
             }
@@ -205,7 +206,10 @@ namespace TourismAgency.Models
             }
             set
             {
-                if (value.StartsWith("+387") == false || value.Length > 15)
+                if (value.Length < 12 || value.Length > 15)
+                    throw new Exception("Phone number doesn't have a proper number of digits!");
+
+                if (value.StartsWith("+387"))
                     throw new Exception("The phone number must start with '+387'!");
 
                 phone_number = value;

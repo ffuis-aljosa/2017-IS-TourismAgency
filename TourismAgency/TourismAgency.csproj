@@ -129,11 +129,11 @@
     <Compile Include="TravelsInfoForm.Designer.cs">
       <DependentUpon>TravelsInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsersInfoForm.cs">
+    <Compile Include="ClientsInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsersInfoForm.Designer.cs">
-      <DependentUpon>UsersInfoForm.cs</DependentUpon>
+    <Compile Include="ClientsInfoForm.Designer.cs">
+      <DependentUpon>ClientsInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
@@ -172,8 +172,8 @@
     <EmbeddedResource Include="TravelsInfoForm.resx">
       <DependentUpon>TravelsInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersInfoForm.resx">
-      <DependentUpon>UsersInfoForm.cs</DependentUpon>
+    <EmbeddedResource Include="ClientsInfoForm.resx">
+      <DependentUpon>ClientsInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>

@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TravelsInfoForm));
             this.TravelsListView = new System.Windows.Forms.ListView();
             this.NumberColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DestinationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DestinationsColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StartDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FinishDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SeatsColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GuideColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SeatsColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PriceColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             this.TravelsListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TravelsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.NumberColumnHeader,
-            this.DestinationColumnHeader,
+            this.DestinationsColumnHeader,
             this.StartDateColumnHeader,
             this.FinishDateColumnHeader,
             this.GuideColumnHeader,
@@ -69,11 +69,11 @@
             this.NumberColumnHeader.Text = "No.";
             this.NumberColumnHeader.Width = 38;
             // 
-            // DestinationColumnHeader
+            // DestinationsColumnHeader
             // 
-            this.DestinationColumnHeader.Text = "Destination";
-            this.DestinationColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.DestinationColumnHeader.Width = 164;
+            this.DestinationsColumnHeader.Text = "Destinations";
+            this.DestinationsColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.DestinationsColumnHeader.Width = 164;
             // 
             // StartDateColumnHeader
             // 
@@ -87,17 +87,17 @@
             this.FinishDateColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.FinishDateColumnHeader.Width = 103;
             // 
-            // SeatsColumnHeader
-            // 
-            this.SeatsColumnHeader.Text = "Number of seats";
-            this.SeatsColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SeatsColumnHeader.Width = 130;
-            // 
             // GuideColumnHeader
             // 
             this.GuideColumnHeader.Text = "Guide";
             this.GuideColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.GuideColumnHeader.Width = 182;
+            // 
+            // SeatsColumnHeader
+            // 
+            this.SeatsColumnHeader.Text = "Number of seats";
+            this.SeatsColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SeatsColumnHeader.Width = 130;
             // 
             // PriceColumnHeader
             // 
@@ -177,7 +177,7 @@
 
         private System.Windows.Forms.ListView TravelsListView;
         private System.Windows.Forms.ColumnHeader NumberColumnHeader;
-        private System.Windows.Forms.ColumnHeader DestinationColumnHeader;
+        private System.Windows.Forms.ColumnHeader DestinationsColumnHeader;
         private System.Windows.Forms.ColumnHeader StartDateColumnHeader;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader FinishDateColumnHeader;

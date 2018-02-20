@@ -14,12 +14,9 @@ namespace TourismAgency
             RepeatPasswordTextBox.UseSystemPasswordChar = true; 
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
-            UsersInfoForm usersInfoForm = new UsersInfoForm();
             this.Hide();
-            usersInfoForm.Show();
-             
         }
 
         private void CreateAdminButton_Click(object sender, EventArgs e)

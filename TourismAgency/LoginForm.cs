@@ -13,7 +13,7 @@ namespace TourismAgency
             PasswordTextBox.UseSystemPasswordChar = true; 
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             ClientTourismAgencyForm client = new ClientTourismAgencyForm();

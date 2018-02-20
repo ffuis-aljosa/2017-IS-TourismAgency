@@ -23,7 +23,7 @@ namespace TourismAgency
             {
                 Client client = new Client(FirstNameTextBox.Text, LastNameTextBox.Text, BirthDateTimePicker.Text, EmailTextBox.Text, PassportTextBox.Text, CitizenshipTextBox.Text, CityTextBox.Text, AdressTextBox.Text, PhoneNumberTextBox.Text);
 
-                ClientRepository.CreateUser(client);
+                ClientRepository.CreateClient(client);
                 
                 FirstNameTextBox.Text = "";
                 LastNameTextBox.Text = "";
@@ -46,8 +46,8 @@ namespace TourismAgency
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            AdminTourismAgencyForm adminForm = new AdminTourismAgencyForm();
-            adminForm.Show();
+            ClientsInfoForm clientForm = new ClientsInfoForm();
+            clientForm.Show();
         }
     }
     

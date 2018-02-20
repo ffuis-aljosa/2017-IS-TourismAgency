@@ -1,6 +1,6 @@
 ﻿namespace TourismAgency
 {
-    partial class UsersInfoForm
+    partial class ClientsInfoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersInfoForm));
-            this.UsersListView = new System.Windows.Forms.ListView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientsInfoForm));
+            this.ClientsListView = new System.Windows.Forms.ListView();
             this.NumberColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.UsernameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.RoleColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FirstNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LastNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DateOfBirthColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -44,18 +42,16 @@
             this.PhoneNumberColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ExitButton = new System.Windows.Forms.Button();
             this.ChangeUserInfoButton = new System.Windows.Forms.Button();
-            this.CreateNewAdminButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.CreateNewClientButton = new System.Windows.Forms.Button();
+            this.ClientsInfoLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // UsersListView
+            // ClientsListView
             // 
-            this.UsersListView.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.UsersListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsersListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ClientsListView.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientsListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ClientsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.NumberColumnHeader,
-            this.UsernameColumnHeader,
-            this.RoleColumnHeader,
             this.FirstNameColumnHeader,
             this.LastNameColumnHeader,
             this.DateOfBirthColumnHeader,
@@ -65,32 +61,20 @@
             this.CityColumnHeader,
             this.AdressColumnHeader,
             this.PhoneNumberColumnHeader});
-            this.UsersListView.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsersListView.GridLines = true;
-            this.UsersListView.Location = new System.Drawing.Point(12, 30);
-            this.UsersListView.Name = "UsersListView";
-            this.UsersListView.Size = new System.Drawing.Size(1362, 263);
-            this.UsersListView.TabIndex = 0;
-            this.UsersListView.UseCompatibleStateImageBehavior = false;
-            this.UsersListView.View = System.Windows.Forms.View.Details;
-            this.UsersListView.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.UsersListView_ColumnWidthChanging);
+            this.ClientsListView.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClientsListView.GridLines = true;
+            this.ClientsListView.Location = new System.Drawing.Point(15, 30);
+            this.ClientsListView.Name = "ClientsListView";
+            this.ClientsListView.Size = new System.Drawing.Size(1218, 263);
+            this.ClientsListView.TabIndex = 0;
+            this.ClientsListView.UseCompatibleStateImageBehavior = false;
+            this.ClientsListView.View = System.Windows.Forms.View.Details;
+            this.ClientsListView.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.UsersListView_ColumnWidthChanging);
             // 
             // NumberColumnHeader
             // 
             this.NumberColumnHeader.Text = "No.";
             this.NumberColumnHeader.Width = 33;
-            // 
-            // UsernameColumnHeader
-            // 
-            this.UsernameColumnHeader.Text = "Username";
-            this.UsernameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.UsernameColumnHeader.Width = 89;
-            // 
-            // RoleColumnHeader
-            // 
-            this.RoleColumnHeader.Text = "Role";
-            this.RoleColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.RoleColumnHeader.Width = 51;
             // 
             // FirstNameColumnHeader
             // 
@@ -152,7 +136,7 @@
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.Location = new System.Drawing.Point(0, 459);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(1370, 46);
+            this.ExitButton.Size = new System.Drawing.Size(1246, 46);
             this.ExitButton.TabIndex = 1;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -164,48 +148,48 @@
             this.ChangeUserInfoButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangeUserInfoButton.Location = new System.Drawing.Point(0, 413);
             this.ChangeUserInfoButton.Name = "ChangeUserInfoButton";
-            this.ChangeUserInfoButton.Size = new System.Drawing.Size(1370, 46);
+            this.ChangeUserInfoButton.Size = new System.Drawing.Size(1246, 46);
             this.ChangeUserInfoButton.TabIndex = 2;
             this.ChangeUserInfoButton.Text = "Change Existing User Info";
             this.ChangeUserInfoButton.UseVisualStyleBackColor = true;
             // 
-            // CreateNewAdminButton
+            // CreateNewClientButton
             // 
-            this.CreateNewAdminButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.CreateNewAdminButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateNewAdminButton.Location = new System.Drawing.Point(0, 367);
-            this.CreateNewAdminButton.Name = "CreateNewAdminButton";
-            this.CreateNewAdminButton.Size = new System.Drawing.Size(1370, 46);
-            this.CreateNewAdminButton.TabIndex = 3;
-            this.CreateNewAdminButton.Text = "Create New Admin";
-            this.CreateNewAdminButton.UseVisualStyleBackColor = true;
-            this.CreateNewAdminButton.Click += new System.EventHandler(this.CreateNewAdminButton_Click);
+            this.CreateNewClientButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.CreateNewClientButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateNewClientButton.Location = new System.Drawing.Point(0, 367);
+            this.CreateNewClientButton.Name = "CreateNewClientButton";
+            this.CreateNewClientButton.Size = new System.Drawing.Size(1246, 46);
+            this.CreateNewClientButton.TabIndex = 3;
+            this.CreateNewClientButton.Text = "Create New Client";
+            this.CreateNewClientButton.UseVisualStyleBackColor = true;
+            this.CreateNewClientButton.Click += new System.EventHandler(this.CreateNewAdminButton_Click);
             // 
-            // label1
+            // ClientsInfoLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 18);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Users Info";
+            this.ClientsInfoLabel.AutoSize = true;
+            this.ClientsInfoLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClientsInfoLabel.Location = new System.Drawing.Point(12, 9);
+            this.ClientsInfoLabel.Name = "ClientsInfoLabel";
+            this.ClientsInfoLabel.Size = new System.Drawing.Size(104, 18);
+            this.ClientsInfoLabel.TabIndex = 4;
+            this.ClientsInfoLabel.Text = "Clients Info";
             // 
-            // UsersInfoForm
+            // ClientsInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1370, 505);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.CreateNewAdminButton);
+            this.ClientSize = new System.Drawing.Size(1246, 505);
+            this.Controls.Add(this.ClientsInfoLabel);
+            this.Controls.Add(this.CreateNewClientButton);
             this.Controls.Add(this.ChangeUserInfoButton);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.UsersListView);
+            this.Controls.Add(this.ClientsListView);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "UsersInfoForm";
+            this.Name = "ClientsInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Users Info";
             this.ResumeLayout(false);
@@ -215,7 +199,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView UsersListView;
+        private System.Windows.Forms.ListView ClientsListView;
         private System.Windows.Forms.ColumnHeader FirstNameColumnHeader;
         private System.Windows.Forms.ColumnHeader LastNameColumnHeader;
         private System.Windows.Forms.ColumnHeader DateOfBirthColumnHeader;
@@ -226,11 +210,9 @@
         private System.Windows.Forms.ColumnHeader AdressColumnHeader;
         private System.Windows.Forms.ColumnHeader PhoneNumberColumnHeader;
         private System.Windows.Forms.ColumnHeader NumberColumnHeader;
-        private System.Windows.Forms.ColumnHeader UsernameColumnHeader;
-        private System.Windows.Forms.ColumnHeader RoleColumnHeader;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button ChangeUserInfoButton;
-        private System.Windows.Forms.Button CreateNewAdminButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button CreateNewClientButton;
+        private System.Windows.Forms.Label ClientsInfoLabel;
     }
 }

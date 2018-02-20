@@ -36,7 +36,7 @@
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.LoginButton = new System.Windows.Forms.Button();
-            this.ExitButton = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
             this.RegisterLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,24 +80,24 @@
             // UsernameTextBox
             // 
             this.UsernameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UsernameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.UsernameTextBox.Location = new System.Drawing.Point(81, 135);
             this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(201, 20);
+            this.UsernameTextBox.Size = new System.Drawing.Size(201, 27);
             this.UsernameTextBox.TabIndex = 2;
             this.UsernameTextBox.Click += new System.EventHandler(this.UsernameTextBox_Click);
             // 
             // PasswordTextBox
             // 
             this.PasswordTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PasswordTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PasswordTextBox.Location = new System.Drawing.Point(81, 179);
+            this.PasswordTextBox.Location = new System.Drawing.Point(81, 186);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(201, 20);
+            this.PasswordTextBox.Size = new System.Drawing.Size(201, 27);
             this.PasswordTextBox.TabIndex = 3;
             this.PasswordTextBox.Click += new System.EventHandler(this.PasswordTextBox_Click);
             // 
@@ -112,16 +112,16 @@
             this.LoginButton.UseVisualStyleBackColor = true;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // ExitButton
+            // BackButton
             // 
-            this.ExitButton.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.Location = new System.Drawing.Point(107, 289);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(161, 50);
-            this.ExitButton.TabIndex = 5;
-            this.ExitButton.Text = "Exit";
-            this.ExitButton.UseVisualStyleBackColor = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            this.BackButton.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.Location = new System.Drawing.Point(107, 289);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(161, 50);
+            this.BackButton.TabIndex = 5;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // RegisterLabel
             // 
@@ -144,7 +144,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(78, 158);
+            this.label2.Location = new System.Drawing.Point(78, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 18);
             this.label2.TabIndex = 7;
@@ -159,7 +159,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RegisterLabel);
-            this.Controls.Add(this.ExitButton);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UsernameTextBox);
@@ -186,7 +186,7 @@
         private System.Windows.Forms.TextBox UsernameTextBox;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Button LoginButton;
-        private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Label RegisterLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

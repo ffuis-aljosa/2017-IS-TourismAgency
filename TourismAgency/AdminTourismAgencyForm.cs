@@ -18,14 +18,14 @@ namespace TourismAgency
 
         private void LogoutToolStripButton_Click(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm();
+            ClientTourismAgencyForm clientForm = new ClientTourismAgencyForm();
             this.Hide();
-            loginForm.Show(); 
+            clientForm.Show(); 
         }
 
         private void UsersInfoButton_Click(object sender, EventArgs e)
         {
-            UsersInfoForm usersInfoForm = new UsersInfoForm();
+            ClientsInfoForm usersInfoForm = new ClientsInfoForm();
             this.Hide();
             usersInfoForm.Show(); 
         }
@@ -35,6 +35,12 @@ namespace TourismAgency
             TravelsInfoForm travelsInfo = new TravelsInfoForm();
             this.Hide();
             travelsInfo.Show(); 
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            AddNewAdminForm addNewAdmin = new AddNewAdminForm();
+            addNewAdmin.ShowDialog();
         }
     }
 }

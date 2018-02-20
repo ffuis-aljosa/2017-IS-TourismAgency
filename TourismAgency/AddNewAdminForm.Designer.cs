@@ -37,7 +37,7 @@
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.RepeatPasswordLabel = new System.Windows.Forms.Label();
             this.CreateAdminButton = new System.Windows.Forms.Button();
-            this.ExitButton = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CreateAdminLabel
@@ -118,15 +118,15 @@
             this.CreateAdminButton.UseVisualStyleBackColor = true;
             this.CreateAdminButton.Click += new System.EventHandler(this.CreateAdminButton_Click);
             // 
-            // ExitButton
+            // BackButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(164, 263);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(137, 52);
-            this.ExitButton.TabIndex = 12;
-            this.ExitButton.Text = "Exit";
-            this.ExitButton.UseVisualStyleBackColor = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            this.BackButton.Location = new System.Drawing.Point(164, 263);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(137, 52);
+            this.BackButton.TabIndex = 12;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // AddNewAdminForm
             // 
@@ -134,7 +134,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(313, 327);
-            this.Controls.Add(this.ExitButton);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.CreateAdminButton);
             this.Controls.Add(this.RepeatPasswordLabel);
             this.Controls.Add(this.PasswordLabel);
@@ -166,6 +166,6 @@
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Label RepeatPasswordLabel;
         private System.Windows.Forms.Button CreateAdminButton;
-        private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Button BackButton;
     }
 }
