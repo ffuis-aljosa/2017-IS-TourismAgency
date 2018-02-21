@@ -14,7 +14,7 @@ namespace TourismAgency
             StartDateTimePicker.MinDate = DateTime.Now;
             FinishDateTimePicker.MinDate = DateTime.Now;
             TravelRepository.LoadTravels(TravelsListView, SearchTextBox);
-            loadGuides();
+            LoadGuides();
             TravelsListView.FullRowSelect = true;
         }
 
@@ -25,7 +25,7 @@ namespace TourismAgency
             adminForm.Show();
         }
 
-        private void loadGuides()
+        private void LoadGuides()
         {
             List<Guide> guides = GuideRepository.FetchAllGuides();
 
