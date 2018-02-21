@@ -100,7 +100,6 @@ C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\Tourism
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.exe
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.pdb
 C:\Users\Finch\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.TourismAgencyForm.resources
-C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewTravelForm.resources
 C:\Users\Finch\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewTravelForm.resources
 C:\Users\Finch\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.WelcomeForm.resources
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.WelcomeForm.resources
@@ -126,13 +125,12 @@ C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\Touris
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AdminTourismAgencyForm.resources
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewAdminForm.resources
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewAdminForm.resources
-C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewClientForm.resources
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AdminTourismAgencyForm.resources
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.ClientTourismAgencyForm.resources
 C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.ClientTourismAgencyForm.resources
-C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.TravelsInfoForm.resources
-C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.ClientsInfoForm.resources
-C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.AddNewGuideForm.resources
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.InfoTravelsForm.resources
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.InfoGuidesForm.resources
 C:\Users\acer1\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.InfoClientsForm.resources
+C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.InfoTravelsForm.resources
+C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.InfoGuidesForm.resources
+C:\Users\IGOR\Source\Repos\2017-IS-TourismAgency\TourismAgency\obj\Debug\TourismAgency.InfoClientsForm.resources

@@ -37,11 +37,11 @@ namespace TourismAgency.Db
 
             if (search.Text == "")
             {
-                sql = @"SELECT first_name, last_name FROM guides";
+                sql = @"SELECT id, first_name, last_name FROM guides";
             }
             else
             {
-                sql = @"SELECT first_name, last_name FROM guides 
+                sql = @"SELECT id, first_name, last_name FROM guides 
                     WHERE first_name LIKE '%" + search.Text + "%' " +
                     "OR last_name LIKE '%" + search.Text + "%' ;";
             }
@@ -53,7 +53,8 @@ namespace TourismAgency.Db
                 SqlCeDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    ListViewItem item = new ListViewItem(reader["first_name"].ToString());
+                    ListViewItem item = new ListViewItem(reader["id"].ToString());
+                    item.SubItems.Add(reader["first_name"].ToString());
                     item.SubItems.Add(reader["last_name"].ToString());
 
                     listview.Items.Add(item);
@@ -87,6 +88,28 @@ namespace TourismAgency.Db
             }
 
             return guides;
+        }
+
+        public static void UpdateGuide(Guide guide, TextBox idTextBox)
+        {
+            string sql = @"UPDATE guides SET first_name = @first_name, last_name = @last_name
+                WHERE id =" + idTextBox.Text;
+
+            SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
+
+            SqlCeParameter first_name = new SqlCeParameter("@first_name", guide.First_name);
+            command.Parameters.Add(first_name);
+
+            SqlCeParameter last_name = new SqlCeParameter("@last_name", guide.Last_name);
+            command.Parameters.Add(last_name);
+
+            SqlCeParameter id = new SqlCeParameter("@id", guide.Id);
+            command.Parameters.Add(id);
+
+
+            command.Prepare();
+
+            command.ExecuteNonQuery();
         }
     }
 }

@@ -25,6 +25,14 @@ namespace TourismAgency.Models
             Last_name = last_name;
         }
 
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+        }
+
         public string First_name
         {
             get

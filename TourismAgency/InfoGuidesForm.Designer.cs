@@ -41,6 +41,8 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.IdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IdTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // FirstNameTextBox
@@ -91,6 +93,7 @@
             // 
             this.GuidesListView.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.GuidesListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.IdColumnHeader,
             this.FirstNameColumnHeader,
             this.LastNameColumnHeader});
             this.GuidesListView.GridLines = true;
@@ -105,12 +108,11 @@
             // FirstNameColumnHeader
             // 
             this.FirstNameColumnHeader.Text = "FirstName";
-            this.FirstNameColumnHeader.Width = 173;
+            this.FirstNameColumnHeader.Width = 138;
             // 
             // LastNameColumnHeader
             // 
             this.LastNameColumnHeader.Text = "Last name";
-            this.LastNameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.LastNameColumnHeader.Width = 180;
             // 
             // UpdateButton
@@ -123,6 +125,7 @@
             this.UpdateButton.TabIndex = 5;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // GuidesLabel
             // 
@@ -181,12 +184,27 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Search";
             // 
+            // IdColumnHeader
+            // 
+            this.IdColumnHeader.Text = "Id";
+            this.IdColumnHeader.Width = 34;
+            // 
+            // IdTextBox
+            // 
+            this.IdTextBox.Location = new System.Drawing.Point(444, 35);
+            this.IdTextBox.Name = "IdTextBox";
+            this.IdTextBox.Size = new System.Drawing.Size(100, 21);
+            this.IdTextBox.TabIndex = 11;
+            this.IdTextBox.TabStop = false;
+            this.IdTextBox.Visible = false;
+            // 
             // InfoGuidesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(621, 286);
+            this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.ExitButton);
@@ -226,5 +244,7 @@
         private System.Windows.Forms.ColumnHeader FirstNameColumnHeader;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ColumnHeader IdColumnHeader;
+        private System.Windows.Forms.TextBox IdTextBox;
     }
 }
