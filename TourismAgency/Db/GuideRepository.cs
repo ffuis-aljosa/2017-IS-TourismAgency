@@ -29,6 +29,27 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
+        public static void UpdateGuide(Guide guide, TextBox idTextBox)
+        {
+            string sql = @"UPDATE guides SET first_name = @first_name, last_name = @last_name
+                WHERE id =" + idTextBox.Text;
+
+            SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
+
+            SqlCeParameter id = new SqlCeParameter("@id", guide.Id);
+            command.Parameters.Add(id);
+
+            SqlCeParameter first_name = new SqlCeParameter("@first_name", guide.First_name);
+            command.Parameters.Add(first_name);
+
+            SqlCeParameter last_name = new SqlCeParameter("@last_name", guide.Last_name);
+            command.Parameters.Add(last_name);
+
+            command.Prepare();
+
+            command.ExecuteNonQuery();
+        }
+
         public static void LoadGuides(ListView listview, TextBox search)
         {
             listview.Items.Clear();
@@ -88,28 +109,6 @@ namespace TourismAgency.Db
             }
 
             return guides;
-        }
-
-        public static void UpdateGuide(Guide guide, TextBox idTextBox)
-        {
-            string sql = @"UPDATE guides SET first_name = @first_name, last_name = @last_name
-                WHERE id =" + idTextBox.Text;
-
-            SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
-
-            SqlCeParameter first_name = new SqlCeParameter("@first_name", guide.First_name);
-            command.Parameters.Add(first_name);
-
-            SqlCeParameter last_name = new SqlCeParameter("@last_name", guide.Last_name);
-            command.Parameters.Add(last_name);
-
-            SqlCeParameter id = new SqlCeParameter("@id", guide.Id);
-            command.Parameters.Add(id);
-
-
-            command.Prepare();
-
-            command.ExecuteNonQuery();
         }
     }
 }

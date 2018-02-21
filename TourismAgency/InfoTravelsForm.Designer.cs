@@ -53,6 +53,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.UpdateButton = new System.Windows.Forms.Button();
+            this.IdTextBox = new System.Windows.Forms.TextBox();
+            this.IdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // DestinationLabel
@@ -199,10 +202,10 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 12F);
             this.ExitButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ExitButton.Location = new System.Drawing.Point(12, 374);
+            this.ExitButton.Location = new System.Drawing.Point(12, 425);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(184, 45);
             this.ExitButton.TabIndex = 13;
@@ -227,6 +230,7 @@
             // 
             this.TravelsListView.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.TravelsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.IdColumnHeader,
             this.DestinationColumnHeader,
             this.StartDateColumnHeader,
             this.FinishDateColumnHeader,
@@ -236,7 +240,7 @@
             this.TravelsListView.GridLines = true;
             this.TravelsListView.Location = new System.Drawing.Point(221, 88);
             this.TravelsListView.Name = "TravelsListView";
-            this.TravelsListView.Size = new System.Drawing.Size(738, 328);
+            this.TravelsListView.Size = new System.Drawing.Size(738, 382);
             this.TravelsListView.TabIndex = 15;
             this.TravelsListView.UseCompatibleStateImageBehavior = false;
             this.TravelsListView.View = System.Windows.Forms.View.Details;
@@ -246,37 +250,32 @@
             // 
             this.DestinationColumnHeader.Tag = "";
             this.DestinationColumnHeader.Text = "Destination";
-            this.DestinationColumnHeader.Width = 120;
+            this.DestinationColumnHeader.Width = 151;
             // 
             // StartDateColumnHeader
             // 
             this.StartDateColumnHeader.Text = "Start Date";
-            this.StartDateColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.StartDateColumnHeader.Width = 117;
             // 
             // FinishDateColumnHeader
             // 
             this.FinishDateColumnHeader.Text = "Finish Date";
-            this.FinishDateColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.FinishDateColumnHeader.Width = 125;
             // 
             // GuideColumnHeader
             // 
             this.GuideColumnHeader.Text = "Guide";
-            this.GuideColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.GuideColumnHeader.Width = 152;
+            this.GuideColumnHeader.Width = 116;
             // 
             // NumberOfSeatsColumnHeader
             // 
             this.NumberOfSeatsColumnHeader.Text = "Number of seats";
-            this.NumberOfSeatsColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.NumberOfSeatsColumnHeader.Width = 115;
             // 
             // PriceColumnHeader
             // 
             this.PriceColumnHeader.Text = "Price";
-            this.PriceColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.PriceColumnHeader.Width = 105;
+            this.PriceColumnHeader.Width = 72;
             // 
             // GuideComboBox
             // 
@@ -323,12 +322,40 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Search";
             // 
+            // UpdateButton
+            // 
+            this.UpdateButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.UpdateButton.Font = new System.Drawing.Font("Verdana", 12F);
+            this.UpdateButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.UpdateButton.Location = new System.Drawing.Point(12, 374);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(184, 45);
+            this.UpdateButton.TabIndex = 20;
+            this.UpdateButton.Text = "Update";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            // 
+            // IdTextBox
+            // 
+            this.IdTextBox.Location = new System.Drawing.Point(501, 37);
+            this.IdTextBox.Name = "IdTextBox";
+            this.IdTextBox.Size = new System.Drawing.Size(100, 21);
+            this.IdTextBox.TabIndex = 21;
+            this.IdTextBox.Visible = false;
+            // 
+            // IdColumnHeader
+            // 
+            this.IdColumnHeader.Text = "Id";
+            this.IdColumnHeader.Width = 38;
+            // 
             // InfoTravelsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(983, 437);
+            this.ClientSize = new System.Drawing.Size(983, 485);
+            this.Controls.Add(this.IdTextBox);
+            this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.label1);
@@ -388,5 +415,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.TextBox IdTextBox;
+        private System.Windows.Forms.ColumnHeader IdColumnHeader;
     }
 }

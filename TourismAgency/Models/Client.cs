@@ -43,6 +43,14 @@ namespace TourismAgency.Models
             Phone_number = phone_number;
         }
 
+        public int Id
+        {
+            get
+            {
+                return id; 
+            }
+        }
+
         public string First_name
         {
             get

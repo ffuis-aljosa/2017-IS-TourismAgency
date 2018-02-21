@@ -56,6 +56,7 @@
             this.NumberOfSeatsColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PriceColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PhotoCollectionButton = new System.Windows.Forms.Button();
+            this.IdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ClientFormToolStrip.SuspendLayout();
             this.TravelListPanel.SuspendLayout();
             this.PhotoPanel1.SuspendLayout();
@@ -297,6 +298,7 @@
             // 
             this.TravelsListView.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.TravelsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.IdColumnHeader,
             this.DestinationColumnHeader,
             this.StartDateColumnHeader,
             this.FinishDateColumnHeader,
@@ -320,31 +322,26 @@
             // StartDateColumnHeader
             // 
             this.StartDateColumnHeader.Text = "Start Date";
-            this.StartDateColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.StartDateColumnHeader.Width = 117;
             // 
             // FinishDateColumnHeader
             // 
             this.FinishDateColumnHeader.Text = "Finish Date";
-            this.FinishDateColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.FinishDateColumnHeader.Width = 125;
             // 
             // GuideColumnHeader
             // 
             this.GuideColumnHeader.Text = "Guide";
-            this.GuideColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.GuideColumnHeader.Width = 152;
             // 
             // NumberOfSeatsColumnHeader
             // 
             this.NumberOfSeatsColumnHeader.Text = "Number of seats";
-            this.NumberOfSeatsColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.NumberOfSeatsColumnHeader.Width = 115;
             // 
             // PriceColumnHeader
             // 
             this.PriceColumnHeader.Text = "Price";
-            this.PriceColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.PriceColumnHeader.Width = 105;
             // 
             // PhotoCollectionButton
@@ -357,6 +354,10 @@
             this.PhotoCollectionButton.Text = "See Photo Collection";
             this.PhotoCollectionButton.UseVisualStyleBackColor = true;
             this.PhotoCollectionButton.Click += new System.EventHandler(this.PhotoCollectionButton_Click);
+            // 
+            // IdColumnHeader
+            // 
+            this.IdColumnHeader.Text = "Id";
             // 
             // ClientTourismAgencyForm
             // 
@@ -415,5 +416,6 @@
         private System.Windows.Forms.Panel PhotoPanel4;
         private System.Windows.Forms.Button TravellnfoButton3;
         private System.Windows.Forms.Button PreviousButton3;
+        private System.Windows.Forms.ColumnHeader IdColumnHeader;
     }
 }

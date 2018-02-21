@@ -63,6 +63,8 @@
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.DateOfBirthDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.IdTextBox = new System.Windows.Forms.TextBox();
+            this.IdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // ClientsListView
@@ -70,6 +72,7 @@
             this.ClientsListView.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientsListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ClientsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.IdColumnHeader,
             this.FirstNameColumnHeader,
             this.LastNameColumnHeader,
             this.DateOfBirthColumnHeader,
@@ -87,61 +90,52 @@
             this.ClientsListView.TabIndex = 0;
             this.ClientsListView.UseCompatibleStateImageBehavior = false;
             this.ClientsListView.View = System.Windows.Forms.View.Details;
-            this.ClientsListView.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.UsersListView_ColumnWidthChanging);
+            this.ClientsListView.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.ClientsListView_ColumnWidthChanging);
             this.ClientsListView.Click += new System.EventHandler(this.ClientsListView_Click);
             // 
             // FirstNameColumnHeader
             // 
             this.FirstNameColumnHeader.Text = "First Name";
-            this.FirstNameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.FirstNameColumnHeader.Width = 110;
+            this.FirstNameColumnHeader.Width = 108;
             // 
             // LastNameColumnHeader
             // 
             this.LastNameColumnHeader.Text = "Last Name";
-            this.LastNameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.LastNameColumnHeader.Width = 131;
+            this.LastNameColumnHeader.Width = 113;
             // 
             // DateOfBirthColumnHeader
             // 
             this.DateOfBirthColumnHeader.Text = "Date of birth";
-            this.DateOfBirthColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.DateOfBirthColumnHeader.Width = 110;
             // 
             // EmailColumnHeader
             // 
             this.EmailColumnHeader.Text = "E-mail";
-            this.EmailColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.EmailColumnHeader.Width = 167;
+            this.EmailColumnHeader.Width = 110;
             // 
             // PassportNumberColumnHeader
             // 
             this.PassportNumberColumnHeader.Text = "Passport number";
-            this.PassportNumberColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.PassportNumberColumnHeader.Width = 123;
             // 
             // CitizenshipColumnHeader
             // 
             this.CitizenshipColumnHeader.Text = "Citizenship";
-            this.CitizenshipColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CitizenshipColumnHeader.Width = 119;
             // 
             // CityColumnHeader
             // 
             this.CityColumnHeader.Text = "City";
-            this.CityColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CityColumnHeader.Width = 145;
             // 
             // AdressColumnHeader
             // 
             this.AdressColumnHeader.Text = "Adress";
-            this.AdressColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.AdressColumnHeader.Width = 159;
             // 
             // PhoneNumberColumnHeader
             // 
             this.PhoneNumberColumnHeader.Text = "Phone number";
-            this.PhoneNumberColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.PhoneNumberColumnHeader.Width = 121;
             // 
             // ExitButton
@@ -164,6 +158,7 @@
             this.UpdateButton.TabIndex = 10;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // AddNewClientButton
             // 
@@ -388,12 +383,26 @@
             this.DateOfBirthDateTimePicker.TabIndex = 2;
             this.DateOfBirthDateTimePicker.Value = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
             // 
+            // IdTextBox
+            // 
+            this.IdTextBox.Location = new System.Drawing.Point(613, 37);
+            this.IdTextBox.Name = "IdTextBox";
+            this.IdTextBox.Size = new System.Drawing.Size(100, 21);
+            this.IdTextBox.TabIndex = 24;
+            this.IdTextBox.Visible = false;
+            // 
+            // IdColumnHeader
+            // 
+            this.IdColumnHeader.Text = "Id";
+            this.IdColumnHeader.Width = 40;
+            // 
             // InfoClientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(983, 649);
+            this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.DateOfBirthDateTimePicker);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchTextBox);
@@ -466,5 +475,7 @@
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker DateOfBirthDateTimePicker;
+        private System.Windows.Forms.TextBox IdTextBox;
+        private System.Windows.Forms.ColumnHeader IdColumnHeader;
     }
 }
