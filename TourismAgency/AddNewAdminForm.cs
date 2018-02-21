@@ -26,19 +26,21 @@ namespace TourismAgency
                 if (PasswordTextBox.Text != RepeatPasswordTextBox.Text)
                     throw new Exception("Password and repeated password are not same!");
 
+                MessageBox.Show("Are you sure you want to create new admin?", "Create client", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                 User user = new User(UsernameTextBox.Text, PasswordTextBox.Text);
 
                 UserRepository.CreateAdmin(user);
+                DialogResult = DialogResult.OK;
 
                 UsernameTextBox.Text = "";
                 PasswordTextBox.Text = "";
                 RepeatPasswordTextBox.Text = "";
 
-                MessageBox.Show("Admin is created succesfully!", "Great", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception error)
             {
-                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(error.Message);
             }
         }
     }

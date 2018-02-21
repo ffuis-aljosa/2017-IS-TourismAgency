@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoGuidesForm));
             this.FirstNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.LastNameLabel = new System.Windows.Forms.Label();
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.GuidesListView = new System.Windows.Forms.ListView();
+            this.IdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FirstNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LastNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UpdateButton = new System.Windows.Forms.Button();
@@ -41,7 +43,6 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.IdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.IdTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -104,6 +105,11 @@
             this.GuidesListView.UseCompatibleStateImageBehavior = false;
             this.GuidesListView.View = System.Windows.Forms.View.Details;
             this.GuidesListView.Click += new System.EventHandler(this.GuidesListView_Click);
+            // 
+            // IdColumnHeader
+            // 
+            this.IdColumnHeader.Text = "Id";
+            this.IdColumnHeader.Width = 34;
             // 
             // FirstNameColumnHeader
             // 
@@ -184,11 +190,6 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Search";
             // 
-            // IdColumnHeader
-            // 
-            this.IdColumnHeader.Text = "Id";
-            this.IdColumnHeader.Width = 34;
-            // 
             // IdTextBox
             // 
             this.IdTextBox.Location = new System.Drawing.Point(444, 35);
@@ -219,6 +220,7 @@
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "InfoGuidesForm";

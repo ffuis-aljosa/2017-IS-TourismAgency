@@ -26,7 +26,7 @@ namespace TourismAgency
             {
                 User user = new User(UsernameTextBox.Text, PasswordTextBox.Text);
 
-                if (UserRepository.login(user) != null)
+                if (UserRepository.Login(user) != null)
                 {
                         AdminTourismAgencyForm adminTourismAgencyForm = new AdminTourismAgencyForm();
                         adminTourismAgencyForm.Show();
@@ -41,7 +41,7 @@ namespace TourismAgency
             }
             catch (Exception error)
             {
-                MessageBox.Show(error.Message);
+                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

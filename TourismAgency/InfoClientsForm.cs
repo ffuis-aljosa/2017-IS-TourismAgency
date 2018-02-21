@@ -56,12 +56,13 @@ namespace TourismAgency
         {
             try
             {
+                MessageBox.Show("Are you sure you want to create new client?", "Create client", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                Client guide = new Client (FirstNameTextBox.Text, LastNameTextBox.Text, 
+                Client client = new Client (FirstNameTextBox.Text, LastNameTextBox.Text, 
                     DateOfBirthDateTimePicker.Text, EmailTextBox.Text, PassportNumberTextBox.Text, 
                     CitizenshipTextBox.Text, CityTextBox.Text, AdressTextBox.Text, PhoneNumberTextBox.Text);
 
-                ClientRepository.CreateClient(guide);
+                ClientRepository.CreateClient(client);
 
                 DialogResult = DialogResult.OK;
                 ClientRepository.LoadClients(ClientsListView, SearchTextBox);
@@ -77,9 +78,9 @@ namespace TourismAgency
                 PhoneNumberTextBox.Text = ""; 
 
             }
-            catch (Exception ex)
+            catch (Exception error)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -87,6 +88,7 @@ namespace TourismAgency
         {
             try
             {
+                MessageBox.Show("Are you sure you want to change existing client?", "Update client", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 Client client = new Client(FirstNameTextBox.Text, LastNameTextBox.Text,
                     DateOfBirthDateTimePicker.Text, EmailTextBox.Text, PassportNumberTextBox.Text,
@@ -108,9 +110,9 @@ namespace TourismAgency
                 PhoneNumberTextBox.Text = "";
 
             }
-            catch (Exception ex)
+            catch (Exception error)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

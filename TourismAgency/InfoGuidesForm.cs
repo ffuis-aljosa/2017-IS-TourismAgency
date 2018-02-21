@@ -32,6 +32,7 @@ namespace TourismAgency
         {
             try
             {
+                MessageBox.Show("Are you sure you want to create new guide?", "Create guide", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 Guide guide = new Guide(
                     FirstNameTextBox.Text,
@@ -45,9 +46,9 @@ namespace TourismAgency
                 ClearTextBox(LastNameTextBox);
 
             }
-            catch (Exception ex)
+            catch (Exception error)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -66,6 +67,7 @@ namespace TourismAgency
         {
             try
             {
+                MessageBox.Show("Are you sure you want to change existing guide?", "Update guide", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 Guide guide = new Guide(
                     FirstNameTextBox.Text,
@@ -80,9 +82,9 @@ namespace TourismAgency
                 ClearTextBox(LastNameTextBox);
 
             }
-            catch (Exception ex)
+            catch (Exception error)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

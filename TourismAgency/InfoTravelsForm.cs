@@ -37,6 +37,9 @@ namespace TourismAgency
         {
             try
             {
+                MessageBox.Show("Are you sure you want to create new travel?", "Create travel", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+
                 Travel travel = new Travel(DestinationsTextBox.Text, StartDateTimePicker.Text, 
                     FinishDateTimePicker.Text, Number_Of_SeatsComboBox.Text, (Guide)GuideComboBox.SelectedItem,
                     PriceTextBox.Text);
@@ -88,6 +91,8 @@ namespace TourismAgency
         {
             try
             {
+                MessageBox.Show("Are you sure you want to change existing travel?", "Update travel", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                 Travel travel = new Travel(DestinationsTextBox.Text, StartDateTimePicker.Text, 
                     FinishDateTimePicker.Text, Number_Of_SeatsComboBox.Text, (Guide)GuideComboBox.SelectedItem,
                     PriceTextBox.Text);

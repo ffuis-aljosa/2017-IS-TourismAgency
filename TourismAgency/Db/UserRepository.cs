@@ -10,7 +10,7 @@ namespace TourismAgency.Db
     {
         private static DbConnection connection = DbConnection.Instance;
 
-        public static User login(User user)
+        public static User Login(User user)
         {
             string sql = @"SELECT * FROM users WHERE username = @username AND password = @password";
 
@@ -38,8 +38,7 @@ namespace TourismAgency.Db
 
         public static void CreateAdmin(User admin)
         {
-            string sql = "INSERT INTO users(username, password) VALUES"
-                + "(@username, @password)";
+            string sql = @"INSERT INTO users(username, password) VALUES (@username, @password)";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 

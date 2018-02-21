@@ -1,4 +1,5 @@
 ﻿using System;
+using TourismAgency.Db;
 
 namespace TourismAgency.Models
 {
