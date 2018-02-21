@@ -209,9 +209,6 @@ namespace TourismAgency.Models
                 if (value.Length < 12 || value.Length > 15)
                     throw new Exception("Phone number doesn't have a proper number of digits!");
 
-                if (value.StartsWith("+387"))
-                    throw new Exception("The phone number must start with '+387'!");
-
                 phone_number = value;
             }
         }

@@ -87,7 +87,6 @@
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(201, 27);
             this.UsernameTextBox.TabIndex = 2;
-            this.UsernameTextBox.Click += new System.EventHandler(this.UsernameTextBox_Click);
             // 
             // PasswordTextBox
             // 
@@ -99,7 +98,6 @@
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(201, 27);
             this.PasswordTextBox.TabIndex = 3;
-            this.PasswordTextBox.Click += new System.EventHandler(this.PasswordTextBox_Click);
             // 
             // LoginButton
             // 

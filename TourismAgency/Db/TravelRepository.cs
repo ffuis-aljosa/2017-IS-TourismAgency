@@ -39,12 +39,28 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static void LoadTravels (ListView listview)
+        public static void LoadTravels (ListView listview, TextBox search)
         {
             listview.Items.Clear();
+            string sql;
 
-            string sql = @"SELECT t.destinations, t.start_date, t.finish_date, g.first_name + '' + g.last_name AS guide, t.number_of_seats,
-                t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id";
+            if (search.Text == "")
+            {
+                sql = @"SELECT t.destinations, t.start_date, t.finish_date, 
+                    g.first_name + '' + g.last_name AS guide, t.number_of_seats,
+                    t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id";
+            }
+            else
+            {
+                sql = @"SELECT t.destinations, t.start_date, t.finish_date,
+                    g.first_name + '' + g.last_name AS guide, t.number_of_seats,
+                    t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id 
+                    WHERE t.destinations LIKE '%" + search.Text + "%' " +
+                    "OR t.start_date LIKE '%" + search.Text + "%' " +
+                    "OR t.finish_date LIKE '%" + search.Text + "%' " +
+                    "OR g.first_name LIKE '%" + search.Text + "%' " +
+                    "OR g.last_name LIKE '%" + search.Text + "%' ;";
+            }
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 

@@ -33,12 +33,14 @@
             this.LastNameLabel = new System.Windows.Forms.Label();
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.GuidesListView = new System.Windows.Forms.ListView();
+            this.FirstNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LastNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UpdateButton = new System.Windows.Forms.Button();
             this.GuidesLabel = new System.Windows.Forms.Label();
             this.AddNewGuideButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.FirstNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // FirstNameTextBox
@@ -80,7 +82,7 @@
             this.LastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LastNameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LastNameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LastNameTextBox.Location = new System.Drawing.Point(12, 81);
+            this.LastNameTextBox.Location = new System.Drawing.Point(12, 80);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(184, 27);
             this.LastNameTextBox.TabIndex = 3;
@@ -92,13 +94,18 @@
             this.FirstNameColumnHeader,
             this.LastNameColumnHeader});
             this.GuidesListView.GridLines = true;
-            this.GuidesListView.Location = new System.Drawing.Point(227, 29);
+            this.GuidesListView.Location = new System.Drawing.Point(227, 80);
             this.GuidesListView.Name = "GuidesListView";
-            this.GuidesListView.Size = new System.Drawing.Size(357, 232);
+            this.GuidesListView.Size = new System.Drawing.Size(357, 181);
             this.GuidesListView.TabIndex = 4;
             this.GuidesListView.UseCompatibleStateImageBehavior = false;
             this.GuidesListView.View = System.Windows.Forms.View.Details;
             this.GuidesListView.Click += new System.EventHandler(this.GuidesListView_Click);
+            // 
+            // FirstNameColumnHeader
+            // 
+            this.FirstNameColumnHeader.Text = "FirstName";
+            this.FirstNameColumnHeader.Width = 173;
             // 
             // LastNameColumnHeader
             // 
@@ -122,7 +129,7 @@
             this.GuidesLabel.AutoSize = true;
             this.GuidesLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.GuidesLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.GuidesLabel.Location = new System.Drawing.Point(224, 8);
+            this.GuidesLabel.Location = new System.Drawing.Point(224, 59);
             this.GuidesLabel.Name = "GuidesLabel";
             this.GuidesLabel.Size = new System.Drawing.Size(64, 18);
             this.GuidesLabel.TabIndex = 6;
@@ -152,10 +159,27 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // FirstNameColumnHeader
+            // SearchTextBox
             // 
-            this.FirstNameColumnHeader.Text = "FirstName";
-            this.FirstNameColumnHeader.Width = 173;
+            this.SearchTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SearchTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SearchTextBox.Location = new System.Drawing.Point(227, 29);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(184, 27);
+            this.SearchTextBox.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label2.Location = new System.Drawing.Point(224, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 18);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Search";
             // 
             // InfoGuidesForm
             // 
@@ -163,6 +187,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(621, 286);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.AddNewGuideButton);
             this.Controls.Add(this.GuidesLabel);
@@ -198,5 +224,7 @@
         private System.Windows.Forms.Button AddNewGuideButton;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.ColumnHeader FirstNameColumnHeader;
+        private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.Label label2;
     }
 }

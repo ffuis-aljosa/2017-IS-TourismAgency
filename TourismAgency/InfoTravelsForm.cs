@@ -13,7 +13,7 @@ namespace TourismAgency
             InitializeComponent();
             StartDateTimePicker.MinDate = DateTime.Now;
             FinishDateTimePicker.MinDate = DateTime.Now;
-            TravelRepository.LoadTravels(TravelsListView);
+            TravelRepository.LoadTravels(TravelsListView, SearchTextBox);
             loadGuides();
             TravelsListView.FullRowSelect = true;
         }
@@ -41,14 +41,16 @@ namespace TourismAgency
 
                 TravelRepository.CreateTravel(travel);
 
+                DialogResult = DialogResult.OK;
+                TravelRepository.LoadTravels(TravelsListView, SearchTextBox);
+
                 DestinationsTextBox.Text = "";
+                StartDateTimePicker.Value = StartDateTimePicker.MinDate;
+                FinishDateTimePicker.Value = FinishDateTimePicker.MinDate; 
                 GuideComboBox.ResetText();
                 Number_Of_SeatsComboBox.Text = "";
                 PriceTextBox.Text = "";
 
-                MessageBox.Show("Travel is created succesfully!", "Great", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                TravelRepository.LoadTravels(TravelsListView);
             }
             catch (Exception error)
             {

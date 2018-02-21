@@ -29,12 +29,22 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static void LoadGuides(ListView listview)
+        public static void LoadGuides(ListView listview, TextBox search)
         {
             listview.Items.Clear();
 
-            string sql = @"SELECT first_name, last_name 
-                 FROM guides ORDER BY first_name";
+            string sql;
+
+            if (search.Text == "")
+            {
+                sql = @"SELECT first_name, last_name FROM guides";
+            }
+            else
+            {
+                sql = @"SELECT first_name, last_name FROM guides 
+                    WHERE first_name LIKE '%" + search.Text + "%' " +
+                    "OR last_name LIKE '%" + search.Text + "%' ;";
+            }
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 

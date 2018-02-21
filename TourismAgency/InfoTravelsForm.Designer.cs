@@ -51,6 +51,8 @@
             this.PriceColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GuideComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // DestinationLabel
@@ -58,7 +60,7 @@
             this.DestinationLabel.AutoSize = true;
             this.DestinationLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DestinationLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.DestinationLabel.Location = new System.Drawing.Point(15, 16);
+            this.DestinationLabel.Location = new System.Drawing.Point(9, 16);
             this.DestinationLabel.Name = "DestinationLabel";
             this.DestinationLabel.Size = new System.Drawing.Size(112, 18);
             this.DestinationLabel.TabIndex = 0;
@@ -81,7 +83,7 @@
             this.StartDateLabel.AutoSize = true;
             this.StartDateLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartDateLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.StartDateLabel.Location = new System.Drawing.Point(15, 64);
+            this.StartDateLabel.Location = new System.Drawing.Point(9, 67);
             this.StartDateLabel.Name = "StartDateLabel";
             this.StartDateLabel.Size = new System.Drawing.Size(91, 18);
             this.StartDateLabel.TabIndex = 2;
@@ -96,7 +98,7 @@
             this.StartDateTimePicker.Cursor = System.Windows.Forms.Cursors.Hand;
             this.StartDateTimePicker.Font = new System.Drawing.Font("Verdana", 12F);
             this.StartDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.StartDateTimePicker.Location = new System.Drawing.Point(12, 85);
+            this.StartDateTimePicker.Location = new System.Drawing.Point(12, 88);
             this.StartDateTimePicker.MinDate = new System.DateTime(2018, 2, 9, 1, 6, 19, 0);
             this.StartDateTimePicker.Name = "StartDateTimePicker";
             this.StartDateTimePicker.Size = new System.Drawing.Size(184, 27);
@@ -109,7 +111,7 @@
             this.FinishDateLabel.AutoSize = true;
             this.FinishDateLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FinishDateLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FinishDateLabel.Location = new System.Drawing.Point(15, 115);
+            this.FinishDateLabel.Location = new System.Drawing.Point(9, 118);
             this.FinishDateLabel.Name = "FinishDateLabel";
             this.FinishDateLabel.Size = new System.Drawing.Size(99, 18);
             this.FinishDateLabel.TabIndex = 4;
@@ -120,7 +122,7 @@
             this.FinishDateTimePicker.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FinishDateTimePicker.Font = new System.Drawing.Font("Verdana", 12F);
             this.FinishDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FinishDateTimePicker.Location = new System.Drawing.Point(12, 136);
+            this.FinishDateTimePicker.Location = new System.Drawing.Point(12, 139);
             this.FinishDateTimePicker.MinDate = new System.DateTime(2018, 2, 9, 0, 0, 0, 0);
             this.FinishDateTimePicker.Name = "FinishDateTimePicker";
             this.FinishDateTimePicker.Size = new System.Drawing.Size(184, 27);
@@ -132,7 +134,7 @@
             this.BusLabel.AutoSize = true;
             this.BusLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BusLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.BusLabel.Location = new System.Drawing.Point(15, 166);
+            this.BusLabel.Location = new System.Drawing.Point(9, 169);
             this.BusLabel.Name = "BusLabel";
             this.BusLabel.Size = new System.Drawing.Size(144, 18);
             this.BusLabel.TabIndex = 6;
@@ -156,7 +158,7 @@
             "54",
             "60",
             "80"});
-            this.Number_Of_SeatsComboBox.Location = new System.Drawing.Point(12, 187);
+            this.Number_Of_SeatsComboBox.Location = new System.Drawing.Point(12, 190);
             this.Number_Of_SeatsComboBox.Name = "Number_Of_SeatsComboBox";
             this.Number_Of_SeatsComboBox.Size = new System.Drawing.Size(184, 26);
             this.Number_Of_SeatsComboBox.TabIndex = 8;
@@ -166,7 +168,7 @@
             this.PriceLabel.AutoSize = true;
             this.PriceLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PriceLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.PriceLabel.Location = new System.Drawing.Point(15, 266);
+            this.PriceLabel.Location = new System.Drawing.Point(9, 269);
             this.PriceLabel.Name = "PriceLabel";
             this.PriceLabel.Size = new System.Drawing.Size(47, 18);
             this.PriceLabel.TabIndex = 9;
@@ -178,7 +180,7 @@
             this.PriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PriceTextBox.Font = new System.Drawing.Font("Verdana", 12F);
             this.PriceTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PriceTextBox.Location = new System.Drawing.Point(12, 287);
+            this.PriceTextBox.Location = new System.Drawing.Point(12, 290);
             this.PriceTextBox.Multiline = true;
             this.PriceTextBox.Name = "PriceTextBox";
             this.PriceTextBox.Size = new System.Drawing.Size(184, 27);
@@ -189,18 +191,18 @@
             this.TravelLabel.AutoSize = true;
             this.TravelLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TravelLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TravelLabel.Location = new System.Drawing.Point(218, 13);
+            this.TravelLabel.Location = new System.Drawing.Point(218, 67);
             this.TravelLabel.Name = "TravelLabel";
-            this.TravelLabel.Size = new System.Drawing.Size(56, 18);
+            this.TravelLabel.Size = new System.Drawing.Size(65, 18);
             this.TravelLabel.TabIndex = 12;
-            this.TravelLabel.Text = "Travel";
+            this.TravelLabel.Text = "Travels";
             // 
             // ExitButton
             // 
             this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 12F);
             this.ExitButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ExitButton.Location = new System.Drawing.Point(12, 371);
+            this.ExitButton.Location = new System.Drawing.Point(12, 374);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(184, 45);
             this.ExitButton.TabIndex = 13;
@@ -213,7 +215,7 @@
             this.CreateTravelButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CreateTravelButton.Font = new System.Drawing.Font("Verdana", 12F);
             this.CreateTravelButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CreateTravelButton.Location = new System.Drawing.Point(12, 320);
+            this.CreateTravelButton.Location = new System.Drawing.Point(12, 323);
             this.CreateTravelButton.Name = "CreateTravelButton";
             this.CreateTravelButton.Size = new System.Drawing.Size(184, 45);
             this.CreateTravelButton.TabIndex = 14;
@@ -232,9 +234,9 @@
             this.NumberOfSeatsColumnHeader,
             this.PriceColumnHeader});
             this.TravelsListView.GridLines = true;
-            this.TravelsListView.Location = new System.Drawing.Point(221, 37);
+            this.TravelsListView.Location = new System.Drawing.Point(221, 88);
             this.TravelsListView.Name = "TravelsListView";
-            this.TravelsListView.Size = new System.Drawing.Size(738, 379);
+            this.TravelsListView.Size = new System.Drawing.Size(738, 328);
             this.TravelsListView.TabIndex = 15;
             this.TravelsListView.UseCompatibleStateImageBehavior = false;
             this.TravelsListView.View = System.Windows.Forms.View.Details;
@@ -282,7 +284,7 @@
             this.GuideComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GuideComboBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.GuideComboBox.FormattingEnabled = true;
-            this.GuideComboBox.Location = new System.Drawing.Point(12, 237);
+            this.GuideComboBox.Location = new System.Drawing.Point(12, 240);
             this.GuideComboBox.Name = "GuideComboBox";
             this.GuideComboBox.Size = new System.Drawing.Size(184, 26);
             this.GuideComboBox.TabIndex = 16;
@@ -292,18 +294,43 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label1.Location = new System.Drawing.Point(15, 216);
+            this.label1.Location = new System.Drawing.Point(9, 219);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 18);
             this.label1.TabIndex = 17;
             this.label1.Text = "Guide";
             // 
-            // TravelsInfoForm
+            // SearchTextBox
+            // 
+            this.SearchTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchTextBox.Font = new System.Drawing.Font("Verdana", 12F);
+            this.SearchTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SearchTextBox.Location = new System.Drawing.Point(221, 37);
+            this.SearchTextBox.Multiline = true;
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(184, 27);
+            this.SearchTextBox.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label2.Location = new System.Drawing.Point(218, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 18);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Search";
+            // 
+            // InfoTravelsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(983, 437);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GuideComboBox);
             this.Controls.Add(this.TravelsListView);
@@ -327,7 +354,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "TravelsInfoForm";
+            this.Name = "InfoTravelsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "";
             this.ResumeLayout(false);
@@ -359,5 +386,7 @@
         private System.Windows.Forms.ComboBox GuideComboBox;
         private System.Windows.Forms.ColumnHeader GuideColumnHeader;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.Label label2;
     }
 }

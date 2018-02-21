@@ -48,12 +48,27 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static void LoadClients(ListView listview)
+        public static void LoadClients(ListView listview, TextBox search)
         {
             listview.Items.Clear();
+            string sql;
 
-            string sql = @"SELECT first_name, last_name, date_of_birth, e_mail, 
-                passport_number, citizenship, city, adress, phone_number FROM clients ORDER BY first_name";
+            if (search.Text == "")
+            {
+                sql = @"SELECT first_name, last_name, date_of_birth, e_mail, 
+                    passport_number, citizenship, city, adress, phone_number FROM clients ORDER BY first_name";
+            }
+            else
+            {
+                sql = @"SELECT first_name, last_name, date_of_birth, e_mail, 
+                    passport_number, citizenship, city, adress, phone_number FROM clients ORDER BY first_name
+                    WHERE first_name LIKE '%" + search.Text + "%' " +
+                    "OR last_name LIKE '%" + search.Text + "%'" +
+                    "OR date_of_birth LIKE '%" + search.Text + "%'" +
+                    "OR citizenship LIKE '%" + search.Text + "%'" +
+                    "OR city LIKE '%" + search.Text + "%'" +
+                    "OR adress LIKE '%" + search.Text + "%' ;";
+            };
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 

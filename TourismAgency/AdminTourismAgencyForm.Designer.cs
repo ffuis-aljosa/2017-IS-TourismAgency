@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminTourismAgencyForm));
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.AddNewAdminToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.HelpToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.LogoutToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.UsersInfoButton = new System.Windows.Forms.Button();
+            this.ClientsInfoButton = new System.Windows.Forms.Button();
             this.TravelsInfoButton = new System.Windows.Forms.Button();
             this.GuidesInfoButton = new System.Windows.Forms.Button();
             this.MainToolStrip.SuspendLayout();
@@ -46,24 +46,24 @@
             this.MainToolStrip.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.AddNewAdminToolStripButton,
             this.HelpToolStripButton,
             this.LogoutToolStripButton});
             this.MainToolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.MainToolStrip.Location = new System.Drawing.Point(0, 0);
             this.MainToolStrip.Name = "MainToolStrip";
-            this.MainToolStrip.Size = new System.Drawing.Size(617, 37);
+            this.MainToolStrip.Size = new System.Drawing.Size(366, 37);
             this.MainToolStrip.TabIndex = 3;
             // 
-            // toolStripButton1
+            // AddNewAdminToolStripButton
             // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(81, 34);
-            this.toolStripButton1.Text = "New admin";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.AddNewAdminToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("AddNewAdminToolStripButton.Image")));
+            this.AddNewAdminToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AddNewAdminToolStripButton.Name = "AddNewAdminToolStripButton";
+            this.AddNewAdminToolStripButton.Size = new System.Drawing.Size(81, 34);
+            this.AddNewAdminToolStripButton.Text = "New admin";
+            this.AddNewAdminToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.AddNewAdminToolStripButton.Click += new System.EventHandler(this.AddNewAdminToolStripButton_Click);
             // 
             // HelpToolStripButton
             // 
@@ -85,21 +85,21 @@
             this.LogoutToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.LogoutToolStripButton.Click += new System.EventHandler(this.LogoutToolStripButton_Click);
             // 
-            // UsersInfoButton
+            // ClientsInfoButton
             // 
-            this.UsersInfoButton.Location = new System.Drawing.Point(65, 99);
-            this.UsersInfoButton.Name = "UsersInfoButton";
-            this.UsersInfoButton.Size = new System.Drawing.Size(193, 90);
-            this.UsersInfoButton.TabIndex = 0;
-            this.UsersInfoButton.Text = "Users info";
-            this.UsersInfoButton.UseVisualStyleBackColor = true;
-            this.UsersInfoButton.Click += new System.EventHandler(this.UsersInfoButton_Click);
+            this.ClientsInfoButton.Location = new System.Drawing.Point(66, 76);
+            this.ClientsInfoButton.Name = "ClientsInfoButton";
+            this.ClientsInfoButton.Size = new System.Drawing.Size(238, 90);
+            this.ClientsInfoButton.TabIndex = 0;
+            this.ClientsInfoButton.Text = "Clients info";
+            this.ClientsInfoButton.UseVisualStyleBackColor = true;
+            this.ClientsInfoButton.Click += new System.EventHandler(this.ClientsInfoButton_Click);
             // 
             // TravelsInfoButton
             // 
-            this.TravelsInfoButton.Location = new System.Drawing.Point(355, 99);
+            this.TravelsInfoButton.Location = new System.Drawing.Point(66, 191);
             this.TravelsInfoButton.Name = "TravelsInfoButton";
-            this.TravelsInfoButton.Size = new System.Drawing.Size(193, 90);
+            this.TravelsInfoButton.Size = new System.Drawing.Size(238, 90);
             this.TravelsInfoButton.TabIndex = 2;
             this.TravelsInfoButton.Text = "Travels info";
             this.TravelsInfoButton.UseVisualStyleBackColor = true;
@@ -107,9 +107,9 @@
             // 
             // GuidesInfoButton
             // 
-            this.GuidesInfoButton.Location = new System.Drawing.Point(65, 235);
+            this.GuidesInfoButton.Location = new System.Drawing.Point(66, 306);
             this.GuidesInfoButton.Name = "GuidesInfoButton";
-            this.GuidesInfoButton.Size = new System.Drawing.Size(193, 90);
+            this.GuidesInfoButton.Size = new System.Drawing.Size(238, 90);
             this.GuidesInfoButton.TabIndex = 4;
             this.GuidesInfoButton.Text = "Guides info";
             this.GuidesInfoButton.UseVisualStyleBackColor = true;
@@ -120,10 +120,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(617, 355);
+            this.ClientSize = new System.Drawing.Size(366, 432);
             this.Controls.Add(this.GuidesInfoButton);
             this.Controls.Add(this.TravelsInfoButton);
-            this.Controls.Add(this.UsersInfoButton);
+            this.Controls.Add(this.ClientsInfoButton);
             this.Controls.Add(this.MainToolStrip);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -144,9 +144,9 @@
         private System.Windows.Forms.ToolStrip MainToolStrip;
         private System.Windows.Forms.ToolStripButton LogoutToolStripButton;
         private System.Windows.Forms.ToolStripButton HelpToolStripButton;
-        private System.Windows.Forms.Button UsersInfoButton;
+        private System.Windows.Forms.Button ClientsInfoButton;
         private System.Windows.Forms.Button TravelsInfoButton;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton AddNewAdminToolStripButton;
         private System.Windows.Forms.Button GuidesInfoButton;
     }
 }

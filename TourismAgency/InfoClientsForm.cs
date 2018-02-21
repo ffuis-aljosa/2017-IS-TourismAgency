@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using TourismAgency.Db;
+using TourismAgency.Models;
 
 namespace TourismAgency
 {
@@ -9,7 +10,7 @@ namespace TourismAgency
         public InfoClientsForm()
         {
             InitializeComponent();
-            ClientRepository.LoadClients(ClientsListView);
+            ClientRepository.LoadClients(ClientsListView, SearchTextBox);
             ClientsListView.FullRowSelect = true; 
         }
 
@@ -40,13 +41,44 @@ namespace TourismAgency
 
                 FirstNameTextBox.Text = firstName;
                 LastNameTextBox.Text = lastName;
-                DateOfBirthTextBox.Text = dateOfBirth;
+                DateOfBirthDateTimePicker.Text = dateOfBirth;
                 EmailTextBox.Text = email;
                 PassportNumberTextBox.Text = passportNumber;
                 CitizenshipTextBox.Text = citizenship;
                 CityTextBox.Text = city;
                 AdressTextBox.Text = adress;
                 PhoneNumberTextBox.Text = phoneNumber; 
+        }
+
+        private void AddNewClientButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Client guide = new Client (FirstNameTextBox.Text, LastNameTextBox.Text, 
+                    DateOfBirthDateTimePicker.Text, EmailTextBox.Text, PassportNumberTextBox.Text, 
+                    CitizenshipTextBox.Text, CityTextBox.Text, AdressTextBox.Text, PhoneNumberTextBox.Text);
+
+                ClientRepository.CreateClient(guide);
+
+                DialogResult = DialogResult.OK;
+                ClientRepository.LoadClients(ClientsListView, SearchTextBox);
+
+                FirstNameTextBox.Text = "";
+                LastNameTextBox.Text = "";
+                DateOfBirthDateTimePicker.Value = DateOfBirthDateTimePicker.MinDate; 
+                EmailTextBox.Text = "";
+                PassportNumberTextBox.Text = "";
+                CitizenshipTextBox.Text = "";
+                CityTextBox.Text = "";
+                AdressTextBox.Text = "";
+                PhoneNumberTextBox.Text = ""; 
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

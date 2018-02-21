@@ -49,7 +49,6 @@
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.PassportNumberTextBox = new System.Windows.Forms.TextBox();
             this.AdressTextBox = new System.Windows.Forms.TextBox();
-            this.DateOfBirthTextBox = new System.Windows.Forms.TextBox();
             this.CitizenshipTextBox = new System.Windows.Forms.TextBox();
             this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.FirstNameLabel = new System.Windows.Forms.Label();
@@ -61,6 +60,9 @@
             this.AdressLabel = new System.Windows.Forms.Label();
             this.PhoneNumberLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DateOfBirthDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // ClientsListView
@@ -79,9 +81,9 @@
             this.PhoneNumberColumnHeader});
             this.ClientsListView.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClientsListView.GridLines = true;
-            this.ClientsListView.Location = new System.Drawing.Point(224, 37);
+            this.ClientsListView.Location = new System.Drawing.Point(224, 88);
             this.ClientsListView.Name = "ClientsListView";
-            this.ClientsListView.Size = new System.Drawing.Size(747, 587);
+            this.ClientsListView.Size = new System.Drawing.Size(747, 536);
             this.ClientsListView.TabIndex = 0;
             this.ClientsListView.UseCompatibleStateImageBehavior = false;
             this.ClientsListView.View = System.Windows.Forms.View.Details;
@@ -148,7 +150,7 @@
             this.ExitButton.Location = new System.Drawing.Point(12, 579);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(184, 45);
-            this.ExitButton.TabIndex = 12;
+            this.ExitButton.TabIndex = 11;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
@@ -159,7 +161,7 @@
             this.UpdateButton.Location = new System.Drawing.Point(12, 528);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(184, 45);
-            this.UpdateButton.TabIndex = 11;
+            this.UpdateButton.TabIndex = 10;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = true;
             // 
@@ -169,15 +171,16 @@
             this.AddNewClientButton.Location = new System.Drawing.Point(12, 477);
             this.AddNewClientButton.Name = "AddNewClientButton";
             this.AddNewClientButton.Size = new System.Drawing.Size(184, 45);
-            this.AddNewClientButton.TabIndex = 10;
+            this.AddNewClientButton.TabIndex = 9;
             this.AddNewClientButton.Text = "Add New Client";
             this.AddNewClientButton.UseVisualStyleBackColor = true;
+            this.AddNewClientButton.Click += new System.EventHandler(this.AddNewClientButton_Click);
             // 
             // ClientsLabel
             // 
             this.ClientsLabel.AutoSize = true;
             this.ClientsLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClientsLabel.Location = new System.Drawing.Point(221, 16);
+            this.ClientsLabel.Location = new System.Drawing.Point(221, 67);
             this.ClientsLabel.Name = "ClientsLabel";
             this.ClientsLabel.Size = new System.Drawing.Size(65, 18);
             this.ClientsLabel.TabIndex = 4;
@@ -201,7 +204,7 @@
             this.EmailTextBox.Location = new System.Drawing.Point(12, 190);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(184, 27);
-            this.EmailTextBox.TabIndex = 4;
+            this.EmailTextBox.TabIndex = 3;
             // 
             // CityTextBox
             // 
@@ -211,7 +214,7 @@
             this.CityTextBox.Location = new System.Drawing.Point(12, 342);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(184, 27);
-            this.CityTextBox.TabIndex = 7;
+            this.CityTextBox.TabIndex = 6;
             // 
             // LastNameTextBox
             // 
@@ -231,7 +234,7 @@
             this.PassportNumberTextBox.Location = new System.Drawing.Point(12, 241);
             this.PassportNumberTextBox.Name = "PassportNumberTextBox";
             this.PassportNumberTextBox.Size = new System.Drawing.Size(184, 27);
-            this.PassportNumberTextBox.TabIndex = 5;
+            this.PassportNumberTextBox.TabIndex = 4;
             // 
             // AdressTextBox
             // 
@@ -241,17 +244,7 @@
             this.AdressTextBox.Location = new System.Drawing.Point(12, 393);
             this.AdressTextBox.Name = "AdressTextBox";
             this.AdressTextBox.Size = new System.Drawing.Size(184, 27);
-            this.AdressTextBox.TabIndex = 8;
-            // 
-            // DateOfBirthTextBox
-            // 
-            this.DateOfBirthTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.DateOfBirthTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DateOfBirthTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateOfBirthTextBox.Location = new System.Drawing.Point(12, 139);
-            this.DateOfBirthTextBox.Name = "DateOfBirthTextBox";
-            this.DateOfBirthTextBox.Size = new System.Drawing.Size(184, 27);
-            this.DateOfBirthTextBox.TabIndex = 3;
+            this.AdressTextBox.TabIndex = 7;
             // 
             // CitizenshipTextBox
             // 
@@ -261,7 +254,7 @@
             this.CitizenshipTextBox.Location = new System.Drawing.Point(12, 292);
             this.CitizenshipTextBox.Name = "CitizenshipTextBox";
             this.CitizenshipTextBox.Size = new System.Drawing.Size(184, 27);
-            this.CitizenshipTextBox.TabIndex = 6;
+            this.CitizenshipTextBox.TabIndex = 5;
             // 
             // PhoneNumberTextBox
             // 
@@ -271,7 +264,7 @@
             this.PhoneNumberTextBox.Location = new System.Drawing.Point(12, 444);
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(184, 27);
-            this.PhoneNumberTextBox.TabIndex = 9;
+            this.PhoneNumberTextBox.TabIndex = 8;
             // 
             // FirstNameLabel
             // 
@@ -363,12 +356,47 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Date of birth";
             // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTextBox.Location = new System.Drawing.Point(224, 37);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(184, 27);
+            this.SearchTextBox.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(221, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 18);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Search";
+            // 
+            // DateOfBirthDateTimePicker
+            // 
+            this.DateOfBirthDateTimePicker.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateOfBirthDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateOfBirthDateTimePicker.Location = new System.Drawing.Point(13, 140);
+            this.DateOfBirthDateTimePicker.MaxDate = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
+            this.DateOfBirthDateTimePicker.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.DateOfBirthDateTimePicker.Name = "DateOfBirthDateTimePicker";
+            this.DateOfBirthDateTimePicker.Size = new System.Drawing.Size(183, 27);
+            this.DateOfBirthDateTimePicker.TabIndex = 2;
+            this.DateOfBirthDateTimePicker.Value = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
+            // 
             // InfoClientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(983, 649);
+            this.Controls.Add(this.DateOfBirthDateTimePicker);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.PhoneNumberLabel);
             this.Controls.Add(this.AdressLabel);
@@ -380,7 +408,6 @@
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.PhoneNumberTextBox);
             this.Controls.Add(this.CitizenshipTextBox);
-            this.Controls.Add(this.DateOfBirthTextBox);
             this.Controls.Add(this.AdressTextBox);
             this.Controls.Add(this.PassportNumberTextBox);
             this.Controls.Add(this.LastNameTextBox);
@@ -425,7 +452,6 @@
         private System.Windows.Forms.TextBox LastNameTextBox;
         private System.Windows.Forms.TextBox PassportNumberTextBox;
         private System.Windows.Forms.TextBox AdressTextBox;
-        private System.Windows.Forms.TextBox DateOfBirthTextBox;
         private System.Windows.Forms.TextBox CitizenshipTextBox;
         private System.Windows.Forms.TextBox PhoneNumberTextBox;
         private System.Windows.Forms.Label FirstNameLabel;
@@ -437,5 +463,8 @@
         private System.Windows.Forms.Label AdressLabel;
         private System.Windows.Forms.Label PhoneNumberLabel;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker DateOfBirthDateTimePicker;
     }
 }

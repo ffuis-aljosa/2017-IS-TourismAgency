@@ -20,16 +20,6 @@ namespace TourismAgency
             client.Show();
         }
 
-        private void UsernameTextBox_Click(object sender, EventArgs e)
-        {
-            UsernameTextBox.Text = ""; 
-        }
-
-        private void PasswordTextBox_Click (object sender, EventArgs e)
-        {
-            PasswordTextBox.Text = ""; 
-        }
-
         private void LoginButton_Click(object sender, EventArgs e)
         {
             try

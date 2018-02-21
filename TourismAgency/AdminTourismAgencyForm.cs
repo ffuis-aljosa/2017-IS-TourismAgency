@@ -23,11 +23,11 @@ namespace TourismAgency
             clientForm.Show(); 
         }
 
-        private void UsersInfoButton_Click(object sender, EventArgs e)
+        private void ClientsInfoButton_Click(object sender, EventArgs e)
         {
-            InfoClientsForm usersInfoForm = new InfoClientsForm();
+            InfoClientsForm clientsInfoForm = new InfoClientsForm();
             this.Hide();
-            usersInfoForm.Show(); 
+            clientsInfoForm.Show(); 
         }
 
         private void TravelsInfoButton_Click(object sender, EventArgs e)
@@ -37,17 +37,19 @@ namespace TourismAgency
             travelsInfo.Show(); 
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            AddNewAdminForm addNewAdmin = new AddNewAdminForm();
-            addNewAdmin.ShowDialog();
-        }
-
         private void GuidesInfoButton_Click(object sender, EventArgs e)
         {
             InfoGuidesForm guideForm = new InfoGuidesForm();
             this.Hide();
             guideForm.Show();
         }
+
+        private void AddNewAdminToolStripButton_Click(object sender, EventArgs e)
+        {
+            AddNewAdminForm addNewAdmin = new AddNewAdminForm();
+            addNewAdmin.ShowDialog();
+        }
+
+        
     }
 }
