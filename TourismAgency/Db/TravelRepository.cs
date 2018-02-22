@@ -75,70 +75,24 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static List<Travel> FetchAllTravels(string search)
-        {
-            List<Travel> travels = new List<Travel>();
-
-            string sql;
-
-            if (search == "")
-            {
-                sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date, 
-                    g.first_name + ' ' + g.last_name AS guide, t.number_of_seats,
-                    t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id ORDER BY id";
-            }
-            else
-            {
-                sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date,
-                    g.first_name + ' ' + g.last_name AS guide, t.number_of_seats,
-                    t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id 
-                    WHERE t.destinations LIKE '%" + search + "%' " +
-                    "OR t.start_date LIKE '%" + search + "%' " +
-                    "OR t.finish_date LIKE '%" + search + "%' " +
-                    "OR g.first_name LIKE '%" + search + "%' " +
-                    "OR g.last_name LIKE '%" + search + "%' " +
-                    "ORDER BY id;";
-            }
-
-            SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
-
-            SqlCeDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                int id = (int)reader["id"];
-                string destinations = (string)reader["destinations"];
-                string start_date = (string)reader["start_date"];
-                string finish_date = (string)reader["finish_date"];
-                string g_first_name = (string)reader["first_name"];
-                string g_last_name = (string)reader["last_name"];
-                string number_of_seats = (string)reader["number_of_seats"];
-                string price = (string)reader["price"];
-
-                Travel travel = new Travel(id, destinations, start_date, finish_date, 
-                    number_of_seats, new Guide(g_first_name, g_last_name), price);
-                travels.Add(travel);
-            }
-
-            return travels;
-        }
-
         public static void TravelsToListView(ListView listview, string search)
         {
             string sql;
+            DateTime now = DateTime.Now; 
 
             if (search == "")
             {
                 sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date, 
                     g.first_name + ' ' + g.last_name AS guide, t.number_of_seats,
-                    t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id ORDER BY id";
+                    t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id WHERE t.start_date > '" + now + "' ORDER BY id";
             }
             else
             {
                 sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date,
                     g.first_name + ' ' + g.last_name AS guide, t.number_of_seats,
                     t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id 
-                    WHERE t.destinations LIKE '%" + search + "%' " +
+                    WHERE  t.start_date > '" + now + "' " +
+                    "t.destinations LIKE '%" + search + "%' " +
                     "OR t.start_date LIKE '%" + search + "%' " +
                     "OR t.finish_date LIKE '%" + search + "%' " +
                     "OR g.first_name LIKE '%" + search + "%' " +

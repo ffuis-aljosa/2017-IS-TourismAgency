@@ -17,7 +17,7 @@ namespace TourismAgency
 
         public void ClearTextBox(TextBox textBox)
         {
-            textBox.Text = " ";
+            textBox.Text = "";
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -30,26 +30,9 @@ namespace TourismAgency
 
         private void AddGuidesButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                MessageBox.Show("Are you sure you want to create new guide?", "Create guide", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                Guide guide = new Guide(
-                    FirstNameTextBox.Text,
-                    LastNameTextBox.Text);
-                GuideRepository.CreateGuide(guide);
-
-                DialogResult = DialogResult.OK;
-                GuideRepository.LoadGuides(GuidesListView, SearchTextBox);
-
-                ClearTextBox(FirstNameTextBox);
-                ClearTextBox(LastNameTextBox);
-
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            AddNewGuideForm add = new AddNewGuideForm();
+            this.Hide();
+            add.Show(); 
         }
 
         private void GuidesListView_Click(object sender, EventArgs e)

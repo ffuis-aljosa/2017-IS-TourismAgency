@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoClientsForm));
             this.ClientsListView = new System.Windows.Forms.ListView();
+            this.IdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FirstNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LastNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DateOfBirthColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -64,7 +65,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.DateOfBirthDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.IdTextBox = new System.Windows.Forms.TextBox();
-            this.IdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DeleteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ClientsListView
@@ -86,12 +87,17 @@
             this.ClientsListView.GridLines = true;
             this.ClientsListView.Location = new System.Drawing.Point(224, 88);
             this.ClientsListView.Name = "ClientsListView";
-            this.ClientsListView.Size = new System.Drawing.Size(747, 536);
+            this.ClientsListView.Size = new System.Drawing.Size(747, 587);
             this.ClientsListView.TabIndex = 0;
             this.ClientsListView.UseCompatibleStateImageBehavior = false;
             this.ClientsListView.View = System.Windows.Forms.View.Details;
             this.ClientsListView.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.ClientsListView_ColumnWidthChanging);
             this.ClientsListView.Click += new System.EventHandler(this.ClientsListView_Click);
+            // 
+            // IdColumnHeader
+            // 
+            this.IdColumnHeader.Text = "Id";
+            this.IdColumnHeader.Width = 40;
             // 
             // FirstNameColumnHeader
             // 
@@ -141,7 +147,7 @@
             // ExitButton
             // 
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.Location = new System.Drawing.Point(12, 579);
+            this.ExitButton.Location = new System.Drawing.Point(12, 630);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(184, 45);
             this.ExitButton.TabIndex = 11;
@@ -156,7 +162,7 @@
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(184, 45);
             this.UpdateButton.TabIndex = 10;
-            this.UpdateButton.Text = "Update";
+            this.UpdateButton.Text = "Update selected";
             this.UpdateButton.UseVisualStyleBackColor = true;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
@@ -391,17 +397,23 @@
             this.IdTextBox.TabIndex = 24;
             this.IdTextBox.Visible = false;
             // 
-            // IdColumnHeader
+            // DeleteButton
             // 
-            this.IdColumnHeader.Text = "Id";
-            this.IdColumnHeader.Width = 40;
+            this.DeleteButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteButton.Location = new System.Drawing.Point(13, 579);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(184, 45);
+            this.DeleteButton.TabIndex = 25;
+            this.DeleteButton.Text = "Delete selected";
+            this.DeleteButton.UseVisualStyleBackColor = true;
             // 
             // InfoClientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(983, 649);
+            this.ClientSize = new System.Drawing.Size(983, 690);
+            this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.DateOfBirthDateTimePicker);
             this.Controls.Add(this.label1);
@@ -477,5 +489,6 @@
         private System.Windows.Forms.DateTimePicker DateOfBirthDateTimePicker;
         private System.Windows.Forms.TextBox IdTextBox;
         private System.Windows.Forms.ColumnHeader IdColumnHeader;
+        private System.Windows.Forms.Button DeleteButton;
     }
 }

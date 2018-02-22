@@ -23,7 +23,7 @@ namespace TourismAgency
         private void ExitButton_Click(object sender, EventArgs e)
         {
             AdminTourismAgencyForm adminTourismAgencyForm = new AdminTourismAgencyForm();
-            this.Hide();
+            this.Close();
             adminTourismAgencyForm.Show(); 
         }
 
@@ -54,34 +54,9 @@ namespace TourismAgency
 
         private void AddNewClientButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                MessageBox.Show("Are you sure you want to create new client?", "Create client", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                Client client = new Client (FirstNameTextBox.Text, LastNameTextBox.Text, 
-                    DateOfBirthDateTimePicker.Text, EmailTextBox.Text, PassportNumberTextBox.Text, 
-                    CitizenshipTextBox.Text, CityTextBox.Text, AdressTextBox.Text, PhoneNumberTextBox.Text);
-
-                ClientRepository.CreateClient(client);
-
-                DialogResult = DialogResult.OK;
-                ClientRepository.LoadClients(ClientsListView, SearchTextBox);
-
-                FirstNameTextBox.Text = "";
-                LastNameTextBox.Text = "";
-                DateOfBirthDateTimePicker.Value = DateOfBirthDateTimePicker.MinDate; 
-                EmailTextBox.Text = "";
-                PassportNumberTextBox.Text = "";
-                CitizenshipTextBox.Text = "";
-                CityTextBox.Text = "";
-                AdressTextBox.Text = "";
-                PhoneNumberTextBox.Text = ""; 
-
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            AddNewClientForm add = new AddNewClientForm();
+            this.Hide();
+            add.Show(); 
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)

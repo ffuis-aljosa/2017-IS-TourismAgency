@@ -41,8 +41,9 @@
             this.PriceTextBox = new System.Windows.Forms.TextBox();
             this.TravelLabel = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.CreateTravelButton = new System.Windows.Forms.Button();
+            this.AddNewTravelButton = new System.Windows.Forms.Button();
             this.TravelsListView = new System.Windows.Forms.ListView();
+            this.IdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DestinationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StartDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FinishDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -55,7 +56,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.IdTextBox = new System.Windows.Forms.TextBox();
-            this.IdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DeleteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DestinationLabel
@@ -146,7 +147,7 @@
             // Number_Of_SeatsComboBox
             // 
             this.Number_Of_SeatsComboBox.BackColor = System.Drawing.SystemColors.Window;
-            this.Number_Of_SeatsComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Number_Of_SeatsComboBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.Number_Of_SeatsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Number_Of_SeatsComboBox.Font = new System.Drawing.Font("Verdana", 12F);
             this.Number_Of_SeatsComboBox.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -205,7 +206,7 @@
             this.ExitButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 12F);
             this.ExitButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ExitButton.Location = new System.Drawing.Point(12, 425);
+            this.ExitButton.Location = new System.Drawing.Point(12, 476);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(184, 45);
             this.ExitButton.TabIndex = 13;
@@ -213,18 +214,18 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // CreateTravelButton
+            // AddNewTravelButton
             // 
-            this.CreateTravelButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CreateTravelButton.Font = new System.Drawing.Font("Verdana", 12F);
-            this.CreateTravelButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CreateTravelButton.Location = new System.Drawing.Point(12, 323);
-            this.CreateTravelButton.Name = "CreateTravelButton";
-            this.CreateTravelButton.Size = new System.Drawing.Size(184, 45);
-            this.CreateTravelButton.TabIndex = 14;
-            this.CreateTravelButton.Text = "Create travel";
-            this.CreateTravelButton.UseVisualStyleBackColor = true;
-            this.CreateTravelButton.Click += new System.EventHandler(this.CreateTravelButton_Click);
+            this.AddNewTravelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddNewTravelButton.Font = new System.Drawing.Font("Verdana", 12F);
+            this.AddNewTravelButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.AddNewTravelButton.Location = new System.Drawing.Point(12, 323);
+            this.AddNewTravelButton.Name = "AddNewTravelButton";
+            this.AddNewTravelButton.Size = new System.Drawing.Size(184, 45);
+            this.AddNewTravelButton.TabIndex = 14;
+            this.AddNewTravelButton.Text = "Add new travel";
+            this.AddNewTravelButton.UseVisualStyleBackColor = true;
+            this.AddNewTravelButton.Click += new System.EventHandler(this.AddNewTravelButton_Click);
             // 
             // TravelsListView
             // 
@@ -238,13 +239,18 @@
             this.NumberOfSeatsColumnHeader,
             this.PriceColumnHeader});
             this.TravelsListView.GridLines = true;
-            this.TravelsListView.Location = new System.Drawing.Point(221, 88);
+            this.TravelsListView.Location = new System.Drawing.Point(221, 93);
             this.TravelsListView.Name = "TravelsListView";
-            this.TravelsListView.Size = new System.Drawing.Size(738, 382);
+            this.TravelsListView.Size = new System.Drawing.Size(739, 433);
             this.TravelsListView.TabIndex = 15;
             this.TravelsListView.UseCompatibleStateImageBehavior = false;
             this.TravelsListView.View = System.Windows.Forms.View.Details;
             this.TravelsListView.Click += new System.EventHandler(this.TravelsListView_Click);
+            // 
+            // IdColumnHeader
+            // 
+            this.IdColumnHeader.Text = "Id";
+            this.IdColumnHeader.Width = 33;
             // 
             // DestinationColumnHeader
             // 
@@ -265,7 +271,7 @@
             // GuideColumnHeader
             // 
             this.GuideColumnHeader.Text = "Guide";
-            this.GuideColumnHeader.Width = 116;
+            this.GuideColumnHeader.Width = 122;
             // 
             // NumberOfSeatsColumnHeader
             // 
@@ -331,7 +337,7 @@
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(184, 45);
             this.UpdateButton.TabIndex = 20;
-            this.UpdateButton.Text = "Update";
+            this.UpdateButton.Text = "Update selected";
             this.UpdateButton.UseVisualStyleBackColor = true;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
@@ -343,17 +349,25 @@
             this.IdTextBox.TabIndex = 21;
             this.IdTextBox.Visible = false;
             // 
-            // IdColumnHeader
+            // DeleteButton
             // 
-            this.IdColumnHeader.Text = "Id";
-            this.IdColumnHeader.Width = 38;
+            this.DeleteButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DeleteButton.Font = new System.Drawing.Font("Verdana", 12F);
+            this.DeleteButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DeleteButton.Location = new System.Drawing.Point(12, 425);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(184, 45);
+            this.DeleteButton.TabIndex = 22;
+            this.DeleteButton.Text = "Delete selected";
+            this.DeleteButton.UseVisualStyleBackColor = true;
             // 
             // InfoTravelsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(983, 485);
+            this.ClientSize = new System.Drawing.Size(983, 538);
+            this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.label2);
@@ -361,7 +375,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GuideComboBox);
             this.Controls.Add(this.TravelsListView);
-            this.Controls.Add(this.CreateTravelButton);
+            this.Controls.Add(this.AddNewTravelButton);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.TravelLabel);
             this.Controls.Add(this.PriceTextBox);
@@ -403,7 +417,7 @@
         private System.Windows.Forms.TextBox PriceTextBox;
         private System.Windows.Forms.Label TravelLabel;
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Button CreateTravelButton;
+        private System.Windows.Forms.Button AddNewTravelButton;
         private System.Windows.Forms.ListView TravelsListView;
         private System.Windows.Forms.ColumnHeader DestinationColumnHeader;
         private System.Windows.Forms.ColumnHeader StartDateColumnHeader;
@@ -418,5 +432,6 @@
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.TextBox IdTextBox;
         private System.Windows.Forms.ColumnHeader IdColumnHeader;
+        private System.Windows.Forms.Button DeleteButton;
     }
 }

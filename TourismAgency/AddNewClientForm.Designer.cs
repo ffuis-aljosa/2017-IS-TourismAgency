@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.FirstNameTextBox = new System.Windows.Forms.TextBox();
-            this.EmaiTextBox = new System.Windows.Forms.TextBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.CityTextBox = new System.Windows.Forms.TextBox();
             this.AdressTextBox = new System.Windows.Forms.TextBox();
             this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.PassportNumberTextBox = new System.Windows.Forms.TextBox();
-            this.DateOfBirthTextBox = new System.Windows.Forms.TextBox();
             this.CitizenshipTextBox = new System.Windows.Forms.TextBox();
             this.FirstNameLabel = new System.Windows.Forms.Label();
             this.EmailLabel = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.CreateClientButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
             this.CreateClientLabel = new System.Windows.Forms.Label();
+            this.DateOfBirthDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // FirstNameTextBox
@@ -60,14 +60,14 @@
             this.FirstNameTextBox.Size = new System.Drawing.Size(169, 27);
             this.FirstNameTextBox.TabIndex = 2;
             // 
-            // EmaiTextBox
+            // EmailTextBox
             // 
-            this.EmaiTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.EmaiTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.EmaiTextBox.Location = new System.Drawing.Point(13, 131);
-            this.EmaiTextBox.Name = "EmaiTextBox";
-            this.EmaiTextBox.Size = new System.Drawing.Size(169, 27);
-            this.EmaiTextBox.TabIndex = 3;
+            this.EmailTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EmailTextBox.Location = new System.Drawing.Point(13, 131);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(169, 27);
+            this.EmailTextBox.TabIndex = 3;
             // 
             // CityTextBox
             // 
@@ -114,15 +114,6 @@
             this.PassportNumberTextBox.Size = new System.Drawing.Size(169, 27);
             this.PassportNumberTextBox.TabIndex = 8;
             // 
-            // DateOfBirthTextBox
-            // 
-            this.DateOfBirthTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.DateOfBirthTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DateOfBirthTextBox.Location = new System.Drawing.Point(430, 80);
-            this.DateOfBirthTextBox.Name = "DateOfBirthTextBox";
-            this.DateOfBirthTextBox.Size = new System.Drawing.Size(169, 27);
-            this.DateOfBirthTextBox.TabIndex = 9;
-            // 
             // CitizenshipTextBox
             // 
             this.CitizenshipTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -156,7 +147,7 @@
             // 
             this.CityLabel.AutoSize = true;
             this.CityLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CityLabel.Location = new System.Drawing.Point(9, 177);
+            this.CityLabel.Location = new System.Drawing.Point(10, 161);
             this.CityLabel.Name = "CityLabel";
             this.CityLabel.Size = new System.Drawing.Size(40, 18);
             this.CityLabel.TabIndex = 13;
@@ -230,6 +221,7 @@
             this.CreateClientButton.TabIndex = 20;
             this.CreateClientButton.Text = "Create client";
             this.CreateClientButton.UseVisualStyleBackColor = true;
+            this.CreateClientButton.Click += new System.EventHandler(this.CreateClientButton_Click);
             // 
             // BackButton
             // 
@@ -239,6 +231,7 @@
             this.BackButton.TabIndex = 21;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // CreateClientLabel
             // 
@@ -251,12 +244,21 @@
             this.CreateClientLabel.TabIndex = 22;
             this.CreateClientLabel.Text = "Create Client";
             // 
+            // DateOfBirthDateTimePicker
+            // 
+            this.DateOfBirthDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateOfBirthDateTimePicker.Location = new System.Drawing.Point(430, 80);
+            this.DateOfBirthDateTimePicker.Name = "DateOfBirthDateTimePicker";
+            this.DateOfBirthDateTimePicker.Size = new System.Drawing.Size(168, 27);
+            this.DateOfBirthDateTimePicker.TabIndex = 23;
+            // 
             // AddNewClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(610, 307);
+            this.Controls.Add(this.DateOfBirthDateTimePicker);
             this.Controls.Add(this.CreateClientLabel);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.CreateClientButton);
@@ -270,13 +272,12 @@
             this.Controls.Add(this.EmailLabel);
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.CitizenshipTextBox);
-            this.Controls.Add(this.DateOfBirthTextBox);
             this.Controls.Add(this.PassportNumberTextBox);
             this.Controls.Add(this.LastNameTextBox);
             this.Controls.Add(this.PhoneNumberTextBox);
             this.Controls.Add(this.AdressTextBox);
             this.Controls.Add(this.CityTextBox);
-            this.Controls.Add(this.EmaiTextBox);
+            this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.FirstNameTextBox);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -291,13 +292,12 @@
         #endregion
 
         private System.Windows.Forms.TextBox FirstNameTextBox;
-        private System.Windows.Forms.TextBox EmaiTextBox;
+        private System.Windows.Forms.TextBox EmailTextBox;
         private System.Windows.Forms.TextBox CityTextBox;
         private System.Windows.Forms.TextBox AdressTextBox;
         private System.Windows.Forms.TextBox PhoneNumberTextBox;
         private System.Windows.Forms.TextBox LastNameTextBox;
         private System.Windows.Forms.TextBox PassportNumberTextBox;
-        private System.Windows.Forms.TextBox DateOfBirthTextBox;
         private System.Windows.Forms.TextBox CitizenshipTextBox;
         private System.Windows.Forms.Label FirstNameLabel;
         private System.Windows.Forms.Label EmailLabel;
@@ -311,5 +311,6 @@
         private System.Windows.Forms.Button CreateClientButton;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Label CreateClientLabel;
+        private System.Windows.Forms.DateTimePicker DateOfBirthDateTimePicker;
     }
 }

@@ -44,6 +44,7 @@
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.IdTextBox = new System.Windows.Forms.TextBox();
+            this.DeleteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FirstNameTextBox
@@ -88,7 +89,7 @@
             this.LastNameTextBox.Location = new System.Drawing.Point(12, 80);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(184, 27);
-            this.LastNameTextBox.TabIndex = 3;
+            this.LastNameTextBox.TabIndex = 1;
             // 
             // GuidesListView
             // 
@@ -100,8 +101,9 @@
             this.GuidesListView.GridLines = true;
             this.GuidesListView.Location = new System.Drawing.Point(227, 80);
             this.GuidesListView.Name = "GuidesListView";
-            this.GuidesListView.Size = new System.Drawing.Size(357, 181);
-            this.GuidesListView.TabIndex = 4;
+            this.GuidesListView.Size = new System.Drawing.Size(357, 232);
+            this.GuidesListView.TabIndex = 8;
+            this.GuidesListView.TabStop = false;
             this.GuidesListView.UseCompatibleStateImageBehavior = false;
             this.GuidesListView.View = System.Windows.Forms.View.Details;
             this.GuidesListView.Click += new System.EventHandler(this.GuidesListView_Click);
@@ -128,8 +130,8 @@
             this.UpdateButton.Location = new System.Drawing.Point(12, 165);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(184, 45);
-            this.UpdateButton.TabIndex = 5;
-            this.UpdateButton.Text = "Update";
+            this.UpdateButton.TabIndex = 4;
+            this.UpdateButton.Text = "Update selected";
             this.UpdateButton.UseVisualStyleBackColor = true;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
@@ -151,7 +153,7 @@
             this.AddNewGuideButton.Location = new System.Drawing.Point(12, 114);
             this.AddNewGuideButton.Name = "AddNewGuideButton";
             this.AddNewGuideButton.Size = new System.Drawing.Size(184, 45);
-            this.AddNewGuideButton.TabIndex = 7;
+            this.AddNewGuideButton.TabIndex = 3;
             this.AddNewGuideButton.Text = "Add new guide";
             this.AddNewGuideButton.UseVisualStyleBackColor = true;
             this.AddNewGuideButton.Click += new System.EventHandler(this.AddGuidesButton_Click);
@@ -160,10 +162,10 @@
             // 
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ExitButton.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ExitButton.Location = new System.Drawing.Point(12, 216);
+            this.ExitButton.Location = new System.Drawing.Point(12, 267);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(184, 45);
-            this.ExitButton.TabIndex = 8;
+            this.ExitButton.TabIndex = 5;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
@@ -177,7 +179,7 @@
             this.SearchTextBox.Location = new System.Drawing.Point(227, 29);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(184, 27);
-            this.SearchTextBox.TabIndex = 9;
+            this.SearchTextBox.TabIndex = 2;
             // 
             // label2
             // 
@@ -199,12 +201,24 @@
             this.IdTextBox.TabStop = false;
             this.IdTextBox.Visible = false;
             // 
+            // DeleteButton
+            // 
+            this.DeleteButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.DeleteButton.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.DeleteButton.Location = new System.Drawing.Point(12, 216);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(184, 45);
+            this.DeleteButton.TabIndex = 12;
+            this.DeleteButton.Text = "Delete selected";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            // 
             // InfoGuidesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(621, 286);
+            this.ClientSize = new System.Drawing.Size(621, 326);
+            this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SearchTextBox);
@@ -248,5 +262,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader IdColumnHeader;
         private System.Windows.Forms.TextBox IdTextBox;
+        private System.Windows.Forms.Button DeleteButton;
     }
 }

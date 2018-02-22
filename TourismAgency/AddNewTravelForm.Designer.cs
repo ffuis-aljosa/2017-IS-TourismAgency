@@ -28,12 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.DestinationsTextBox = new System.Windows.Forms.TextBox();
+            this.PriceTextBox = new System.Windows.Forms.TextBox();
             this.DestinationsLabel = new System.Windows.Forms.Label();
             this.StartDateLabel = new System.Windows.Forms.Label();
             this.FinishDateLabel = new System.Windows.Forms.Label();
@@ -43,61 +39,29 @@
             this.CreateTravelLabel = new System.Windows.Forms.Label();
             this.CreateTravelButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
+            this.FinishDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.StartDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.NumberOfSeatsComboBox = new System.Windows.Forms.ComboBox();
+            this.GuideComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // UsernameTextBox
+            // DestinationsTextBox
             // 
-            this.UsernameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UsernameTextBox.Location = new System.Drawing.Point(12, 77);
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(169, 27);
-            this.UsernameTextBox.TabIndex = 3;
+            this.DestinationsTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.DestinationsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DestinationsTextBox.Location = new System.Drawing.Point(12, 77);
+            this.DestinationsTextBox.Name = "DestinationsTextBox";
+            this.DestinationsTextBox.Size = new System.Drawing.Size(169, 27);
+            this.DestinationsTextBox.TabIndex = 3;
             // 
-            // textBox1
+            // PriceTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(12, 128);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 27);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(12, 179);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 27);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(212, 77);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(169, 27);
-            this.textBox3.TabIndex = 6;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(211, 128);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(169, 27);
-            this.textBox4.TabIndex = 7;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(211, 179);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(169, 27);
-            this.textBox5.TabIndex = 8;
+            this.PriceTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.PriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PriceTextBox.Location = new System.Drawing.Point(211, 179);
+            this.PriceTextBox.Name = "PriceTextBox";
+            this.PriceTextBox.Size = new System.Drawing.Size(169, 27);
+            this.PriceTextBox.TabIndex = 8;
             // 
             // DestinationsLabel
             // 
@@ -178,6 +142,7 @@
             this.CreateTravelButton.TabIndex = 24;
             this.CreateTravelButton.Text = "Create travel";
             this.CreateTravelButton.UseVisualStyleBackColor = true;
+            this.CreateTravelButton.Click += new System.EventHandler(this.CreateTravelButton_Click);
             // 
             // BackButton
             // 
@@ -187,6 +152,41 @@
             this.BackButton.TabIndex = 25;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // FinishDateTimePicker
+            // 
+            this.FinishDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FinishDateTimePicker.Location = new System.Drawing.Point(12, 128);
+            this.FinishDateTimePicker.Name = "FinishDateTimePicker";
+            this.FinishDateTimePicker.Size = new System.Drawing.Size(169, 27);
+            this.FinishDateTimePicker.TabIndex = 26;
+            // 
+            // StartDateTimePicker
+            // 
+            this.StartDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.StartDateTimePicker.Location = new System.Drawing.Point(211, 77);
+            this.StartDateTimePicker.Name = "StartDateTimePicker";
+            this.StartDateTimePicker.Size = new System.Drawing.Size(169, 27);
+            this.StartDateTimePicker.TabIndex = 27;
+            // 
+            // NumberOfSeatsComboBox
+            // 
+            this.NumberOfSeatsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NumberOfSeatsComboBox.FormattingEnabled = true;
+            this.NumberOfSeatsComboBox.Location = new System.Drawing.Point(211, 128);
+            this.NumberOfSeatsComboBox.Name = "NumberOfSeatsComboBox";
+            this.NumberOfSeatsComboBox.Size = new System.Drawing.Size(169, 26);
+            this.NumberOfSeatsComboBox.TabIndex = 28;
+            // 
+            // GuideComboBox
+            // 
+            this.GuideComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GuideComboBox.FormattingEnabled = true;
+            this.GuideComboBox.Location = new System.Drawing.Point(12, 180);
+            this.GuideComboBox.Name = "GuideComboBox";
+            this.GuideComboBox.Size = new System.Drawing.Size(169, 26);
+            this.GuideComboBox.TabIndex = 29;
             // 
             // AddNewTravelForm
             // 
@@ -194,6 +194,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(393, 302);
+            this.Controls.Add(this.GuideComboBox);
+            this.Controls.Add(this.NumberOfSeatsComboBox);
+            this.Controls.Add(this.StartDateTimePicker);
+            this.Controls.Add(this.FinishDateTimePicker);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.CreateTravelButton);
             this.Controls.Add(this.CreateTravelLabel);
@@ -203,12 +207,8 @@
             this.Controls.Add(this.FinishDateLabel);
             this.Controls.Add(this.StartDateLabel);
             this.Controls.Add(this.DestinationsLabel);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.UsernameTextBox);
+            this.Controls.Add(this.PriceTextBox);
+            this.Controls.Add(this.DestinationsTextBox);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -221,12 +221,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox UsernameTextBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox DestinationsTextBox;
+        private System.Windows.Forms.TextBox PriceTextBox;
         private System.Windows.Forms.Label DestinationsLabel;
         private System.Windows.Forms.Label StartDateLabel;
         private System.Windows.Forms.Label FinishDateLabel;
@@ -236,5 +232,9 @@
         private System.Windows.Forms.Label CreateTravelLabel;
         private System.Windows.Forms.Button CreateTravelButton;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.DateTimePicker FinishDateTimePicker;
+        private System.Windows.Forms.DateTimePicker StartDateTimePicker;
+        private System.Windows.Forms.ComboBox NumberOfSeatsComboBox;
+        private System.Windows.Forms.ComboBox GuideComboBox;
     }
 }

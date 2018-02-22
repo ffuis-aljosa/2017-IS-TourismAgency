@@ -21,7 +21,7 @@ namespace TourismAgency
         private void ExitButton_Click(object sender, EventArgs e)
         {
             AdminTourismAgencyForm adminForm = new AdminTourismAgencyForm();
-            this.Hide();
+            this.Close();
             adminForm.Show();
         }
 
@@ -47,34 +47,11 @@ namespace TourismAgency
             }
         }
 
-        private void CreateTravelButton_Click(object sender, EventArgs e)
+        private void AddNewTravelButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                MessageBox.Show("Are you sure you want to create new travel?", "Create travel", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-
-                Travel travel = new Travel(DestinationsTextBox.Text, StartDateTimePicker.Text, 
-                    FinishDateTimePicker.Text, Number_Of_SeatsComboBox.Text,
-                    (Guide)GuideComboBox.SelectedItem, PriceTextBox.Text);
-
-                TravelRepository.CreateTravel(travel);
-
-                DialogResult = DialogResult.OK;
-                TravelRepository.TravelsToListView(TravelsListView, SearchTextBox.Text);
-
-                DestinationsTextBox.Text = "";
-                StartDateTimePicker.Value = StartDateTimePicker.MinDate;
-                FinishDateTimePicker.Value = FinishDateTimePicker.MinDate; 
-                GuideComboBox.ResetText();
-                Number_Of_SeatsComboBox.Text = "";
-                PriceTextBox.Text = "";
-
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            AddNewTravelForm addNewTravel = new AddNewTravelForm();
+            this.Hide();
+            addNewTravel.Show(); 
         }
 
         private void StartDateTimePicker_ValueChanged(object sender, EventArgs e)
