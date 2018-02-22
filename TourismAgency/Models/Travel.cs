@@ -8,9 +8,8 @@ using System.Data;
 
 namespace TourismAgency.Models
 {
-    class Travel
+    public class Travel
     {
-
         private int id;
         private string destinations;
         private string start_date;
@@ -27,6 +26,13 @@ namespace TourismAgency.Models
             Finish_date = finish_date;
             Number_of_seats = number_of_seats;
             Guide = guide;
+
+            int priceInt;
+            bool parseSuccessful = int.TryParse(price, out priceInt);
+
+            if (!parseSuccessful)
+                throw new Exception("Incorrect price!");
+
             Price = price;
 
         }
@@ -38,6 +44,13 @@ namespace TourismAgency.Models
             Finish_date = finish_date;
             Number_of_seats = number_of_seats;
             Guide = guide;
+
+            int priceInt;
+            bool parseSuccessful = int.TryParse(price, out priceInt);
+
+            if (!parseSuccessful)
+                throw new Exception("Incorrect price!");
+
             Price = price; 
         }
 

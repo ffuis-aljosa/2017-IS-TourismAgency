@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TourismAgency.Models
 {
-    class Guide
+    public class Guide
     {
         private int id;
         private string first_name;

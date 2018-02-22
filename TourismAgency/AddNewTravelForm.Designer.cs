@@ -169,11 +169,22 @@
             this.StartDateTimePicker.Name = "StartDateTimePicker";
             this.StartDateTimePicker.Size = new System.Drawing.Size(169, 27);
             this.StartDateTimePicker.TabIndex = 27;
+            this.StartDateTimePicker.ValueChanged += new System.EventHandler(this.StartDateTimePicker_ValueChanged);
             // 
             // NumberOfSeatsComboBox
             // 
             this.NumberOfSeatsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NumberOfSeatsComboBox.FormattingEnabled = true;
+            this.NumberOfSeatsComboBox.Items.AddRange(new object[] {
+            "",
+            "33",
+            "34",
+            "38",
+            "44",
+            "50",
+            "54",
+            "60",
+            "80"});
             this.NumberOfSeatsComboBox.Location = new System.Drawing.Point(211, 128);
             this.NumberOfSeatsComboBox.Name = "NumberOfSeatsComboBox";
             this.NumberOfSeatsComboBox.Size = new System.Drawing.Size(169, 26);

@@ -83,8 +83,9 @@ namespace TourismAgency.Db
             if (search == "")
             {
                 sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date, 
-                    g.first_name + ' ' + g.last_name AS guide, t.number_of_seats,
-                    t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id WHERE t.start_date > '" + now + "' ORDER BY id";
+                    g.first_name, g.last_name, t.number_of_seats,
+                    t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id WHERE t.start_date > '" 
+                    + now + "' ORDER BY id";
             }
             else
             {
@@ -106,11 +107,12 @@ namespace TourismAgency.Db
 
             while (reader.Read())
             {
+                Guide konj = new Guide(reader["first_name"].ToString(), reader["last_name"].ToString());
                 ListViewItem item = new ListViewItem(reader["id"].ToString());
                 item.SubItems.Add(reader["destinations"].ToString());
                 item.SubItems.Add(reader["start_date"].ToString());
                 item.SubItems.Add(reader["finish_date"].ToString());
-                item.SubItems.Add(reader["guide"].ToString());
+                item.SubItems.Add(konj.ToString());
                 item.SubItems.Add(reader["number_of_seats"].ToString());
                 item.SubItems.Add(reader["price"].ToString());
 
@@ -118,6 +120,7 @@ namespace TourismAgency.Db
             }
 
         }
+        
 
     }
 }

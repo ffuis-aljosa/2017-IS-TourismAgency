@@ -3,7 +3,7 @@ using TourismAgency.Db;
 
 namespace TourismAgency.Models
 {
-    class Client
+    public class Client
     {
         private int id; 
         private string first_name;

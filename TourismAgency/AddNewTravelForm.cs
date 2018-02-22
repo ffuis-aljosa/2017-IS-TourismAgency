@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TourismAgency.Db;
 using TourismAgency.Models;
@@ -14,9 +8,13 @@ namespace TourismAgency
 {
     public partial class AddNewTravelForm : Form
     {
+        public Travel NewTravel { get; set; }
+
         public AddNewTravelForm()
         {
             InitializeComponent();
+            StartDateTimePicker.Value = DateTime.Now;
+            LoadGuides();
         }
 
         private void CreateTravelButton_Click(object sender, EventArgs e)
@@ -26,11 +24,11 @@ namespace TourismAgency
                 MessageBox.Show("Are you sure you want to create new travel?", "Create travel", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
 
-                Travel travel = new Travel(DestinationsTextBox.Text, StartDateTimePicker.Text,
+                NewTravel = new Travel(DestinationsTextBox.Text, StartDateTimePicker.Text,
                     FinishDateTimePicker.Text, NumberOfSeatsComboBox.Text,
                     (Guide)GuideComboBox.SelectedItem, PriceTextBox.Text);
 
-                TravelRepository.CreateTravel(travel);
+                TravelRepository.CreateTravel(NewTravel);
 
                 DialogResult = DialogResult.OK;
 
@@ -53,6 +51,19 @@ namespace TourismAgency
             InfoTravelsForm info = new InfoTravelsForm();
             this.Close();
             info.Show(); 
+        }
+
+        private void StartDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            FinishDateTimePicker.MinDate = StartDateTimePicker.Value;
+        }
+
+        private void LoadGuides()
+        {
+            List<Guide> guides = GuideRepository.FetchAllGuides();
+
+            foreach (Guide guide in guides)
+                GuideComboBox.Items.Add(guide);
         }
     }
 }

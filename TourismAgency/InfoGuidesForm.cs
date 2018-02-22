@@ -11,7 +11,7 @@ namespace TourismAgency
         public InfoGuidesForm()
         {
             InitializeComponent();
-            GuideRepository.LoadGuides(GuidesListView, SearchTextBox);
+            GuideRepository.LoadGuides(GuidesListView, SearchTextBox.Text);
             GuidesListView.FullRowSelect = true;
         }
 
@@ -59,7 +59,7 @@ namespace TourismAgency
                 GuideRepository.UpdateGuide(guide, IdTextBox);
 
                 DialogResult = DialogResult.OK;
-                GuideRepository.LoadGuides(GuidesListView, SearchTextBox);
+                GuideRepository.LoadGuides(GuidesListView, SearchTextBox.Text);
 
                 ClearTextBox(FirstNameTextBox);
                 ClearTextBox(LastNameTextBox);

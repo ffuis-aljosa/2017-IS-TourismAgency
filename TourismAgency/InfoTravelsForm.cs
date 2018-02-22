@@ -65,16 +65,16 @@ namespace TourismAgency
             string destinations = TravelsListView.SelectedItems[0].SubItems[1].Text;
             string startDate = TravelsListView.SelectedItems[0].SubItems[2].Text;
             string finishDate = TravelsListView.SelectedItems[0].SubItems[3].Text;
-            string numberOfSeats = TravelsListView.SelectedItems[0].SubItems[4].Text;
-            string guide = TravelsListView.SelectedItems[0].SubItems[5].Text;
+            string guide = TravelsListView.SelectedItems[0].SubItems[4].Text;
+            string numberOfSeats = TravelsListView.SelectedItems[0].SubItems[5].Text;
             string price = TravelsListView.SelectedItems[0].SubItems[6].Text;
 
             IdTextBox.Text = id; 
             DestinationsTextBox.Text = destinations;
             StartDateTimePicker.Text = startDate;
             FinishDateTimePicker.Text = finishDate;
-            Number_Of_SeatsComboBox.Text = numberOfSeats;
-            GuideComboBox.Text = guide;
+            Number_Of_SeatsComboBox.SelectedItem = numberOfSeats;
+            GuideComboBox.SelectedItem = guide;
             PriceTextBox.Text = price;
         }
 

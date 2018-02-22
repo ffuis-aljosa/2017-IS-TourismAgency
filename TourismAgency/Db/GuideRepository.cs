@@ -50,21 +50,21 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static void LoadGuides(ListView listview, TextBox search)
+        public static void LoadGuides(ListView listview, string search)
         {
             listview.Items.Clear();
 
             string sql;
 
-            if (search.Text == "")
+            if (search == "")
             {
                 sql = @"SELECT id, first_name, last_name FROM guides";
             }
             else
             {
                 sql = @"SELECT id, first_name, last_name FROM guides 
-                    WHERE first_name LIKE '%" + search.Text + "%' " +
-                    "OR last_name LIKE '%" + search.Text + "%' ;";
+                    WHERE first_name LIKE '%" + search + "%' " +
+                    "OR last_name LIKE '%" + search + "%' ;";
             }
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
@@ -81,9 +81,9 @@ namespace TourismAgency.Db
                     listview.Items.Add(item);
                 }
             }
-            catch (Exception ex)
+            catch (Exception error)
             {
-                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(error.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
@@ -92,7 +92,7 @@ namespace TourismAgency.Db
         {
             List<Guide> guides = new List<Guide>();
 
-            string sql = @"SELECT first_name, last_name FROM guides";
+            string sql = @"SELECT id, first_name, last_name FROM guides";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
@@ -100,11 +100,12 @@ namespace TourismAgency.Db
 
             while (reader.Read())
             {
+                int id = (int)reader["id"];
                 string first_name = (string)reader["first_name"];
                 string last_name = (string)reader["last_name"];
 
 
-                Guide guide = new Guide(first_name, last_name);
+                Guide guide = new Guide(id, first_name, last_name);
                 guides.Add(guide);
             }
 
