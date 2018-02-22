@@ -83,6 +83,18 @@
     <Compile Include="AddNewAdminForm.Designer.cs">
       <DependentUpon>AddNewAdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewClientForm.Designer.cs">
+      <DependentUpon>AddNewClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewTravelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewTravelForm.Designer.cs">
+      <DependentUpon>AddNewTravelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfoTravelsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +150,12 @@
     </Compile>
     <EmbeddedResource Include="AddNewAdminForm.resx">
       <DependentUpon>AddNewAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewClientForm.resx">
+      <DependentUpon>AddNewClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewTravelForm.resx">
+      <DependentUpon>AddNewTravelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InfoTravelsForm.resx">
       <DependentUpon>InfoTravelsForm.cs</DependentUpon>
