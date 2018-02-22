@@ -68,5 +68,10 @@ namespace TourismAgency.Models
                 last_name = value;
             }
         }
-    }
+
+        public override string ToString()
+        {
+            return first_name + " " + last_name;
+        }
+}
 }

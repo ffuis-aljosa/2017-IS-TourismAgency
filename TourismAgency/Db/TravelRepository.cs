@@ -2,6 +2,7 @@
 using System.Data.SqlServerCe;
 using System.Windows.Forms;
 using System;
+using System.Collections.Generic;
 
 namespace TourismAgency.Db
 {
@@ -74,12 +75,13 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static void LoadTravels (ListView listview, TextBox search)
+        public static List<Travel> FetchAllTravels(string search)
         {
-            listview.Items.Clear();
+            List<Travel> travels = new List<Travel>();
+
             string sql;
 
-            if (search.Text == "")
+            if (search == "")
             {
                 sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date, 
                     g.first_name + ' ' + g.last_name AS guide, t.number_of_seats,
@@ -90,37 +92,77 @@ namespace TourismAgency.Db
                 sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date,
                     g.first_name + ' ' + g.last_name AS guide, t.number_of_seats,
                     t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id 
-                    ORDER BY id
-                    WHERE t.destinations LIKE '%" + search.Text + "%' " +
-                    "OR t.start_date LIKE '%" + search.Text + "%' " +
-                    "OR t.finish_date LIKE '%" + search.Text + "%' " +
-                    "OR g.first_name LIKE '%" + search.Text + "%' " +
-                    "OR g.last_name LIKE '%" + search.Text + "%' ;";
+                    WHERE t.destinations LIKE '%" + search + "%' " +
+                    "OR t.start_date LIKE '%" + search + "%' " +
+                    "OR t.finish_date LIKE '%" + search + "%' " +
+                    "OR g.first_name LIKE '%" + search + "%' " +
+                    "OR g.last_name LIKE '%" + search + "%' " +
+                    "ORDER BY id;";
             }
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
-            try
-            {
-                SqlCeDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    ListViewItem item = new ListViewItem(reader["id"].ToString());
-                    item.SubItems.Add(reader["destinations"].ToString());
-                    item.SubItems.Add(reader["start_date"].ToString());
-                    item.SubItems.Add(reader["finish_date"].ToString());
-                    item.SubItems.Add(reader["guide"].ToString());
-                    item.SubItems.Add(reader["number_of_seats"].ToString());
-                    item.SubItems.Add(reader["price"].ToString());
+            SqlCeDataReader reader = command.ExecuteReader();
 
-                    listview.Items.Add(item);
-                }
-            }
-            catch (Exception ex)
+            while (reader.Read())
             {
-                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                int id = (int)reader["id"];
+                string destinations = (string)reader["destinations"];
+                string start_date = (string)reader["start_date"];
+                string finish_date = (string)reader["finish_date"];
+                string g_first_name = (string)reader["first_name"];
+                string g_last_name = (string)reader["last_name"];
+                string number_of_seats = (string)reader["number_of_seats"];
+                string price = (string)reader["price"];
 
+                Travel travel = new Travel(id, destinations, start_date, finish_date, 
+                    number_of_seats, new Guide(g_first_name, g_last_name), price);
+                travels.Add(travel);
             }
+
+            return travels;
+        }
+
+        public static void TravelsToListView(ListView listview, string search)
+        {
+            string sql;
+
+            if (search == "")
+            {
+                sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date, 
+                    g.first_name + ' ' + g.last_name AS guide, t.number_of_seats,
+                    t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id ORDER BY id";
+            }
+            else
+            {
+                sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date,
+                    g.first_name + ' ' + g.last_name AS guide, t.number_of_seats,
+                    t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id 
+                    WHERE t.destinations LIKE '%" + search + "%' " +
+                    "OR t.start_date LIKE '%" + search + "%' " +
+                    "OR t.finish_date LIKE '%" + search + "%' " +
+                    "OR g.first_name LIKE '%" + search + "%' " +
+                    "OR g.last_name LIKE '%" + search + "%' " +
+                    "ORDER BY id;";
+            }
+
+            SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
+
+            SqlCeDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ListViewItem item = new ListViewItem(reader["id"].ToString());
+                item.SubItems.Add(reader["destinations"].ToString());
+                item.SubItems.Add(reader["start_date"].ToString());
+                item.SubItems.Add(reader["finish_date"].ToString());
+                item.SubItems.Add(reader["guide"].ToString());
+                item.SubItems.Add(reader["number_of_seats"].ToString());
+                item.SubItems.Add(reader["price"].ToString());
+
+                listview.Items.Add(item);
+            }
+
         }
 
     }

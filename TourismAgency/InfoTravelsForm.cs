@@ -13,7 +13,7 @@ namespace TourismAgency
             InitializeComponent();
             StartDateTimePicker.MinDate = DateTime.Now;
             FinishDateTimePicker.MinDate = DateTime.Now;
-            TravelRepository.LoadTravels(TravelsListView, SearchTextBox);
+            LoadTravels();
             LoadGuides();
             TravelsListView.FullRowSelect = true;
         }
@@ -33,6 +33,20 @@ namespace TourismAgency
                 GuideComboBox.Items.Add(guide);
         }
 
+        private void LoadTravels()
+        {
+            TravelsListView.Items.Clear();
+
+            try
+            {
+                TravelRepository.TravelsToListView(TravelsListView, SearchTextBox.Text);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void CreateTravelButton_Click(object sender, EventArgs e)
         {
             try
@@ -41,13 +55,13 @@ namespace TourismAgency
 
 
                 Travel travel = new Travel(DestinationsTextBox.Text, StartDateTimePicker.Text, 
-                    FinishDateTimePicker.Text, Number_Of_SeatsComboBox.Text, (Guide)GuideComboBox.SelectedItem,
-                    PriceTextBox.Text);
+                    FinishDateTimePicker.Text, Number_Of_SeatsComboBox.Text,
+                    (Guide)GuideComboBox.SelectedItem, PriceTextBox.Text);
 
                 TravelRepository.CreateTravel(travel);
 
                 DialogResult = DialogResult.OK;
-                TravelRepository.LoadTravels(TravelsListView, SearchTextBox);
+                TravelRepository.TravelsToListView(TravelsListView, SearchTextBox.Text);
 
                 DestinationsTextBox.Text = "";
                 StartDateTimePicker.Value = StartDateTimePicker.MinDate;
@@ -100,7 +114,7 @@ namespace TourismAgency
                 TravelRepository.UpdateTravel(travel, IdTextBox);
 
                 DialogResult = DialogResult.OK;
-                TravelRepository.LoadTravels(TravelsListView, SearchTextBox);
+                TravelRepository.TravelsToListView(TravelsListView, SearchTextBox.Text);
 
                 DestinationsTextBox.Text = "";
                 StartDateTimePicker.Value = StartDateTimePicker.MinDate;

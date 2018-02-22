@@ -221,5 +221,12 @@ namespace TourismAgency.Models
                 phone_number = value;
             }
         }
+
+        public override string ToString()
+        {
+            return first_name + " " + last_name + " " + date_of_birth + " " +
+                e_mail + " " + passport_number + " " + citizenship + " " +
+                city + " " + adress + " " + phone_number;
+        }
     }
 }

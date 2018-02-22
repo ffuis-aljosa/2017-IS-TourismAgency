@@ -141,10 +141,12 @@ namespace TourismAgency.Models
                 price = value;
 
             }
-
         }
-
-
+        public override string ToString()
+        {
+            return destinations + " " + start_date + " " + finish_date + 
+                " " + number_of_seats + " " + price + "€";
+        }
     }
 
 }

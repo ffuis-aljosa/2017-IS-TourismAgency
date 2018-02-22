@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using TourismAgency.Db; 
 
 namespace TourismAgency
@@ -8,12 +9,26 @@ namespace TourismAgency
         public ClientTourismAgencyForm()
         {
             InitializeComponent();
-            TravelRepository.LoadTravels(TravelsListView, SearchTextBox);
+            LoadTravels();
         }
 
         private void ClientTourismAgencyForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit(); 
+        }
+
+        private void LoadTravels()
+        {
+            TravelsListView.Items.Clear();
+
+            try
+            {
+                TravelRepository.TravelsToListView(TravelsListView, SearchTextBox.Text);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ToolStripButton1_Click(object sender, System.EventArgs e)
