@@ -51,9 +51,11 @@ namespace TourismAgency
 
         private void GuidesListView_Click(object sender, EventArgs e)
         {
+            string id = GuidesListView.SelectedItems[0].SubItems[0].Text;
             string firstName = GuidesListView.SelectedItems[0].SubItems[1].Text;
             string lastName = GuidesListView.SelectedItems[0].SubItems[2].Text;
-            
+
+            IdLabel.Text = id; 
             FirstNameTextBox.Text = firstName;
             LastNameTextBox.Text = lastName;
         }
@@ -66,11 +68,12 @@ namespace TourismAgency
                     FirstNameTextBox.Text,
                     LastNameTextBox.Text);
 
-                GuideRepository.UpdateGuide(guide);
+                GuideRepository.UpdateGuide(guide,IdLabel.Text);
 
                 GuidesListView.Items.Clear();
 
-                DialogResult = DialogResult.OK;
+                MessageBox.Show("Successful updated", "Great", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 LoadGuides();
 
                 ClearTextBox(FirstNameTextBox);
@@ -88,6 +91,32 @@ namespace TourismAgency
             GuidesListView.Items.Clear();
             LoadGuides();
 
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Are you sure you want to delete this guide?", "Delete guide", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                Guide guide = new Guide(
+                    FirstNameTextBox.Text,
+                    LastNameTextBox.Text);
+
+                GuideRepository.DeleteGuide(guide, IdLabel.Text);
+
+                GuidesListView.Items.Clear();
+
+                LoadGuides();
+
+                ClearTextBox(FirstNameTextBox);
+                ClearTextBox(LastNameTextBox);
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

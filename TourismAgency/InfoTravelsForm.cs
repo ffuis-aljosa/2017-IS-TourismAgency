@@ -59,8 +59,19 @@ namespace TourismAgency
             FinishDateTimePicker.MinDate = StartDateTimePicker.Value;
         }
 
+        public void ClearAllBoxes()
+        {
+            DestinationsTextBox.Text = "";
+            StartDateTimePicker.Value = StartDateTimePicker.MinDate;
+            FinishDateTimePicker.Value = FinishDateTimePicker.MinDate;
+            GuideComboBox.ResetText();
+            Number_Of_SeatsComboBox.Text = "";
+            PriceTextBox.Text = "";
+        }
+
         private void TravelsListView_Click(object sender, EventArgs e)
         {
+            string id = TravelsListView.SelectedItems[0].SubItems[0].Text;
             string destinations = TravelsListView.SelectedItems[0].SubItems[1].Text;
             string startDate = TravelsListView.SelectedItems[0].SubItems[2].Text;
             string finishDate = TravelsListView.SelectedItems[0].SubItems[3].Text;
@@ -68,7 +79,8 @@ namespace TourismAgency
             string numberOfSeats = TravelsListView.SelectedItems[0].SubItems[5].Text;
             string price = TravelsListView.SelectedItems[0].SubItems[6].Text;
 
-             DestinationsTextBox.Text = destinations;
+            IdLabel.Text = id; 
+            DestinationsTextBox.Text = destinations;
             StartDateTimePicker.Text = startDate;
             FinishDateTimePicker.Text = finishDate;
             Number_Of_SeatsComboBox.SelectedItem = numberOfSeats;
@@ -84,19 +96,15 @@ namespace TourismAgency
                     FinishDateTimePicker.Text, Number_Of_SeatsComboBox.Text, (Guide)GuideComboBox.SelectedItem,
                     PriceTextBox.Text);
 
-                TravelRepository.UpdateTravel(travel);
+                TravelRepository.UpdateTravel(travel, IdLabel.Text);
 
                 TravelsListView.Items.Clear();
 
-                DialogResult = DialogResult.OK;
-                TravelRepository.TravelsToListView(TravelsListView, SearchTextBox.Text);
+                MessageBox.Show("Successful updated", "Great", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                DestinationsTextBox.Text = "";
-                StartDateTimePicker.Value = StartDateTimePicker.MinDate;
-                FinishDateTimePicker.Value = FinishDateTimePicker.MinDate;
-                GuideComboBox.ResetText();
-                Number_Of_SeatsComboBox.Text = "";
-                PriceTextBox.Text = "";
+                LoadTravels();
+
+                ClearAllBoxes();
 
             }
             catch (Exception error)
@@ -109,6 +117,31 @@ namespace TourismAgency
         {
             TravelsListView.Items.Clear();
             LoadTravels();
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Are you sure you want to delete this travel?", "Delete travel", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                Travel travel = new Travel(DestinationsTextBox.Text, StartDateTimePicker.Text,
+                    FinishDateTimePicker.Text, Number_Of_SeatsComboBox.Text, (Guide)GuideComboBox.SelectedItem,
+                    PriceTextBox.Text);
+
+                TravelRepository.DeleteTravel(travel, IdLabel.Text);
+
+                TravelsListView.Items.Clear();
+
+                LoadTravels();
+
+                ClearAllBoxes();
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 

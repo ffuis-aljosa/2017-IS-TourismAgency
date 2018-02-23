@@ -52,7 +52,7 @@
             this.DestinationsTextBox.Location = new System.Drawing.Point(12, 77);
             this.DestinationsTextBox.Name = "DestinationsTextBox";
             this.DestinationsTextBox.Size = new System.Drawing.Size(169, 27);
-            this.DestinationsTextBox.TabIndex = 3;
+            this.DestinationsTextBox.TabIndex = 1;
             // 
             // PriceTextBox
             // 
@@ -61,7 +61,7 @@
             this.PriceTextBox.Location = new System.Drawing.Point(211, 179);
             this.PriceTextBox.Name = "PriceTextBox";
             this.PriceTextBox.Size = new System.Drawing.Size(169, 27);
-            this.PriceTextBox.TabIndex = 8;
+            this.PriceTextBox.TabIndex = 6;
             // 
             // DestinationsLabel
             // 
@@ -139,7 +139,7 @@
             this.CreateTravelButton.Location = new System.Drawing.Point(44, 238);
             this.CreateTravelButton.Name = "CreateTravelButton";
             this.CreateTravelButton.Size = new System.Drawing.Size(137, 52);
-            this.CreateTravelButton.TabIndex = 24;
+            this.CreateTravelButton.TabIndex = 7;
             this.CreateTravelButton.Text = "Create travel";
             this.CreateTravelButton.UseVisualStyleBackColor = true;
             this.CreateTravelButton.Click += new System.EventHandler(this.CreateTravelButton_Click);
@@ -149,7 +149,7 @@
             this.BackButton.Location = new System.Drawing.Point(211, 238);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(137, 52);
-            this.BackButton.TabIndex = 25;
+            this.BackButton.TabIndex = 8;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
@@ -160,7 +160,7 @@
             this.FinishDateTimePicker.Location = new System.Drawing.Point(12, 128);
             this.FinishDateTimePicker.Name = "FinishDateTimePicker";
             this.FinishDateTimePicker.Size = new System.Drawing.Size(169, 27);
-            this.FinishDateTimePicker.TabIndex = 26;
+            this.FinishDateTimePicker.TabIndex = 3;
             // 
             // StartDateTimePicker
             // 
@@ -168,7 +168,7 @@
             this.StartDateTimePicker.Location = new System.Drawing.Point(211, 77);
             this.StartDateTimePicker.Name = "StartDateTimePicker";
             this.StartDateTimePicker.Size = new System.Drawing.Size(169, 27);
-            this.StartDateTimePicker.TabIndex = 27;
+            this.StartDateTimePicker.TabIndex = 2;
             this.StartDateTimePicker.ValueChanged += new System.EventHandler(this.StartDateTimePicker_ValueChanged);
             // 
             // NumberOfSeatsComboBox
@@ -188,7 +188,7 @@
             this.NumberOfSeatsComboBox.Location = new System.Drawing.Point(211, 128);
             this.NumberOfSeatsComboBox.Name = "NumberOfSeatsComboBox";
             this.NumberOfSeatsComboBox.Size = new System.Drawing.Size(169, 26);
-            this.NumberOfSeatsComboBox.TabIndex = 28;
+            this.NumberOfSeatsComboBox.TabIndex = 4;
             // 
             // GuideComboBox
             // 
@@ -197,7 +197,7 @@
             this.GuideComboBox.Location = new System.Drawing.Point(12, 180);
             this.GuideComboBox.Name = "GuideComboBox";
             this.GuideComboBox.Size = new System.Drawing.Size(169, 26);
-            this.GuideComboBox.TabIndex = 29;
+            this.GuideComboBox.TabIndex = 5;
             // 
             // AddNewTravelForm
             // 

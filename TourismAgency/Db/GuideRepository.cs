@@ -29,10 +29,10 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static void UpdateGuide(Guide guide)
+        public static void UpdateGuide(Guide guide, string idNumber)
         {
             string sql = @"UPDATE guides SET first_name = @first_name, last_name = @last_name
-                WHERE id = @id ";
+                WHERE id =" + idNumber;
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
@@ -50,7 +50,7 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static void DeleteGuide(Guide guide, int idNumber)
+        public static void DeleteGuide(Guide guide, string idNumber)
         {
             string sql = @"DELETE FROM guides WHERE id =" + idNumber;
 

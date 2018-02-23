@@ -43,6 +43,7 @@ namespace TourismAgency
 
         private void ClientsListView_Click(object sender, EventArgs e)
         {
+            string id = ClientsListView.SelectedItems[0].SubItems[0].Text;
             string firstName = ClientsListView.SelectedItems[0].SubItems[1].Text;
             string lastName = ClientsListView.SelectedItems[0].SubItems[2].Text;
             string dateOfBirth = ClientsListView.SelectedItems[0].SubItems[3].Text;
@@ -52,7 +53,8 @@ namespace TourismAgency
             string city = ClientsListView.SelectedItems[0].SubItems[7].Text;
             string adress = ClientsListView.SelectedItems[0].SubItems[8].Text;
             string phoneNumber = ClientsListView.SelectedItems[0].SubItems[9].Text;
-            
+
+            IdLabel.Text = id; 
             FirstNameTextBox.Text = firstName;
             LastNameTextBox.Text = lastName;
             DateOfBirthDateTimePicker.Text = dateOfBirth;
@@ -92,11 +94,11 @@ namespace TourismAgency
                     DateOfBirthDateTimePicker.Text, EmailTextBox.Text, PassportNumberTextBox.Text,
                     CitizenshipTextBox.Text, CityTextBox.Text, AdressTextBox.Text, PhoneNumberTextBox.Text);
 
-                ClientRepository.UpdateClient(client);
+                ClientRepository.UpdateClient(client, IdLabel.Text);
 
                 ClientsListView.Items.Clear();
-
-                DialogResult = DialogResult.OK;
+                MessageBox.Show("Successful updated", "Great", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
                 LoadClients();
 
                 ClearAllBoxes();
@@ -113,6 +115,42 @@ namespace TourismAgency
             ClientsListView.Items.Clear();
             LoadClients();
 
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this client?", "Delete client", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Client client = new Client(FirstNameTextBox.Text, LastNameTextBox.Text,
+                    DateOfBirthDateTimePicker.Text, EmailTextBox.Text, PassportNumberTextBox.Text,
+                    CitizenshipTextBox.Text, CityTextBox.Text, AdressTextBox.Text, PhoneNumberTextBox.Text);
+
+                    ClientRepository.DeleteClient(client, IdLabel.Text);
+
+                    ClientsListView.Items.Clear();
+
+                    LoadClients();
+
+                    ClearAllBoxes();
+                }
+                else
+                {
+                    ClientsListView.Items.Clear();
+
+                    LoadClients();
+
+                    ClearAllBoxes();
+                }
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

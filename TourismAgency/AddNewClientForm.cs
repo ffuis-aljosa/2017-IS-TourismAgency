@@ -23,8 +23,6 @@ namespace TourismAgency
         {
             try
             {
-                MessageBox.Show("Are you sure you want to create new client?", "Create client", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
                 Client client = new Client(FirstNameTextBox.Text, LastNameTextBox.Text,
                     DateOfBirthDateTimePicker.Text, EmailTextBox.Text, PassportNumberTextBox.Text,
                     CitizenshipTextBox.Text, CityTextBox.Text, AdressTextBox.Text, PhoneNumberTextBox.Text);

@@ -41,11 +41,11 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static void UpdateTravel(Travel travel)
+        public static void UpdateTravel(Travel travel, string idNumber)
         {
             string sql = @"UPDATE travels SET destinations = @destinations, start_date = @start_date,
                 finish_date = @finish_date, guide_id = @guide_id, number_of_seats = @number_of_seats, price = @price
-                WHERE id = @id";
+                WHERE id =" + idNumber;
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
@@ -75,7 +75,7 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static void DeleteTravel(Travel travel, int idNumber)
+        public static void DeleteTravel(Travel travel, string idNumber)
         {
             string sql = @"DELETE FROM travels WHERE id =" + idNumber;
 

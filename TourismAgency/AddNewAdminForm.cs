@@ -26,8 +26,6 @@ namespace TourismAgency
                 if (PasswordTextBox.Text != RepeatPasswordTextBox.Text)
                     throw new Exception("Password and repeated password are not same!");
 
-                MessageBox.Show("Are you sure you want to create new admin?", "Create client", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
                 User user = new User(UsernameTextBox.Text, PasswordTextBox.Text);
 
                 UserRepository.CreateAdmin(user);

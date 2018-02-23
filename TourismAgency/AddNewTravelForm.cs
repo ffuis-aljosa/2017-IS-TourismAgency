@@ -21,9 +21,6 @@ namespace TourismAgency
         {
             try
             {
-                MessageBox.Show("Are you sure you want to create new travel?", "Create travel", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-
                 NewTravel = new Travel(DestinationsTextBox.Text, StartDateTimePicker.Text,
                     FinishDateTimePicker.Text, NumberOfSeatsComboBox.Text,
                     (Guide)GuideComboBox.SelectedItem, PriceTextBox.Text);

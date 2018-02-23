@@ -58,7 +58,7 @@
             this.FirstNameTextBox.Location = new System.Drawing.Point(13, 80);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(169, 27);
-            this.FirstNameTextBox.TabIndex = 2;
+            this.FirstNameTextBox.TabIndex = 1;
             // 
             // EmailTextBox
             // 
@@ -67,7 +67,7 @@
             this.EmailTextBox.Location = new System.Drawing.Point(13, 131);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(169, 27);
-            this.EmailTextBox.TabIndex = 3;
+            this.EmailTextBox.TabIndex = 4;
             // 
             // CityTextBox
             // 
@@ -76,7 +76,7 @@
             this.CityTextBox.Location = new System.Drawing.Point(13, 182);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(169, 27);
-            this.CityTextBox.TabIndex = 4;
+            this.CityTextBox.TabIndex = 7;
             // 
             // AdressTextBox
             // 
@@ -85,7 +85,7 @@
             this.AdressTextBox.Location = new System.Drawing.Point(219, 182);
             this.AdressTextBox.Name = "AdressTextBox";
             this.AdressTextBox.Size = new System.Drawing.Size(169, 27);
-            this.AdressTextBox.TabIndex = 5;
+            this.AdressTextBox.TabIndex = 8;
             // 
             // PhoneNumberTextBox
             // 
@@ -94,7 +94,7 @@
             this.PhoneNumberTextBox.Location = new System.Drawing.Point(430, 182);
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(169, 27);
-            this.PhoneNumberTextBox.TabIndex = 6;
+            this.PhoneNumberTextBox.TabIndex = 9;
             // 
             // LastNameTextBox
             // 
@@ -103,7 +103,7 @@
             this.LastNameTextBox.Location = new System.Drawing.Point(219, 80);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(169, 27);
-            this.LastNameTextBox.TabIndex = 7;
+            this.LastNameTextBox.TabIndex = 2;
             // 
             // PassportNumberTextBox
             // 
@@ -112,7 +112,7 @@
             this.PassportNumberTextBox.Location = new System.Drawing.Point(219, 131);
             this.PassportNumberTextBox.Name = "PassportNumberTextBox";
             this.PassportNumberTextBox.Size = new System.Drawing.Size(169, 27);
-            this.PassportNumberTextBox.TabIndex = 8;
+            this.PassportNumberTextBox.TabIndex = 5;
             // 
             // CitizenshipTextBox
             // 
@@ -121,7 +121,7 @@
             this.CitizenshipTextBox.Location = new System.Drawing.Point(430, 131);
             this.CitizenshipTextBox.Name = "CitizenshipTextBox";
             this.CitizenshipTextBox.Size = new System.Drawing.Size(169, 27);
-            this.CitizenshipTextBox.TabIndex = 10;
+            this.CitizenshipTextBox.TabIndex = 6;
             // 
             // FirstNameLabel
             // 
@@ -218,7 +218,7 @@
             this.CreateClientButton.Location = new System.Drawing.Point(110, 243);
             this.CreateClientButton.Name = "CreateClientButton";
             this.CreateClientButton.Size = new System.Drawing.Size(137, 52);
-            this.CreateClientButton.TabIndex = 20;
+            this.CreateClientButton.TabIndex = 10;
             this.CreateClientButton.Text = "Create client";
             this.CreateClientButton.UseVisualStyleBackColor = true;
             this.CreateClientButton.Click += new System.EventHandler(this.CreateClientButton_Click);
@@ -228,7 +228,7 @@
             this.BackButton.Location = new System.Drawing.Point(335, 243);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(137, 52);
-            this.BackButton.TabIndex = 21;
+            this.BackButton.TabIndex = 11;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
@@ -248,9 +248,12 @@
             // 
             this.DateOfBirthDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateOfBirthDateTimePicker.Location = new System.Drawing.Point(430, 80);
+            this.DateOfBirthDateTimePicker.MaxDate = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
+            this.DateOfBirthDateTimePicker.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DateOfBirthDateTimePicker.Name = "DateOfBirthDateTimePicker";
             this.DateOfBirthDateTimePicker.Size = new System.Drawing.Size(168, 27);
-            this.DateOfBirthDateTimePicker.TabIndex = 23;
+            this.DateOfBirthDateTimePicker.TabIndex = 3;
+            this.DateOfBirthDateTimePicker.Value = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
             // 
             // AddNewClientForm
             // 
@@ -281,7 +284,7 @@
             this.Controls.Add(this.FirstNameTextBox);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddNewClientForm";
             this.Text = "AddNewClientForm";
             this.ResumeLayout(false);

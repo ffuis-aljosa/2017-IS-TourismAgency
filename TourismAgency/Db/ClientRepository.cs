@@ -49,12 +49,12 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static void UpdateClient(Client client)
+        public static void UpdateClient(Client client, string idNumber)
         {
             string sql = @"UPDATE clients SET first_name = @first_name, last_name = @last_name, 
                 date_of_birth = @date_of_birth, e_mail= @e_mail, passport_number = @passport_number, 
                 citizenship = @citizenship, city = @city, adress = @adress, phone_number = @phone_number
-                WHERE id = @id";
+                WHERE id =" + idNumber;
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
@@ -89,6 +89,15 @@ namespace TourismAgency.Db
             command.Parameters.Add(phone_number);
 
             command.Prepare();
+
+            command.ExecuteNonQuery();
+        }
+
+        public static void DeleteClient(Client client, string idNumber)
+        {
+            string sql = @"DELETE FROM clients WHERE id =" + idNumber;
+
+            SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
             command.ExecuteNonQuery();
         }

@@ -28,8 +28,6 @@ namespace TourismAgency
         {
             try
             {
-                MessageBox.Show("Are you sure you want to create new guide?", "Create guide", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
                 Guide guide = new Guide(
                     FirstNameTextBox.Text,
                     LastNameTextBox.Text);

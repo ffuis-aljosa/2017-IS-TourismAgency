@@ -65,6 +65,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.DateOfBirthDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.IdLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ClientsListView
@@ -84,7 +85,7 @@
             this.PhoneNumberColumnHeader});
             this.ClientsListView.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClientsListView.GridLines = true;
-            this.ClientsListView.Location = new System.Drawing.Point(224, 88);
+            this.ClientsListView.Location = new System.Drawing.Point(224, 81);
             this.ClientsListView.Name = "ClientsListView";
             this.ClientsListView.Size = new System.Drawing.Size(747, 587);
             this.ClientsListView.TabIndex = 0;
@@ -146,7 +147,7 @@
             // ExitButton
             // 
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.Location = new System.Drawing.Point(12, 630);
+            this.ExitButton.Location = new System.Drawing.Point(15, 653);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(184, 45);
             this.ExitButton.TabIndex = 11;
@@ -157,7 +158,7 @@
             // UpdateButton
             // 
             this.UpdateButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateButton.Location = new System.Drawing.Point(12, 528);
+            this.UpdateButton.Location = new System.Drawing.Point(15, 551);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(184, 45);
             this.UpdateButton.TabIndex = 10;
@@ -168,7 +169,7 @@
             // AddNewClientButton
             // 
             this.AddNewClientButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddNewClientButton.Location = new System.Drawing.Point(12, 477);
+            this.AddNewClientButton.Location = new System.Drawing.Point(15, 500);
             this.AddNewClientButton.Name = "AddNewClientButton";
             this.AddNewClientButton.Size = new System.Drawing.Size(184, 45);
             this.AddNewClientButton.TabIndex = 9;
@@ -180,7 +181,7 @@
             // 
             this.ClientsLabel.AutoSize = true;
             this.ClientsLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClientsLabel.Location = new System.Drawing.Point(221, 67);
+            this.ClientsLabel.Location = new System.Drawing.Point(221, 60);
             this.ClientsLabel.Name = "ClientsLabel";
             this.ClientsLabel.Size = new System.Drawing.Size(65, 18);
             this.ClientsLabel.TabIndex = 4;
@@ -191,7 +192,7 @@
             this.FirstNameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.FirstNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FirstNameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameTextBox.Location = new System.Drawing.Point(12, 37);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(14, 60);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(184, 27);
             this.FirstNameTextBox.TabIndex = 0;
@@ -201,7 +202,7 @@
             this.EmailTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EmailTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTextBox.Location = new System.Drawing.Point(12, 190);
+            this.EmailTextBox.Location = new System.Drawing.Point(15, 213);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(184, 27);
             this.EmailTextBox.TabIndex = 3;
@@ -211,7 +212,7 @@
             this.CityTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.CityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CityTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CityTextBox.Location = new System.Drawing.Point(12, 342);
+            this.CityTextBox.Location = new System.Drawing.Point(15, 365);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(184, 27);
             this.CityTextBox.TabIndex = 6;
@@ -221,7 +222,7 @@
             this.LastNameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.LastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LastNameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameTextBox.Location = new System.Drawing.Point(12, 88);
+            this.LastNameTextBox.Location = new System.Drawing.Point(15, 111);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(184, 27);
             this.LastNameTextBox.TabIndex = 1;
@@ -231,7 +232,7 @@
             this.PassportNumberTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.PassportNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PassportNumberTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PassportNumberTextBox.Location = new System.Drawing.Point(12, 241);
+            this.PassportNumberTextBox.Location = new System.Drawing.Point(15, 264);
             this.PassportNumberTextBox.Name = "PassportNumberTextBox";
             this.PassportNumberTextBox.Size = new System.Drawing.Size(184, 27);
             this.PassportNumberTextBox.TabIndex = 4;
@@ -241,7 +242,7 @@
             this.AdressTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.AdressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AdressTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdressTextBox.Location = new System.Drawing.Point(12, 393);
+            this.AdressTextBox.Location = new System.Drawing.Point(15, 416);
             this.AdressTextBox.Name = "AdressTextBox";
             this.AdressTextBox.Size = new System.Drawing.Size(184, 27);
             this.AdressTextBox.TabIndex = 7;
@@ -251,7 +252,7 @@
             this.CitizenshipTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.CitizenshipTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CitizenshipTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CitizenshipTextBox.Location = new System.Drawing.Point(12, 292);
+            this.CitizenshipTextBox.Location = new System.Drawing.Point(15, 315);
             this.CitizenshipTextBox.Name = "CitizenshipTextBox";
             this.CitizenshipTextBox.Size = new System.Drawing.Size(184, 27);
             this.CitizenshipTextBox.TabIndex = 5;
@@ -261,7 +262,7 @@
             this.PhoneNumberTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.PhoneNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PhoneNumberTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumberTextBox.Location = new System.Drawing.Point(12, 444);
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(15, 467);
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(184, 27);
             this.PhoneNumberTextBox.TabIndex = 8;
@@ -270,7 +271,7 @@
             // 
             this.FirstNameLabel.AutoSize = true;
             this.FirstNameLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameLabel.Location = new System.Drawing.Point(8, 16);
+            this.FirstNameLabel.Location = new System.Drawing.Point(11, 39);
             this.FirstNameLabel.Name = "FirstNameLabel";
             this.FirstNameLabel.Size = new System.Drawing.Size(97, 18);
             this.FirstNameLabel.TabIndex = 13;
@@ -280,7 +281,7 @@
             // 
             this.LastNameLlabel.AutoSize = true;
             this.LastNameLlabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameLlabel.Location = new System.Drawing.Point(9, 67);
+            this.LastNameLlabel.Location = new System.Drawing.Point(12, 90);
             this.LastNameLlabel.Name = "LastNameLlabel";
             this.LastNameLlabel.Size = new System.Drawing.Size(96, 18);
             this.LastNameLlabel.TabIndex = 14;
@@ -290,7 +291,7 @@
             // 
             this.EmailLabel.AutoSize = true;
             this.EmailLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabel.Location = new System.Drawing.Point(9, 169);
+            this.EmailLabel.Location = new System.Drawing.Point(12, 192);
             this.EmailLabel.Name = "EmailLabel";
             this.EmailLabel.Size = new System.Drawing.Size(60, 18);
             this.EmailLabel.TabIndex = 15;
@@ -300,7 +301,7 @@
             // 
             this.PassportNumberLabel.AutoSize = true;
             this.PassportNumberLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PassportNumberLabel.Location = new System.Drawing.Point(9, 220);
+            this.PassportNumberLabel.Location = new System.Drawing.Point(12, 243);
             this.PassportNumberLabel.Name = "PassportNumberLabel";
             this.PassportNumberLabel.Size = new System.Drawing.Size(146, 18);
             this.PassportNumberLabel.TabIndex = 16;
@@ -310,7 +311,7 @@
             // 
             this.CitizenshipLabel.AutoSize = true;
             this.CitizenshipLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CitizenshipLabel.Location = new System.Drawing.Point(9, 271);
+            this.CitizenshipLabel.Location = new System.Drawing.Point(12, 294);
             this.CitizenshipLabel.Name = "CitizenshipLabel";
             this.CitizenshipLabel.Size = new System.Drawing.Size(99, 18);
             this.CitizenshipLabel.TabIndex = 17;
@@ -320,7 +321,7 @@
             // 
             this.CityLabel.AutoSize = true;
             this.CityLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CityLabel.Location = new System.Drawing.Point(9, 321);
+            this.CityLabel.Location = new System.Drawing.Point(12, 344);
             this.CityLabel.Name = "CityLabel";
             this.CityLabel.Size = new System.Drawing.Size(40, 18);
             this.CityLabel.TabIndex = 18;
@@ -330,7 +331,7 @@
             // 
             this.AdressLabel.AutoSize = true;
             this.AdressLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdressLabel.Location = new System.Drawing.Point(9, 372);
+            this.AdressLabel.Location = new System.Drawing.Point(12, 395);
             this.AdressLabel.Name = "AdressLabel";
             this.AdressLabel.Size = new System.Drawing.Size(63, 18);
             this.AdressLabel.TabIndex = 19;
@@ -340,7 +341,7 @@
             // 
             this.PhoneNumberLabel.AutoSize = true;
             this.PhoneNumberLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumberLabel.Location = new System.Drawing.Point(9, 423);
+            this.PhoneNumberLabel.Location = new System.Drawing.Point(12, 446);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
             this.PhoneNumberLabel.Size = new System.Drawing.Size(127, 18);
             this.PhoneNumberLabel.TabIndex = 20;
@@ -350,7 +351,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 118);
+            this.label6.Location = new System.Drawing.Point(12, 141);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 18);
             this.label6.TabIndex = 21;
@@ -361,7 +362,7 @@
             this.SearchTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SearchTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(224, 37);
+            this.SearchTextBox.Location = new System.Drawing.Point(224, 30);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(184, 27);
             this.SearchTextBox.TabIndex = 12;
@@ -371,7 +372,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(221, 16);
+            this.label1.Location = new System.Drawing.Point(221, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 18);
             this.label1.TabIndex = 23;
@@ -381,7 +382,7 @@
             // 
             this.DateOfBirthDateTimePicker.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateOfBirthDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateOfBirthDateTimePicker.Location = new System.Drawing.Point(13, 140);
+            this.DateOfBirthDateTimePicker.Location = new System.Drawing.Point(16, 163);
             this.DateOfBirthDateTimePicker.MaxDate = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
             this.DateOfBirthDateTimePicker.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DateOfBirthDateTimePicker.Name = "DateOfBirthDateTimePicker";
@@ -392,19 +393,31 @@
             // DeleteButton
             // 
             this.DeleteButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteButton.Location = new System.Drawing.Point(13, 579);
+            this.DeleteButton.Location = new System.Drawing.Point(16, 602);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(184, 45);
             this.DeleteButton.TabIndex = 25;
             this.DeleteButton.Text = "Delete selected";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
+            // IdLabel
+            // 
+            this.IdLabel.AutoSize = true;
+            this.IdLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdLabel.Location = new System.Drawing.Point(12, 9);
+            this.IdLabel.Name = "IdLabel";
+            this.IdLabel.Size = new System.Drawing.Size(25, 18);
+            this.IdLabel.TabIndex = 26;
+            this.IdLabel.Text = "Id";
             // 
             // InfoClientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(983, 690);
+            this.ClientSize = new System.Drawing.Size(983, 737);
+            this.Controls.Add(this.IdLabel);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.DateOfBirthDateTimePicker);
             this.Controls.Add(this.label1);
@@ -480,5 +493,6 @@
         private System.Windows.Forms.DateTimePicker DateOfBirthDateTimePicker;
         private System.Windows.Forms.ColumnHeader IdColumnHeader;
         private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Label IdLabel;
     }
 }

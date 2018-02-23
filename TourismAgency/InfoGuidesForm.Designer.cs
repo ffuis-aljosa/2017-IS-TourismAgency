@@ -44,6 +44,7 @@
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.IdLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // FirstNameTextBox
@@ -52,7 +53,7 @@
             this.FirstNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FirstNameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FirstNameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.FirstNameTextBox.Location = new System.Drawing.Point(12, 29);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(12, 58);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(184, 27);
             this.FirstNameTextBox.TabIndex = 0;
@@ -62,7 +63,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 18);
             this.label1.TabIndex = 1;
@@ -73,7 +74,7 @@
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LastNameLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.LastNameLabel.Location = new System.Drawing.Point(9, 59);
+            this.LastNameLabel.Location = new System.Drawing.Point(9, 88);
             this.LastNameLabel.Name = "LastNameLabel";
             this.LastNameLabel.Size = new System.Drawing.Size(94, 18);
             this.LastNameLabel.TabIndex = 2;
@@ -85,7 +86,7 @@
             this.LastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LastNameTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LastNameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LastNameTextBox.Location = new System.Drawing.Point(12, 80);
+            this.LastNameTextBox.Location = new System.Drawing.Point(12, 109);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(184, 27);
             this.LastNameTextBox.TabIndex = 1;
@@ -98,9 +99,9 @@
             this.FirstNameColumnHeader,
             this.LastNameColumnHeader});
             this.GuidesListView.GridLines = true;
-            this.GuidesListView.Location = new System.Drawing.Point(227, 80);
+            this.GuidesListView.Location = new System.Drawing.Point(227, 81);
             this.GuidesListView.Name = "GuidesListView";
-            this.GuidesListView.Size = new System.Drawing.Size(357, 232);
+            this.GuidesListView.Size = new System.Drawing.Size(357, 259);
             this.GuidesListView.TabIndex = 8;
             this.GuidesListView.TabStop = false;
             this.GuidesListView.UseCompatibleStateImageBehavior = false;
@@ -126,7 +127,7 @@
             // 
             this.UpdateButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.UpdateButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.UpdateButton.Location = new System.Drawing.Point(12, 165);
+            this.UpdateButton.Location = new System.Drawing.Point(12, 193);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(184, 45);
             this.UpdateButton.TabIndex = 4;
@@ -139,7 +140,7 @@
             this.GuidesLabel.AutoSize = true;
             this.GuidesLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.GuidesLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.GuidesLabel.Location = new System.Drawing.Point(224, 59);
+            this.GuidesLabel.Location = new System.Drawing.Point(224, 60);
             this.GuidesLabel.Name = "GuidesLabel";
             this.GuidesLabel.Size = new System.Drawing.Size(64, 18);
             this.GuidesLabel.TabIndex = 6;
@@ -149,7 +150,7 @@
             // 
             this.AddNewGuideButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.AddNewGuideButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AddNewGuideButton.Location = new System.Drawing.Point(12, 114);
+            this.AddNewGuideButton.Location = new System.Drawing.Point(12, 142);
             this.AddNewGuideButton.Name = "AddNewGuideButton";
             this.AddNewGuideButton.Size = new System.Drawing.Size(184, 45);
             this.AddNewGuideButton.TabIndex = 3;
@@ -161,7 +162,7 @@
             // 
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ExitButton.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ExitButton.Location = new System.Drawing.Point(12, 267);
+            this.ExitButton.Location = new System.Drawing.Point(12, 295);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(184, 45);
             this.ExitButton.TabIndex = 5;
@@ -175,7 +176,7 @@
             this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SearchTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.SearchTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SearchTextBox.Location = new System.Drawing.Point(227, 29);
+            this.SearchTextBox.Location = new System.Drawing.Point(227, 30);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(184, 27);
             this.SearchTextBox.TabIndex = 2;
@@ -186,7 +187,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label2.Location = new System.Drawing.Point(224, 8);
+            this.label2.Location = new System.Drawing.Point(224, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 18);
             this.label2.TabIndex = 10;
@@ -196,19 +197,32 @@
             // 
             this.DeleteButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.DeleteButton.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.DeleteButton.Location = new System.Drawing.Point(12, 216);
+            this.DeleteButton.Location = new System.Drawing.Point(12, 244);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(184, 45);
             this.DeleteButton.TabIndex = 12;
             this.DeleteButton.Text = "Delete selected";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
+            // IdLabel
+            // 
+            this.IdLabel.AutoSize = true;
+            this.IdLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.IdLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.IdLabel.Location = new System.Drawing.Point(12, 9);
+            this.IdLabel.Name = "IdLabel";
+            this.IdLabel.Size = new System.Drawing.Size(25, 18);
+            this.IdLabel.TabIndex = 13;
+            this.IdLabel.Text = "Id";
             // 
             // InfoGuidesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(621, 326);
+            this.ClientSize = new System.Drawing.Size(621, 353);
+            this.Controls.Add(this.IdLabel);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SearchTextBox);
@@ -252,5 +266,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader IdColumnHeader;
         private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Label IdLabel;
     }
 }
