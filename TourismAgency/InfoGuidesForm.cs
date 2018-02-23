@@ -11,7 +11,7 @@ namespace TourismAgency
         public InfoGuidesForm()
         {
             InitializeComponent();
-            GuideRepository.LoadGuides(GuidesListView, SearchTextBox.Text);
+            LoadGuides();
             GuidesListView.FullRowSelect = true;
         }
 
@@ -35,13 +35,25 @@ namespace TourismAgency
             add.Show(); 
         }
 
+        public void LoadGuides()
+        {
+            GuidesListView.Items.Clear();
+
+            try
+            {
+                GuideRepository.GuidesToListView(GuidesListView, SearchTextBox.Text);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void GuidesListView_Click(object sender, EventArgs e)
         {
-            string id = GuidesListView.SelectedItems[0].SubItems[0].Text;
             string firstName = GuidesListView.SelectedItems[0].SubItems[1].Text;
             string lastName = GuidesListView.SelectedItems[0].SubItems[2].Text;
-
-            IdTextBox.Text = id.ToString();
+            
             FirstNameTextBox.Text = firstName;
             LastNameTextBox.Text = lastName;
         }
@@ -50,16 +62,16 @@ namespace TourismAgency
         {
             try
             {
-                MessageBox.Show("Are you sure you want to change existing guide?", "Update guide", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
                 Guide guide = new Guide(
                     FirstNameTextBox.Text,
                     LastNameTextBox.Text);
 
-                GuideRepository.UpdateGuide(guide, IdTextBox);
+                GuideRepository.UpdateGuide(guide);
+
+                GuidesListView.Items.Clear();
 
                 DialogResult = DialogResult.OK;
-                GuideRepository.LoadGuides(GuidesListView, SearchTextBox.Text);
+                LoadGuides();
 
                 ClearTextBox(FirstNameTextBox);
                 ClearTextBox(LastNameTextBox);
@@ -69,6 +81,13 @@ namespace TourismAgency
             {
                 MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            GuidesListView.Items.Clear();
+            LoadGuides();
+
         }
     }
 }

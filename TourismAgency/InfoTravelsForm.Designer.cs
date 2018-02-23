@@ -55,7 +55,6 @@
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.UpdateButton = new System.Windows.Forms.Button();
-            this.IdTextBox = new System.Windows.Forms.TextBox();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -316,6 +315,7 @@
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(184, 27);
             this.SearchTextBox.TabIndex = 18;
+            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // label2
             // 
@@ -341,14 +341,6 @@
             this.UpdateButton.UseVisualStyleBackColor = true;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
-            // IdTextBox
-            // 
-            this.IdTextBox.Location = new System.Drawing.Point(501, 37);
-            this.IdTextBox.Name = "IdTextBox";
-            this.IdTextBox.Size = new System.Drawing.Size(100, 21);
-            this.IdTextBox.TabIndex = 21;
-            this.IdTextBox.Visible = false;
-            // 
             // DeleteButton
             // 
             this.DeleteButton.Cursor = System.Windows.Forms.Cursors.Default;
@@ -368,7 +360,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(983, 538);
             this.Controls.Add(this.DeleteButton);
-            this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SearchTextBox);
@@ -430,7 +421,6 @@
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button UpdateButton;
-        private System.Windows.Forms.TextBox IdTextBox;
         private System.Windows.Forms.ColumnHeader IdColumnHeader;
         private System.Windows.Forms.Button DeleteButton;
     }

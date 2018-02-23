@@ -118,6 +118,10 @@ namespace TourismAgency
             PhotoPanel4.Visible = true; 
         }
 
-        
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            TravelsListView.Items.Clear();
+            LoadTravels();
+        }
     }
 }

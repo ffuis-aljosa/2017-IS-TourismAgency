@@ -41,11 +41,11 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static void UpdateTravel(Travel travel, TextBox idTextBox)
+        public static void UpdateTravel(Travel travel)
         {
             string sql = @"UPDATE travels SET destinations = @destinations, start_date = @start_date,
-                finish_date = @finish_date, guide = @guide, number_of_seats = @number_of_seats, price = @price
-                WHERE id =" + idTextBox.Text;
+                finish_date = @finish_date, guide_id = @guide_id, number_of_seats = @number_of_seats, price = @price
+                WHERE id = @id";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
@@ -61,8 +61,8 @@ namespace TourismAgency.Db
             SqlCeParameter finish_date = new SqlCeParameter("@finish_date", travel.Finish_date);
             command.Parameters.Add(finish_date);
 
-            SqlCeParameter guide = new SqlCeParameter("@guide", travel.Guide);
-            command.Parameters.Add(guide);
+            SqlCeParameter guide_id = new SqlCeParameter("@guide_id", travel.Guide.Id);
+            command.Parameters.Add(guide_id);
 
             SqlCeParameter number_of_seats = new SqlCeParameter("@number_of_seats", travel.Number_of_seats);
             command.Parameters.Add(number_of_seats);
@@ -75,15 +75,27 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
+        public static void DeleteTravel(Travel travel, int idNumber)
+        {
+            string sql = @"DELETE FROM travels WHERE id =" + idNumber;
+
+            SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
+
+            command.Prepare();
+
+            command.ExecuteNonQuery();
+        }
+
+
         public static void TravelsToListView(ListView listview, string search)
         {
             string sql;
-            DateTime now = DateTime.Now; 
+            string now = DateTime.Now.Date.ToString(("yyyy-MM-dd")); 
 
             if (search == "")
             {
                 sql = @"SELECT t.id, t.destinations, t.start_date, t.finish_date, 
-                    g.first_name, g.last_name, t.number_of_seats,
+                    g.first_name + ' ' + g.last_name AS guide, t.number_of_seats,
                     t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id WHERE t.start_date > '" 
                     + now + "' ORDER BY id";
             }
@@ -93,7 +105,7 @@ namespace TourismAgency.Db
                     g.first_name + ' ' + g.last_name AS guide, t.number_of_seats,
                     t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id 
                     WHERE  t.start_date > '" + now + "' " +
-                    "t.destinations LIKE '%" + search + "%' " +
+                    "AND t.destinations LIKE '%" + search + "%' " +
                     "OR t.start_date LIKE '%" + search + "%' " +
                     "OR t.finish_date LIKE '%" + search + "%' " +
                     "OR g.first_name LIKE '%" + search + "%' " +
@@ -107,12 +119,11 @@ namespace TourismAgency.Db
 
             while (reader.Read())
             {
-                Guide konj = new Guide(reader["first_name"].ToString(), reader["last_name"].ToString());
                 ListViewItem item = new ListViewItem(reader["id"].ToString());
                 item.SubItems.Add(reader["destinations"].ToString());
                 item.SubItems.Add(reader["start_date"].ToString());
                 item.SubItems.Add(reader["finish_date"].ToString());
-                item.SubItems.Add(konj.ToString());
+                item.SubItems.Add(reader["guide"].ToString());
                 item.SubItems.Add(reader["number_of_seats"].ToString());
                 item.SubItems.Add(reader["price"].ToString());
 

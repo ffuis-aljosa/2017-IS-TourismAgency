@@ -10,7 +10,7 @@ namespace TourismAgency
         public InfoClientsForm()
         {
             InitializeComponent();
-            ClientRepository.LoadClients(ClientsListView, SearchTextBox);
+            LoadClients();
             ClientsListView.FullRowSelect = true; 
         }
 
@@ -27,9 +27,22 @@ namespace TourismAgency
             adminTourismAgencyForm.Show(); 
         }
 
+        public void LoadClients()
+        {
+            ClientsListView.Items.Clear();
+
+            try
+            {
+                ClientRepository.ClientsToListView(ClientsListView, SearchTextBox.Text);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void ClientsListView_Click(object sender, EventArgs e)
         {
-            string id = ClientsListView.SelectedItems[0].SubItems[0].Text;
             string firstName = ClientsListView.SelectedItems[0].SubItems[1].Text;
             string lastName = ClientsListView.SelectedItems[0].SubItems[2].Text;
             string dateOfBirth = ClientsListView.SelectedItems[0].SubItems[3].Text;
@@ -39,8 +52,7 @@ namespace TourismAgency
             string city = ClientsListView.SelectedItems[0].SubItems[7].Text;
             string adress = ClientsListView.SelectedItems[0].SubItems[8].Text;
             string phoneNumber = ClientsListView.SelectedItems[0].SubItems[9].Text;
-
-            IdTextBox.Text = id; 
+            
             FirstNameTextBox.Text = firstName;
             LastNameTextBox.Text = lastName;
             DateOfBirthDateTimePicker.Text = dateOfBirth;
@@ -59,36 +71,48 @@ namespace TourismAgency
             add.Show(); 
         }
 
+        public void ClearAllBoxes()
+        {
+            FirstNameTextBox.Text = "";
+            LastNameTextBox.Text = "";
+            DateOfBirthDateTimePicker.Value = DateOfBirthDateTimePicker.MinDate;
+            EmailTextBox.Text = "";
+            PassportNumberTextBox.Text = "";
+            CitizenshipTextBox.Text = "";
+            CityTextBox.Text = "";
+            AdressTextBox.Text = "";
+            PhoneNumberTextBox.Text = "";
+        }
+
         private void UpdateButton_Click(object sender, EventArgs e)
         {
             try
             {
-                MessageBox.Show("Are you sure you want to change existing client?", "Update client", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
                 Client client = new Client(FirstNameTextBox.Text, LastNameTextBox.Text,
                     DateOfBirthDateTimePicker.Text, EmailTextBox.Text, PassportNumberTextBox.Text,
                     CitizenshipTextBox.Text, CityTextBox.Text, AdressTextBox.Text, PhoneNumberTextBox.Text);
 
-                ClientRepository.UpdateClient(client, IdTextBox);
+                ClientRepository.UpdateClient(client);
+
+                ClientsListView.Items.Clear();
 
                 DialogResult = DialogResult.OK;
-                ClientRepository.LoadClients(ClientsListView, SearchTextBox);
+                LoadClients();
 
-                FirstNameTextBox.Text = "";
-                LastNameTextBox.Text = "";
-                DateOfBirthDateTimePicker.Value = DateOfBirthDateTimePicker.MinDate;
-                EmailTextBox.Text = "";
-                PassportNumberTextBox.Text = "";
-                CitizenshipTextBox.Text = "";
-                CityTextBox.Text = "";
-                AdressTextBox.Text = "";
-                PhoneNumberTextBox.Text = "";
+                ClearAllBoxes();
 
             }
             catch (Exception error)
             {
                 MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ClientsListView.Items.Clear();
+            LoadClients();
+
         }
     }
 }

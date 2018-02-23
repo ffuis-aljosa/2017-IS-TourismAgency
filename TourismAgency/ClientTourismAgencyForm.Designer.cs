@@ -49,6 +49,7 @@
             this.SearchLabel = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.TravelsListView = new System.Windows.Forms.ListView();
+            this.IdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DestinationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StartDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FinishDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -56,7 +57,6 @@
             this.NumberOfSeatsColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PriceColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PhotoCollectionButton = new System.Windows.Forms.Button();
-            this.IdColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ClientFormToolStrip.SuspendLayout();
             this.TravelListPanel.SuspendLayout();
             this.PhotoPanel1.SuspendLayout();
@@ -293,6 +293,7 @@
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(184, 27);
             this.SearchTextBox.TabIndex = 19;
+            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // TravelsListView
             // 
@@ -312,6 +313,10 @@
             this.TravelsListView.TabIndex = 16;
             this.TravelsListView.UseCompatibleStateImageBehavior = false;
             this.TravelsListView.View = System.Windows.Forms.View.Details;
+            // 
+            // IdColumnHeader
+            // 
+            this.IdColumnHeader.Text = "Id";
             // 
             // DestinationColumnHeader
             // 
@@ -354,10 +359,6 @@
             this.PhotoCollectionButton.Text = "See Photo Collection";
             this.PhotoCollectionButton.UseVisualStyleBackColor = true;
             this.PhotoCollectionButton.Click += new System.EventHandler(this.PhotoCollectionButton_Click);
-            // 
-            // IdColumnHeader
-            // 
-            this.IdColumnHeader.Text = "Id";
             // 
             // ClientTourismAgencyForm
             // 

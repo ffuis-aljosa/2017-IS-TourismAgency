@@ -29,10 +29,10 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static void UpdateGuide(Guide guide, TextBox idTextBox)
+        public static void UpdateGuide(Guide guide)
         {
             string sql = @"UPDATE guides SET first_name = @first_name, last_name = @last_name
-                WHERE id =" + idTextBox.Text;
+                WHERE id = @id ";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
@@ -50,41 +50,41 @@ namespace TourismAgency.Db
             command.ExecuteNonQuery();
         }
 
-        public static void LoadGuides(ListView listview, string search)
+        public static void DeleteGuide(Guide guide, int idNumber)
         {
-            listview.Items.Clear();
+            string sql = @"DELETE FROM guides WHERE id =" + idNumber;
 
+            SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
+
+            command.ExecuteNonQuery();
+        }
+
+        public static void GuidesToListView(ListView listview, string search)
+        {
             string sql;
 
             if (search == "")
             {
-                sql = @"SELECT id, first_name, last_name FROM guides";
+                sql = @"SELECT id, first_name, last_name FROM guides ORDER BY id";
             }
             else
             {
                 sql = @"SELECT id, first_name, last_name FROM guides 
                     WHERE first_name LIKE '%" + search + "%' " +
-                    "OR last_name LIKE '%" + search + "%' ;";
+                    "OR last_name LIKE '%" + search + "%'" +
+                    "ORDER BY id;";
             }
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
-            try
+            SqlCeDataReader reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                SqlCeDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    ListViewItem item = new ListViewItem(reader["id"].ToString());
-                    item.SubItems.Add(reader["first_name"].ToString());
-                    item.SubItems.Add(reader["last_name"].ToString());
+                ListViewItem item = new ListViewItem(reader["id"].ToString());
+                item.SubItems.Add(reader["first_name"].ToString());
+                item.SubItems.Add(reader["last_name"].ToString());
 
-                    listview.Items.Add(item);
-                }
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(error.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                listview.Items.Add(item);
             }
         }
 

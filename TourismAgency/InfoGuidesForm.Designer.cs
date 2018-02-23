@@ -43,7 +43,6 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.IdTextBox = new System.Windows.Forms.TextBox();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -180,6 +179,7 @@
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(184, 27);
             this.SearchTextBox.TabIndex = 2;
+            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // label2
             // 
@@ -191,15 +191,6 @@
             this.label2.Size = new System.Drawing.Size(62, 18);
             this.label2.TabIndex = 10;
             this.label2.Text = "Search";
-            // 
-            // IdTextBox
-            // 
-            this.IdTextBox.Location = new System.Drawing.Point(444, 35);
-            this.IdTextBox.Name = "IdTextBox";
-            this.IdTextBox.Size = new System.Drawing.Size(100, 21);
-            this.IdTextBox.TabIndex = 11;
-            this.IdTextBox.TabStop = false;
-            this.IdTextBox.Visible = false;
             // 
             // DeleteButton
             // 
@@ -219,7 +210,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(621, 326);
             this.Controls.Add(this.DeleteButton);
-            this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.ExitButton);
@@ -261,7 +251,6 @@
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader IdColumnHeader;
-        private System.Windows.Forms.TextBox IdTextBox;
         private System.Windows.Forms.Button DeleteButton;
     }
 }
