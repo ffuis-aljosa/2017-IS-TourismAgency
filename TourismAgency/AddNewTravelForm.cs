@@ -13,7 +13,7 @@ namespace TourismAgency
         public AddNewTravelForm()
         {
             InitializeComponent();
-            StartDateTimePicker.Value = DateTime.Now;
+            StartDateTimePicker.MinDate = DateTime.Now;
             LoadGuides();
         }
 

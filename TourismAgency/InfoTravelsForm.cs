@@ -12,7 +12,6 @@ namespace TourismAgency
         {
             InitializeComponent();
             StartDateTimePicker.MinDate = DateTime.Now;
-            FinishDateTimePicker.MinDate = DateTime.Now;
             LoadTravels();
             LoadGuides();
             TravelsListView.FullRowSelect = true;
@@ -64,7 +63,7 @@ namespace TourismAgency
             DestinationsTextBox.Text = "";
             StartDateTimePicker.Value = StartDateTimePicker.MinDate;
             FinishDateTimePicker.Value = FinishDateTimePicker.MinDate;
-            GuideComboBox.ResetText();
+            
             Number_Of_SeatsComboBox.Text = "";
             PriceTextBox.Text = "";
         }

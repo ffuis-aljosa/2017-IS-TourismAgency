@@ -12,9 +12,9 @@ namespace TourismAgency.Db
 
         public static void CreateTravel(Travel travel)
         {
-            string sql = @"INSERT INTO travels(destinations, start_date, finish_date, guide, 
+            string sql = @"INSERT INTO travels(destinations, start_date, finish_date, guide_id, 
                 number_of_seats, price) VALUES
-                (@destinations, @start_date, @finish_date, @guide, @number_of_seats, @price)";
+                (@destinations, @start_date, @finish_date, @guide_id, @number_of_seats, @price)";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
@@ -27,7 +27,7 @@ namespace TourismAgency.Db
             SqlCeParameter finish_date = new SqlCeParameter("@finish_date", travel.Finish_date);
             command.Parameters.Add(finish_date);
 
-            SqlCeParameter guide = new SqlCeParameter("@guide", travel.Guide);
+            SqlCeParameter guide = new SqlCeParameter("@guide_id", travel.Guide.Id);
             command.Parameters.Add(guide);
 
             SqlCeParameter number_of_seats = new SqlCeParameter("@number_of_seats", travel.Number_of_seats);
@@ -106,10 +106,6 @@ namespace TourismAgency.Db
                     t.price FROM travels AS t JOIN guides AS g ON t.guide_id = g.id 
                     WHERE  t.start_date > '" + now + "' " +
                     "AND t.destinations LIKE '%" + search + "%' " +
-                    "OR t.start_date LIKE '%" + search + "%' " +
-                    "OR t.finish_date LIKE '%" + search + "%' " +
-                    "OR g.first_name LIKE '%" + search + "%' " +
-                    "OR g.last_name LIKE '%" + search + "%' " +
                     "ORDER BY id;";
             }
 
